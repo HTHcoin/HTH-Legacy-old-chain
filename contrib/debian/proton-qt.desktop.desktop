@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Proton
+Comment=Proton P2P Cryptocurrency
+Exec=proton-qt %u
+Terminal=false
+Type=Application
+Icon=proton128
+MimeType=x-scheme-handler/proton;
+Categories=Office;Finance;
+Name[en_US]=proton-qt.desktop

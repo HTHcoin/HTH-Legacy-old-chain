@@ -1,0 +1,68 @@
+Source: proton
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@protoncoin.info>
+Uploaders: Holger Schinzel <holger@protoncoin.info>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://protoncoin.io/
+Vcs-Git: git://github.com/protoncoin/protoncoin.git
+Vcs-Browser: https://github.com/protoncoin/protoncoin
+
+Package: protond
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Proton is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Proton uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Proton Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, protond, and the CLI tool
+ proton-cli to interact with the daemon.
+
+Package: proton-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Proton is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Proton uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Proton Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Proton-Qt, a GUI for Proton based on Qt.
+
+Package: proton-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Proton is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Proton uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Proton Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides proton-tx, a command-line transaction creation
+ tool which can be used without a proton daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.
