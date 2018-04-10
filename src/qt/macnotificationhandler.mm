@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.proton.Proton-Qt";
+        return @"org.reden.Reden-Qt";
     } else {
         return [self __bundleIdentifier];
     }

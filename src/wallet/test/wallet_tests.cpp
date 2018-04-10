@@ -9,7 +9,7 @@
 #include <utility>
 #include <vector>
 
-#include "test/test_proton.h"
+#include "test/test_reden.h"
 
 #include <boost/foreach.hpp>
 #include <boost/test/unit_test.hpp>

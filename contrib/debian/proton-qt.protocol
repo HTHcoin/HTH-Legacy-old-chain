@@ -1,6 +1,6 @@
 [Protocol]
-exec=proton-qt '%u'
-protocol=proton
+exec=reden-qt '%u'
+protocol=reden
 input=none
 output=none
 helper=true

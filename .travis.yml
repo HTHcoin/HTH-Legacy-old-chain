@@ -32,11 +32,11 @@ env:
     - HOST=i686-w64-mingw32 PLATFORM="win32" DPKG_ADD_ARCH="i386" DEP_OPTS="" PPA="ppa:bitcoin/bitcoin" PACKAGES="python3 nsis g++-mingw-w64-i686 wine1.7 bc" RUN_TESTS=false GOAL="install" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" MAKEJOBS="-j4" WINE=true
 # Win64
     - HOST=x86_64-w64-mingw32 PLATFORM="win64" DPKG_ADD_ARCH="i386" DEP_OPTS="" PPA="ppa:bitcoin/bitcoin" PACKAGES="python3 nsis g++-mingw-w64-x86-64 wine1.7 bc" RUN_TESTS=false GOAL="install" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" MAKEJOBS="-j4" WINE=true
-# Linux 32-bit + proton
+# Linux 32-bit + reden
     - HOST=i686-pc-linux-gnu PLATFORM="linux32" PPA="ppa:bitcoin/bitcoin" PACKAGES="g++-multilib bc python3-zmq" DEP_OPTS="" RUN_TESTS=false GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++" USE_SHELL="/bin/dash" PYZMQ=true
-# Linux 64-bit + proton
+# Linux 64-bit + reden
     - HOST=x86_64-pc-linux-gnu PLATFORM="linux64" PPA="ppa:bitcoin/bitcoin" PACKAGES="g++-multilib bc python3-zmq" DEP_OPTS="" RUN_TESTS=false GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++" USE_SHELL="/bin/dash" PYZMQ=true
-# Linux protond
+# Linux redend
     - HOST=x86_64-pc-linux-gnu PLATFORM="linux-no-qt" PPA="ppa:bitcoin/bitcoin" PACKAGES="g++-multilib bc python3-zmq" DEP_OPTS="NO_QT=1" RUN_TESTS=false GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++" USE_SHELL="/bin/dash" PYZMQ=true
 # No wallet
 #    - HOST=x86_64-unknown-linux-gnu PLATFORM="unknown-linux-no-wallet" PPA="ppa:bitcoin/bitcoin" PACKAGES="python3" DEP_OPTS="NO_WALLET=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
@@ -44,7 +44,7 @@ env:
     - HOST=x86_64-apple-darwin11 PLATFORM="osx" PPA="ppa:bitcoin/bitcoin" PACKAGES="cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" OSX_SDK=10.9 GOAL="deploy"
 
 before_install:
-    - git clone https://github.com/protoncoin/proton_hash.git
+    - git clone https://github.com/redencoin/reden_hash.git
     - travis_retry sudo apt-get install python-dev
     - travis_retry sudo add-apt-repository ppa:ubuntu-wine/ppa -y
     - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
@@ -54,7 +54,7 @@ install:
     - if [ -n "$DPKG_ADD_ARCH" ]; then sudo dpkg --add-architecture "$DPKG_ADD_ARCH" ; fi
     - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
     - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
-    - cd proton_hash && python setup.py install --user && cd ..
+    - cd reden_hash && python setup.py install --user && cd ..
 before_script:
     - unset CC; unset CXX
     - unset DISPLAY
@@ -69,27 +69,27 @@ script:
     - depends/$HOST/native/bin/ccache --max-size=$CCACHE_SIZE
     - test -n "$USE_SHELL" && eval '"$USE_SHELL" -c "./autogen.sh"' || ./autogen.sh
     - "./configure --cache-file=config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && false)"
-    - make distdir PACKAGE=protoncoin VERSION=$HOST
-    - cd protoncoin-$HOST
+    - make distdir PACKAGE=redencoin VERSION=$HOST
+    - cd redencoin-$HOST
     - "./configure --cache-file=../config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && false)"
     - make $MAKEJOBS $GOAL || ( echo "Build failure. Verbose build follows." && make $GOAL V=1 ; false )
     - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/depends/$HOST/lib
     - if [ "$RUN_TESTS" = "true" -a "$WINE" != "true" ]; then make $MAKEJOBS check VERBOSE=1; fi
-    - if [ "$RUN_TESTS" = "true" -a "$WINE" = "true" ]; then wine  src/test/test_proton.exe; fi
+    - if [ "$RUN_TESTS" = "true" -a "$WINE" = "true" ]; then wine  src/test/test_reden.exe; fi
     #- if [ "$RUN_TESTS" = "true" ]; then qa/pull-tester/rpc-tests.py --coverage; fi
 after_script:
     - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then (echo "Upload goes here. Something like: scp -r $BASE_OUTDIR server" || echo "upload failed"); fi
 before_deploy:
-    - if [[ "$PLATFORM" = *"linux"* ]]; then cd $OUTDIR/bin && tar -cvzf $OUTDIR/bin/protoncoin-$PLATFORM-$TRAVIS_TAG.tar.gz proton*; fi
-    - if [[ "$PLATFORM" = *"win"* ]]; then zip -j $OUTDIR/bin/protoncoin-$PLATFORM-$TRAVIS_TAG.zip $OUTDIR/bin/proton*; fi
-    - if [[ "$PLATFORM" = *"osx"* ]]; then mkdir -p $OUTDIR/bin && cp Proton-Core.dmg $OUTDIR/bin/protoncoin-$PLATFORM-$TRAVIS_TAG.dmg; fi
+    - if [[ "$PLATFORM" = *"linux"* ]]; then cd $OUTDIR/bin && tar -cvzf $OUTDIR/bin/redencoin-$PLATFORM-$TRAVIS_TAG.tar.gz reden*; fi
+    - if [[ "$PLATFORM" = *"win"* ]]; then zip -j $OUTDIR/bin/redencoin-$PLATFORM-$TRAVIS_TAG.zip $OUTDIR/bin/reden*; fi
+    - if [[ "$PLATFORM" = *"osx"* ]]; then mkdir -p $OUTDIR/bin && cp Reden-Core.dmg $OUTDIR/bin/redencoin-$PLATFORM-$TRAVIS_TAG.dmg; fi
 deploy:
     provider: releases
     api_key:
       secure: LlorZZRaFCo888opatoQIgZIhXDL905qVT/8T9V0cN285uYnoLp6rRdztOgZ/Bq71ii1wk67FzOeBNkKP05PfqMTB8wB96hwFOI4HkznqLbW8CnoQNR0T+sakwBlYACz2lw1QASSRrR6/AMWNlvDUdxfQkFg95eGAT8e/y34JAb8VHrMO3qdTJls+4kTxFtwiQxDVgJmm9V22+dz2Nd0CIdHkgurtPXeSoaDAuTvRbm9ZjCHDLWu+1t94bZ/2IQkx5No3jP8UcvDLlCMztsasU9ow9vgkShxM/UCb2S2gFCjfDjCV0rAm0pWpDhnVFvwKrXdV34E/nYZj3hHUTb7LwgYOl9PcMxrqqUZYpW1FU1LGaPoIOe7Nikjek/yg8XdXiPX4a1OzGDXrOBOzWwNdFKFdAuqbqSStIXZt5QBSVSILg8CRd3VWjDBtusmH+oz/lO/1HRW7tMw18UBMQlUIjThADUgoGBGYWvaMPWw3lyTzvbOyoj313WKpy/5WbArHZ/u2SGWdVTrgOktg+H8R91TNM/I4UYNr+shnHH2zIIJYaKHgzMCwuvwTcIerwS5dS+oBIFmJYkIfSqvWYAAxh2Si4qmgonq8o8yX1XIaGckeITgscehWNveIgWy7d7x876al1hj2s7ETi3RLn/SL/76Ix0dnYBmhbeR0u4zQQs=
     file_glob: true
-    file: $OUTDIR/bin/protoncoin-$PLATFORM-$TRAVIS_TAG*
+    file: $OUTDIR/bin/redencoin-$PLATFORM-$TRAVIS_TAG*
     skip_cleanup: true
     on:
-      repo: protoncoin/protoncoin
+      repo: redencoin/redencoin
       tags: true 

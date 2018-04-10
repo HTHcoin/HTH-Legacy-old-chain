@@ -1,8 +1,8 @@
-// Copyright (c) 2014-2018 The Proton Core developers
+// Copyright (c) 2014-2018 The Reden Core developers
 
 #include "governance.h"
 
-#include "test/test_proton.h"
+#include "test/test_reden.h"
 
 #include <boost/test/unit_test.hpp>
 

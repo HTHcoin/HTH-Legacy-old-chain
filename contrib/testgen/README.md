@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven Proton tests.
+Utilities to generate test vectors for the data-driven Reden tests.
 
 Usage: 
 

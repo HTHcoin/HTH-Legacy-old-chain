@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Proton Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Reden Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Proton-Qt</string>
+  <string>Reden-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Proton-Qt</string>
+  <string>Reden-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.proton.Proton-Qt</string>
+  <string>org.reden.Reden-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.proton.ProtonPayment</string>
+      <string>org.reden.RedenPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>proton</string>
+        <string>reden</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.proton.paymentrequest</string>
+      <string>org.reden.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Proton payment request</string>
+      <string>Reden payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-proton-payment-request</string>
+        <string>application/x-reden-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>protoncoinmentrequest</string>
+          <string>redencoinmentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.proton.paymentrequest</string>
+        <string>org.reden.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
