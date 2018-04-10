@@ -1,19 +1,19 @@
-Proton Core 2.0.0
+Reden Core 1.0.0
 ===============================
 
 `master:` [![Build Status](https://travis-ci.org/protoncoin/protoncoin.svg?branch=master)](https://travis-ci.org/protoncoin/protoncoin)
 
-https://protoncoin.io
+https://reden.io
 
 
-What is Proton?
+What is Reden?
 ----------------
 
-ProtonCoin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
+Reden-Coin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
 
 
 For more information, as well as an immediately usable, binary version of
-the Proton Core software, see https://protoncoin.io.
+the Reden Core software, see https://reden.io.
 
 
 License
@@ -26,8 +26,8 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
-[Tags](https://github.com/protoncoin/protoncoin/tags) are created to indicate new official,
-stable release versions of Proton Core.
+[Tags](https://github.com/Reden/Reden/tags) are created to indicate new official,
+stable release versions of Reden Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
