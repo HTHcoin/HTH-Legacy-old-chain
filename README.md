@@ -3,7 +3,7 @@ Reden Core 2.0.0
 
 `master:` [![Build Status](https://travis-ci.org/redencoin/redencoin.svg?branch=master)](https://travis-ci.org/redencoin/redencoin)
 
-https://redencoin.io
+https://www.reden.io
 
 
 What is Reden?
