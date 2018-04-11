@@ -1,13 +1,13 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2017 The Raven Core developers
-// Copyright (c) 2017-2018 The Reden Core developers
+// Copyright (c) 2009-2016 The Bitcoin Core developers
+// Copyright (c) 2017 The Reden Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_HASH_H
 #define BITCOIN_HASH_H
 #include <iostream>
+#include <chrono>
 #include "crypto/ripemd160.h"
 #include "crypto/sha256.h"
 #include "prevector.h"
@@ -36,7 +36,6 @@ extern "C" {
 #include <vector>
 
 typedef uint256 ChainCode;
-
 #ifdef GLOBALDEFINED
 #define GLOBAL
 #else
@@ -54,7 +53,6 @@ GLOBAL sph_cubehash512_context  z_cubehash;
 GLOBAL sph_shavite512_context   z_shavite;
 GLOBAL sph_simd512_context      z_simd;
 GLOBAL sph_echo512_context      z_echo;
-
 #define fillz() do { \
     sph_blake512_init(&z_blake); \
     sph_bmw512_init(&z_bmw); \
@@ -68,16 +66,13 @@ GLOBAL sph_echo512_context      z_echo;
     sph_simd512_init(&z_simd); \
     sph_echo512_init(&z_echo); \
 } while (0)
-
 #define ZBLAKE (memcpy(&ctx_blake, &z_blake, sizeof(z_blake)))
 #define ZBMW (memcpy(&ctx_bmw, &z_bmw, sizeof(z_bmw)))
 #define ZGROESTL (memcpy(&ctx_groestl, &z_groestl, sizeof(z_groestl)))
 #define ZJH (memcpy(&ctx_jh, &z_jh, sizeof(z_jh)))
 #define ZKECCAK (memcpy(&ctx_keccak, &z_keccak, sizeof(z_keccak)))
 #define ZSKEIN (memcpy(&ctx_skein, &z_skein, sizeof(z_skein)))
-
-/* ----------- Bitcoin Hash ------------------------------------------------- */
-/** A hasher class for Bitcoin's 256-bit hash (double SHA-256). */
+/** A hasher class for Reden's 256-bit hash (double SHA-256). */
 class CHash256 {
 private:
     CSHA256 sha;
@@ -85,9 +80,9 @@ public:
     static const size_t OUTPUT_SIZE = CSHA256::OUTPUT_SIZE;
 
     void Finalize(unsigned char hash[OUTPUT_SIZE]) {
-        unsigned char buf[sha.OUTPUT_SIZE];
+        unsigned char buf[CSHA256::OUTPUT_SIZE];
         sha.Finalize(buf);
-        sha.Reset().Write(buf, sha.OUTPUT_SIZE).Finalize(hash);
+        sha.Reset().Write(buf, CSHA256::OUTPUT_SIZE).Finalize(hash);
     }
 
     CHash256& Write(const unsigned char *data, size_t len) {
@@ -101,7 +96,7 @@ public:
     }
 };
 
-/** A hasher class for Bitcoin's 160-bit hash (SHA-256 + RIPEMD-160). */
+/** A hasher class for Reden's 160-bit hash (SHA-256 + RIPEMD-160). */
 class CHash160 {
 private:
     CSHA256 sha;
@@ -109,9 +104,9 @@ public:
     static const size_t OUTPUT_SIZE = CRIPEMD160::OUTPUT_SIZE;
 
     void Finalize(unsigned char hash[OUTPUT_SIZE]) {
-        unsigned char buf[sha.OUTPUT_SIZE];
+        unsigned char buf[CSHA256::OUTPUT_SIZE];
         sha.Finalize(buf);
-        CRIPEMD160().Write(buf, sha.OUTPUT_SIZE).Finalize(hash);
+        CRIPEMD160().Write(buf, CSHA256::OUTPUT_SIZE).Finalize(hash);
     }
 
     CHash160& Write(const unsigned char *data, size_t len) {
@@ -148,7 +143,6 @@ inline uint256 Hash(const T1 p1begin, const T1 p1end,
     return result;
 }
 
-/** Compute the 256-bit hash of the concatenation of three objects. */
 template<typename T1, typename T2, typename T3>
 inline uint256 Hash(const T1 p1begin, const T1 p1end,
                     const T2 p2begin, const T2 p2end,
@@ -161,8 +155,6 @@ inline uint256 Hash(const T1 p1begin, const T1 p1end,
               .Finalize((unsigned char*)&result);
     return result;
 }
-
-/** Compute the 256-bit hash of the concatenation of three objects. */
 template<typename T1, typename T2, typename T3, typename T4>
 inline uint256 Hash(const T1 p1begin, const T1 p1end,
                     const T2 p2begin, const T2 p2end,
@@ -177,8 +169,6 @@ inline uint256 Hash(const T1 p1begin, const T1 p1end,
               .Finalize((unsigned char*)&result);
     return result;
 }
-
-/** Compute the 256-bit hash of the concatenation of three objects. */
 template<typename T1, typename T2, typename T3, typename T4, typename T5>
 inline uint256 Hash(const T1 p1begin, const T1 p1end,
                     const T2 p2begin, const T2 p2end,
@@ -195,8 +185,6 @@ inline uint256 Hash(const T1 p1begin, const T1 p1end,
               .Finalize((unsigned char*)&result);
     return result;
 }
-
-/** Compute the 256-bit hash of the concatenation of three objects. */
 template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
 inline uint256 Hash(const T1 p1begin, const T1 p1end,
                     const T2 p2begin, const T2 p2end,
@@ -215,7 +203,6 @@ inline uint256 Hash(const T1 p1begin, const T1 p1end,
               .Finalize((unsigned char*)&result);
     return result;
 }
-
 /** Compute the 160-bit hash an object. */
 template<typename T1>
 inline uint160 Hash160(const T1 pbegin, const T1 pend)
@@ -254,9 +241,9 @@ public:
 
     int GetType() const { return nType; }
     int GetVersion() const { return nVersion; }
-    CHashWriter& write(const char *pch, size_t size) {
+
+    void write(const char *pch, size_t size) {
         ctx.Write((const unsigned char*)pch, size);
-        return (*this);
     }
 
     // invalidates the object
@@ -269,7 +256,7 @@ public:
     template<typename T>
     CHashWriter& operator<<(const T& obj) {
         // Serialize to this stream
-        ::Serialize(*this, obj, nType, nVersion);
+        ::Serialize(*this, obj);
         return (*this);
     }
 };
@@ -393,11 +380,39 @@ inline uint256 HashX16R(const T1 pbegin, const T1 pend, const uint256 PrevBlockH
     sph_whirlpool_context    ctx_whirlpool;  //E
     sph_sha512_context       ctx_sha512;     //F
 
+
+    //////
+    // Insert x16s code here...
+    //
+    // Cliffnotes: use last sixteen of PrevBlockHash to shuffle
+    // a list of all algos and append that to PrevBlockHash and pass to hasher
+    //////
+
+    std::string hashString = PrevBlockHash.GetHex(); // uint256 to string
+    std::string list = "0123456789abcdef";
+    std::string order = list;
+
+    std::string hashFront = hashString.substr(0,48); // preserve first 48 chars
+    std::string sixteen = hashString.substr(48,64); // extract last sixteen chars
+
+    for(int i=0; i<16; i++){
+      int offset = list.find(sixteen[i]); // find offset of sixteen char
+
+      order.insert(0, 1, order[offset]); // insert the nth character at the beginning
+      order.erase(offset+1, 1);  // erase the n+1 character (was nth)
+    }
+
+    const uint256 scrambleHash = uint256S(hashFront + order); // uint256 with length of hash and shuffled last sixteen
+
+    //////
+    //
+    //////
+
     static unsigned char pblank[1];
 
     uint512 hash[16];
 
-    for (int i=0;i<16;i++) 
+    for (int i=0;i<16;i++)
     {
         const void *toHash;
         int lenToHash;
@@ -409,7 +424,7 @@ inline uint256 HashX16R(const T1 pbegin, const T1 pend, const uint256 PrevBlockH
             lenToHash = 64;
         }
 
-        hashSelection = GetHashSelection(PrevBlockHash, i);
+        hashSelection = GetHashSelection(scrambleHash, i); // change PrevBlockHash to scrambleHash (x16s)
 
         switch(hashSelection) {
             case 0:
@@ -497,5 +512,6 @@ inline uint256 HashX16R(const T1 pbegin, const T1 pend, const uint256 PrevBlockH
 
     return hash[15].trim256();
 }
+
 
 #endif // BITCOIN_HASH_H
