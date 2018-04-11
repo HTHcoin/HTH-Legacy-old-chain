@@ -96,8 +96,8 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1502280000; // Aug 9th, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1533816000; // Aug 9th, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1523923200; // Aug 17th, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1555459200; // April 17, 2019
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000010d96c32fd677"); //1938
@@ -130,12 +130,12 @@ public:
         vSeeds.push_back(CDNSSeedData("redencoin4", "seed4.redencoin.info"));
         vSeeds.push_back(CDNSSeedData("dnsseed", "dnsseed.redencoin.info"));
 
-        // Reden addresses start with 'P'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,55);
+        // Reden addresses start with 'R'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         // Reden script addresses start with '7'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,15);
-        // Reden private keys start with '7' or 'P' (?)
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,192);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
+        // Reden private keys start with 'E'
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
         // Reden BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         // Reden BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
@@ -181,8 +181,8 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 262800;
-        consensus.nMasternodePaymentsStartBlock = 10000; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
+        consensus.nSubsidyHalvingInterval = 130000;
+        consensus.nMasternodePaymentsStartBlock = 2; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
         consensus.nMasternodePaymentsIncreaseBlock = 46000;
         consensus.nMasternodePaymentsIncreasePeriod = 576;
         consensus.nInstantSendKeepLock = 6;
@@ -213,8 +213,8 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1502280000; // Aug 9th, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1533816000; // Aug 9th, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1523923200; // Apr 17, 2017
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1555459200; // Apr 17, 2018
 
         pchMessageStart[0] = 0x70;
         pchMessageStart[1] = 0xa7;
@@ -234,12 +234,12 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        // Testnet Reden addresses start with 'n'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,112);
+        // Testnet Reden addresses start with 'R'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,61);
         // Testnet Reden script addresses start with '5'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
         // Testnet private keys start with '5' or 'n' (Bitcoin defaults) (?)
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,240);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
         // Testnet Reden BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         // Testnet Reden BIP32 prvkeys start with 'tprv' (Bitcoin defaults)

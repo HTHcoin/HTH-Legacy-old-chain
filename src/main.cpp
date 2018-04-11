@@ -1,3 +1,4 @@
+
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
@@ -1744,18 +1745,14 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
     if (nPrevHeight == 0) {
-        return 1000000 * COIN;
-    }
-
-    if (nPrevHeight + 1 < APRIL2018_REWARDS_BLOCK_CHANGE) {// 2018/04/02 @ approx. 13:00 (UTC)
-        return 25 * COIN;
+        return 2369865 * COIN;
     }
 
     CAmount nSubsidy = 50 * COIN;
 
-    // yearly decline of production by 10% per year.
+    // yearly decline of production by 20% per 3 months.
     for (int i = consensusParams.nSubsidyHalvingInterval; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
-        nSubsidy -= nSubsidy * 0.12;
+        nSubsidy -= nSubsidy * 0.20;
     }
 
     return fSuperblockPartOnly ? 0 : nSubsidy;
@@ -1763,11 +1760,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    if (nHeight < APRIL2018_REWARDS_BLOCK_CHANGE) {// 2018/04/02 @ approx. 13:00 (UTC)
-        return blockValue * 0.6;
-    }
-
-    return blockValue * 0.85;
+    return blockValue * 0.40;
 }
 
 bool IsInitialBlockDownload()
