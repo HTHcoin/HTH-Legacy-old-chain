@@ -45,7 +45,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Reden coin will start 25 Dec 2017";
+    const char* pszTimestamp = "Proton coin will start 25 Dec 2017";
     const CScript genesisOutputScript = CScript() << ParseHex("040a3ada5ba6280b99f49a92ba47221e6a72af844ec49d0c8bbdae1ec09a4c79b22e42eefe670ae04490556f91780eb57de76493d020c91d0c421c2fa052b28a2b") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -118,17 +118,18 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-       // genesis = CreateGenesisBlock(1514160000, 1648566, 0x1e0ffff0, 1, 50 * COIN);
-        //consensus.hashGenesisBlock = genesis.GetHash();
-        //assert(consensus.hashGenesisBlock == uint256S("0x00000e1728b630fd83aecbc51546c7915fffb7d3c897b5fd8c4b14043070b7f0"));
-        //assert(genesis.hashMerkleRoot == uint256S("0x33a98e8f8089165dc24358b01d52dd740011bdbffad052d51d3ac3588af2f487"));
-
-	genesis = CreateGenesisBlock(1504653953, 0, 0x1d00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1514160000, 1648566, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        printf("%s\n", consensus.hashGenesisBlock.ToString().c_str());
-        printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(consensus.hashGenesisBlock == uint256S("a51381143c954ecdd9584989a01b37e673867a11309f592dbe6fc2ab92a160f2"));
-        assert(genesis.hashMerkleRoot == uint256S("a71192f5fff635cd240db0f34a5662de6ba73787f96d6bf29e527b2f79272737"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000e1728b630fd83aecbc51546c7915fffb7d3c897b5fd8c4b14043070b7f0"));
+        assert(genesis.hashMerkleRoot == uint256S("0x33a98e8f8089165dc24358b01d52dd740011bdbffad052d51d3ac3588af2f487"));
+
+	//genesis = CreateGenesisBlock(1504653953, 0, 0x1d00ffff, 1, 50 * COIN);
+	//genesis = CreateGenesisBlock(1523513141, 25449000, 0x1e00ffff, 4, 50 * COIN);
+	//consensus.hashGenesisBlock = genesis.GetHash();
+        //printf("%s\n", consensus.hashGenesisBlock.ToString().c_str());
+        //printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
+        //assert(consensus.hashGenesisBlock == uint256S("a51381143c954ecdd9584989a01b37e673867a11309f592dbe6fc2ab92a160f2"));
+        //assert(genesis.hashMerkleRoot == uint256S("a71192f5fff635cd240db0f34a5662de6ba73787f96d6bf29e527b2f79272737"));
         vSeeds.push_back(CDNSSeedData("redencoin1", "seed1.redencoin.info"));
         vSeeds.push_back(CDNSSeedData("redencoin2", "seed2.redencoin.info"));
         vSeeds.push_back(CDNSSeedData("redencoin3", "seed3.redencoin.info"));

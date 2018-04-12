@@ -399,10 +399,10 @@
 /* #undef USE_COVERAGE */
 
 /* Define if dbus support should be compiled in */
-#define USE_DBUS 1
+/* #undef USE_DBUS */
 
 /* Define if QR support should be compiled in */
-#define USE_QRCODE 1
+/* #undef USE_QRCODE */
 
 /* UPnP support not compiled if undefined, otherwise value (0 or 1) determines
    default state */
