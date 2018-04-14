@@ -1,3 +1,4 @@
+
 Reden Core 1.0.0
 ===============================
 
@@ -11,7 +12,7 @@ Reden-Coin is a fully decentralised cryptocurrency built on the premise of provi
 
 
 For more information, as well as an immediately usable, binary version of
-the Reden Core software, see https://reden.io.
+the Reden Core software, see https://reden.io
 
 
 License
@@ -23,8 +24,8 @@ information or see https://opensource.org/licenses/MIT.
 Development Process
 -------------------
 
-The `master` branch is meant to be stable. Development is normally done in separate branches.
-[Tags](https://github.com/Reden/Reden/tags) are created to indicate new official,
+The `master` branch is meant to be stable. Development is normally done in separate bran
+[Tags](https://github.com/Reden/Reden/tags) are created to indicate new official,l.0.0
 stable release versions of Reden Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

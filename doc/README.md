@@ -1,11 +1,11 @@
-Proton Core 1.0.0
+Reden Core 1.0.0
 =====================
 
-This is the official reference wallet for Proton digital currency and comprises the backbone of the Proton peer-to-peer network. You can [download Proton Core](https://protoncoin.io) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Reden digital currency and comprises the backbone of the Reden peer-to-peer network. You can [download Reden Core](https://redencoin.io) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Proton on your native platform.
+The following are some helpful notes on how to run Reden on your native platform.
 
 ### Unix
 
@@ -16,22 +16,22 @@ Unpack the files into a directory and run:
 
 ### Windows
 
-Unpack the files into a directory, and then run proton-qt.exe.
+Unpack the files into a directory, and then run reden-qt.exe.
 
 ### OS X
 
-Drag Proton-Qt to your applications folder, and then run Proton-Qt.
+Drag Reden-Qt to your applications folder, and then run Reden-Qt.
 
 ### Need Help?
 
-* See the [Proton documentation](https://protoncoin.atlassian.net/wiki/display/DOC)
+* See the [Reden documentation](https://redencoin.atlassian.net/wiki/display/DOC)
 for help and more information.
-* Ask for help on [#protoncoin](http://webchat.freenode.net?channels=protoncoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=protoncoin).
-* Ask for help on the [ProtonTalk](https://protontalk.org/) forums.
+* Ask for help on [#redencoin](http://webchat.freenode.net?channels=redencoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=redencoin).
+* Ask for help on the [RedenTalk](https://redentalk.org/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Proton Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Reden Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -41,7 +41,7 @@ The following are developer notes on how to build Proton Core on your native pla
 
 Development
 ---------------------
-The Proton Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Reden Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -57,8 +57,8 @@ The Proton Core repo's [root README](/README.md) contains relevant information o
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [ProtonTalk](https://protontalk.org/) forums, in the Development & Technical Discussion board.
-* Discuss on [#protoncoin](http://webchat.freenode.net/?channels=protoncoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=protoncoin).
+* Discuss on the [RedenTalk](https://redentalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on [#redencoin](http://webchat.freenode.net/?channels=redencoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=redencoin).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

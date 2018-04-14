@@ -1,15 +1,15 @@
 [Unit]
-Description=Proton's distributed currency daemon
+Description=Reden's distributed currency daemon
 After=network.target
 
 [Service]
-User=protoncore
-Group=protoncore
+User=redencore
+Group=redencore
 
 Type=forking
-PIDFile=/var/lib/protond/protond.pid
-ExecStart=/usr/bin/protond -daemon -pid=/var/lib/protond/protond.pid \
--conf=/etc/protoncore/proton.conf -datadir=/var/lib/protond -disablewallet
+PIDFile=/var/lib/redend/redend.pid
+ExecStart=/usr/bin/redend -daemon -pid=/var/lib/redend/redend.pid \
+-conf=/etc/redencore/reden.conf -datadir=/var/lib/redend -disablewallet
 
 Restart=always
 PrivateTmp=true

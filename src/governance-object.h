@@ -1,11 +1,11 @@
-// Copyright (c) 2014-2018 The Proton Core developers
+// Copyright (c) 2014-2018 The Reden Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef GOVERNANCE_OBJECT_H
 #define GOVERNANCE_OBJECT_H
 
-//#define ENABLE_PROTON_DEBUG
+//#define ENABLE_REDEN_DEBUG
 
 #include "cachemultimap.h"
 #include "governance-exceptions.h"

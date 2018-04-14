@@ -6,7 +6,7 @@
 #define BITCOIN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/proton-config.h"
+#include "config/reden-config.h"
 #endif
 
 #include "amount.h"
@@ -230,7 +230,7 @@ private Q_SLOTS:
     void showPeers();
     void showRepair();
 
-    /** Open external (default) editor with proton.conf */
+    /** Open external (default) editor with reden.conf */
     void showConfEditor();
     /** Open external (default) editor with masternode.conf */
     void showMNConfEditor();

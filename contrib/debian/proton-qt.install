@@ -1,6 +1,6 @@
-usr/local/bin/proton-qt usr/bin
-share/pixmaps/proton32.xpm usr/share/pixmaps
-share/pixmaps/proton16.xpm usr/share/pixmaps
-share/pixmaps/proton128.png usr/share/pixmaps
-debian/proton-qt.desktop usr/share/applications
-debian/proton-qt.protocol usr/share/kde4/services/
+usr/local/bin/reden-qt usr/bin
+share/pixmaps/reden32.xpm usr/share/pixmaps
+share/pixmaps/reden16.xpm usr/share/pixmaps
+share/pixmaps/reden128.png usr/share/pixmaps
+debian/reden-qt.desktop usr/share/applications
+debian/reden-qt.protocol usr/share/kde4/services/

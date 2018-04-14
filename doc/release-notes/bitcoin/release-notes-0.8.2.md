@@ -116,7 +116,7 @@ Gregory Maxwell
 Jeff Garzik
 Jonas Schnelli
 Larry Gilbert
-Luke Protonjr
+Luke Redenjr
 Matt Corallo
 Michael Ford
 Mike Hearn

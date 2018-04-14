@@ -4,7 +4,7 @@
 
 #include "hash.h"
 #include "utilstrencodings.h"
-#include "test/test_proton.h"
+#include "test/test_reden.h"
 
 #include <vector>
 

@@ -4,22 +4,22 @@
 
 	* means the category has an associated class
 	
-	CProtonNetwork: PROTON NETWORK (ROOT)
+	CRedenNetwork: REDEN NETWORK (ROOT)
 	has:
 		vector<CNetworkVariable> vecNetworkVariables;
-		vector<CProtonProject> vecProjects;
+		vector<CRedenProject> vecProjects;
 		vector<CGovernanceObject> vecProposals;
 		vector<CBudgetContract> vecContracts;
 		vector<CBudgetUsers> vecUsers;
 
-	CProtonProject:
+	CRedenProject:
 	has:
 		name
 		employees
 
 */
 
-	// PROTON NETWORK (ROOT)
+	// REDEN NETWORK (ROOT)
 	// 	-> NETWORK VARIABLE
 	// 		-> switch, setting
 	// 	-> CATEGORIES
@@ -49,7 +49,7 @@
 	// 			-> USER1 (only users are allowed here in this scope)
 	// 			-> USER2
 	// 		-> GROUP2 (EVO)
-	// 			-> VALUEOVERRIDE (STORE=PROTONDRIVE)
+	// 			-> VALUEOVERRIDE (STORE=REDENDRIVE)
 	// 			-> USER1
 
 	// 	-> COMPANIES

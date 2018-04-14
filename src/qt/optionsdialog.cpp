@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/proton-config.h"
+#include "config/reden-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -90,10 +90,10 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
     
     /* Theme selector */
-    ui->theme->addItem(QString("PROTON-light"), QVariant("light"));
-    ui->theme->addItem(QString("PROTON-blue"), QVariant("drkblue"));
-    ui->theme->addItem(QString("PROTON-Crownium"), QVariant("crownium"));
-    ui->theme->addItem(QString("PROTON-traditional"), QVariant("trad"));
+    ui->theme->addItem(QString("REDEN-light"), QVariant("light"));
+    ui->theme->addItem(QString("REDEN-blue"), QVariant("drkblue"));
+    ui->theme->addItem(QString("REDEN-Crownium"), QVariant("crownium"));
+    ui->theme->addItem(QString("REDEN-traditional"), QVariant("trad"));
     
     /* Language selector */
     QDir translations(":translations");

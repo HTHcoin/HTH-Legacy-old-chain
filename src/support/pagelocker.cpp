@@ -5,7 +5,7 @@
 #include "support/pagelocker.h"
 
 #if defined(HAVE_CONFIG_H)
-#include "config/proton-config.h"
+#include "config/reden-config.h"
 #endif
 
 #ifdef WIN32

@@ -1,12 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2017-2018 The Proton Core developers
+// Copyright (c) 2017-2018 The Reden Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/proton-config.h"
+#include "config/reden-config.h"
 #endif
 
 #include "util.h"
@@ -103,7 +103,7 @@ namespace boost {
 
 using namespace std;
 
-//Proton only features
+//Reden only features
 bool fMasterNode = false;
 bool fLiteMode = false;
 /**
@@ -115,8 +115,8 @@ bool fLiteMode = false;
 */
 int nWalletBackups = 10;
 
-const char * const BITCOIN_CONF_FILENAME = "proton.conf";
-const char * const BITCOIN_PID_FILENAME = "protond.pid";
+const char * const BITCOIN_CONF_FILENAME = "reden.conf";
+const char * const BITCOIN_PID_FILENAME = "redend.pid";
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
@@ -270,8 +270,8 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "proton" is a composite category enabling all Proton-related debug output
-            if(ptrCategory->count(string("proton"))) {
+            // "reden" is a composite category enabling all Reden-related debug output
+            if(ptrCategory->count(string("reden"))) {
                 ptrCategory->insert(string("privatesend"));
                 ptrCategory->insert(string("instantsend"));
                 ptrCategory->insert(string("masternode"));
@@ -495,7 +495,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "proton";
+    const char* pszModule = "reden";
 #endif
     if (pex)
         return strprintf(
@@ -515,13 +515,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\ProtonCore
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\ProtonCore
-    // Mac: ~/Library/Application Support/ProtonCore
-    // Unix: ~/.protoncore
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\RedenCore
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\RedenCore
+    // Mac: ~/Library/Application Support/RedenCore
+    // Unix: ~/.redencore
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "ProtonCore";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "RedenCore";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -531,10 +531,10 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/ProtonCore";
+    return pathRet / "Library/Application Support/RedenCore";
 #else
     // Unix
-    return pathRet / ".protoncore";
+    return pathRet / ".redencore";
 #endif
 #endif
 }
@@ -628,7 +628,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()){
-        // Create empty proton.conf if it does not excist
+        // Create empty reden.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -640,7 +640,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override proton.conf
+        // Don't overwrite existing settings so command line settings override reden.conf
         string strKey = string("-") + it->string_key;
         string strValue = it->value[0];
         InterpretNegativeSetting(strKey, strValue);

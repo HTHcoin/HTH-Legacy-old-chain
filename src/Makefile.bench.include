@@ -1,17 +1,17 @@
-bin_PROGRAMS += bench/bench_proton
+bin_PROGRAMS += bench/bench_reden
 BENCH_SRCDIR = bench
-BENCH_BINARY = bench/bench_proton$(EXEEXT)
+BENCH_BINARY = bench/bench_reden$(EXEEXT)
 
 
-bench_bench_proton_SOURCES = \
-  bench/bench_proton.cpp \
+bench_bench_reden_SOURCES = \
+  bench/bench_reden.cpp \
   bench/bench.cpp \
   bench/bench.h \
   bench/Examples.cpp
 
-bench_bench_proton_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
-bench_bench_proton_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bench_bench_proton_LDADD = \
+bench_bench_reden_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_reden_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_reden_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UNIVALUE) \
@@ -22,15 +22,15 @@ bench_bench_proton_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-bench_bench_proton_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+bench_bench_reden_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-bench_bench_proton_LDADD += $(LIBBITCOIN_WALLET)
+bench_bench_reden_LDADD += $(LIBBITCOIN_WALLET)
 endif
 
-bench_bench_proton_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-bench_bench_proton_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bench_bench_reden_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+bench_bench_reden_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno
 
@@ -42,4 +42,4 @@ bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
 bitcoin_bench_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_proton_OBJECTS) $(BENCH_BINARY)
+	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_reden_OBJECTS) $(BENCH_BINARY)

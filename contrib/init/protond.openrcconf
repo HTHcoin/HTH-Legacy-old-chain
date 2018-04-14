@@ -1,25 +1,25 @@
-# /etc/conf.d/protond: config file for /etc/init.d/protond
+# /etc/conf.d/redend: config file for /etc/init.d/redend
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/protoncore/proton.conf"
+#BITCOIND_CONFIGFILE="/etc/redencore/reden.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/protond"
+#BITCOIND_PIDDIR="/var/run/redend"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/protond.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/redend.pid"
 
-# Where to write protond data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/protond"
+# Where to write redend data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/redend"
 
-# User and group to own protond process
-#BITCOIND_USER="protoncore"
-#BITCOIND_GROUP="protoncore"
+# User and group to own redend process
+#BITCOIND_USER="redencore"
+#BITCOIND_GROUP="redencore"
 
-# Path to protond executable
-#BITCOIND_BIN="/usr/bin/protond"
+# Path to redend executable
+#BITCOIND_BIN="/usr/bin/redend"
 
-# Nice value to run protond under
+# Nice value to run redend under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)

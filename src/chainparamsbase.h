@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between proton-cli and protond)
- * of a given instance of the Proton system.
+ * CBaseChainParams defines the base parameters (shared between reden-cli and redend)
+ * of a given instance of the Reden system.
  */
 class CBaseChainParams
 {

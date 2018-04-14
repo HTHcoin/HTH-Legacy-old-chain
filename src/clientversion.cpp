@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both protond and proton-qt, to make it harder for attackers to
+ * for both redend and reden-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Proton Core");
+const std::string CLIENT_NAME("Reden Core");
 
 /**
  * Client version number

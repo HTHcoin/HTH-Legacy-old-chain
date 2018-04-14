@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018 The Proton Core developers
+// Copyright (c) 2014-2018 The Reden Core developers
 
 /*
  * FIELDS AND CLASSIFICATION
@@ -45,7 +45,7 @@
  * =========================
  *
  *   // network
- *   CProtonNetwork lvl, network-type, network-status, network-error, milestone-status*
+ *   CRedenNetwork lvl, network-type, network-status, network-error, milestone-status*
  *   CCategory lvl, category-type, status, status-error
  *   CNetworkGlobalVariable lvl, global-type, status, status-error
  *   // base: actor
@@ -79,7 +79,7 @@
  *  TREE STRUCTURE
  *  ===========================================
  * 
- *  PROTON NETWORK (ROOT)
+ *  REDEN NETWORK (ROOT)
  *      -> NETWORK GLOBOLS
  *          -> SWITCHES, SETTINGS
  *      -> CATEGORIES
@@ -117,7 +117,7 @@ private:
     int nLevel;
     std::string strCategory;
 
-    // Current OBJECT STATUS (see http://govman.protoncoin.info/index.php/Documentation_:_Status_Field)
+    // Current OBJECT STATUS (see http://govman.redencoin.info/index.php/Documentation_:_Status_Field)
     int nStatusID;
     std::string strStatusMessage;
 
@@ -130,7 +130,7 @@ public:
 };
 
 // // root node
-class CProtonNetwork : public CGovernanceObject
+class CRedenNetwork : public CGovernanceObject
 {
 private:
     std::string strName;
@@ -138,7 +138,7 @@ private:
 
 
 public:
-    CProtonNetwork(UniValue objIn)
+    CRedenNetwork(UniValue objIn)
     {
         strName = objIn["name"].get_str();
         strURL = objIn["name"].get_str();
@@ -174,9 +174,9 @@ public:
 
 };
 
-// // can be under: ProtonNetwork
+// // can be under: RedenNetwork
 // //   -- signature requirements : Key1(User)
-// class CProtonNetworkVariable : public CGovernanceObject
+// class CRedenNetworkVariable : public CGovernanceObject
 // {
 // private:
 
@@ -279,7 +279,7 @@ public:
 //     // isRootCategory()
 //     // {
 //     //     // root categories won't have categories as parents
-//     //     return (IsType() == ProtonNetwork);
+//     //     return (IsType() == RedenNetwork);
 //     // }
 
 //     // isSubcategoryOf(std::string strParentName)
