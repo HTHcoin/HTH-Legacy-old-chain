@@ -9,7 +9,7 @@ https://www.reden.io
 What is Reden?
 ----------------
 
-RedenCoin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
+Alt-Coins allow for the rapid launch of new use cases for blockchains, and investors to access projects in an unprecedented way.  Scammers are putting this whole new sector at risk. Reden will develop blockchain based tools for investors to “de-risk” their participation in the market against scammers, and genuine developers to “underwrite” their projects. Ideas include community intelligence sharing, and wallets used for example for project collateral, escrow of listing-funds and mn purchases, and other insurance/assurance objectives.
 
 
 For more information, as well as an immediately usable, binary version of
