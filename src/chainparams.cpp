@@ -67,7 +67,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 60000; // every130k blocks
         consensus.nMasternodePaymentsStartBlock = 2; // block after premine
-        consensus.nMasternodePaymentsIncreaseBlock = 158000; // not used
+        consensus.nMasternodePaymentsIncreaseBlock = 158000000; // not used
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // not used
         consensus.nInstantSendKeepLock = 24;
         consensus.nBudgetPaymentsStartBlock = 2100000000; // year 10000+
@@ -85,7 +85,7 @@ public:
         consensus.BIP34Height = 227931; // FIX
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8"); // FIX
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        consensus.nPowTargetTimespan = 2 * 2 * 60; // Reden: 1 hour, 2 blocks
+        consensus.nPowTargetTimespan = 2 * 2 * 60; // Reden: 2 blocks
         consensus.nPowTargetSpacing = 2 * 60; // Reden: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -97,8 +97,8 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1523923200; // Aug 17th, 2019
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1555459200; // April 17, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1523675804; // Aug 17th, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 9999999999; // April 17, 2019
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000010d96c32fd677"); //1938
@@ -121,7 +121,7 @@ public:
 
         genesis = CreateGenesisBlock(1523764381, 1267432, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-       /*
+   /*    
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -277,6 +277,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
      //   assert(consensus.hashGenesisBlock == uint256S("0x0000000f350d9039575f6446584f4ae4317bed76aae26ef1f2381ff73f7cd68d"));
    //     assert(genesis.hashMerkleRoot == uint256S("0x33a98e8f8089165dc24358b01d52dd740011bdbffad052d51d3ac3588af2f487"));
+
 
         vFixedSeeds.clear();
         vSeeds.clear();
