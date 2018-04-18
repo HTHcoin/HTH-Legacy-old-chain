@@ -3,7 +3,7 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-BUILDDIR="/home/ubuntu/Reden"
+BUILDDIR="/root/Reden"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.
