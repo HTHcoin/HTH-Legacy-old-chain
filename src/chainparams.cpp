@@ -119,9 +119,9 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1523764481, 1267432, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1523764481, 610747, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-   
+   /*
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -161,7 +161,8 @@ public:
                     // Mainnet --- nonce: 296277 time: 1390095618 hash: 000000bdd771b14e5a031806292305e563956ce2584278de414d9965f6ab54b0
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
-        assert(consensus.hashGenesisBlock == uint256S("00000f14dd00f47a5cc783f12c7e9d3b15e43e0f1c1ef2d512eb44fce797f37c"));
+        */
+	assert(consensus.hashGenesisBlock == uint256S("0000021c9a7641b1993274fcd031a257c1c39a7a3bd9d81379d7eca3061a4451"));
         assert(genesis.hashMerkleRoot == uint256S("434a400aa5632397845d9379b4d27d0befcb2649ac34c7ccbb015f74b1235888"));
 
 	//genesis = CreateGenesisBlock(1504653953, 0, 0x1d00ffff, 1, 50 * COIN);
@@ -219,6 +220,14 @@ public:
                         //   (the tx=... number in the SetBestChain debug.log lines)
             2800        // * estimated number of transactions per day after checkpoint
         };*/
+        checkpointData = (CCheckpointData) {
+            boost::assign::map_list_of
+            ( 0, uint256S("0000021c9a7641b1993274fcd031a257c1c39a7a3bd9d81379d7eca3061a4451")),
+            1523764481, // * UNIX timestamp of last checkpoint block
+            0,          // * total number of transactions between genesis and last checkpoint
+                        //   (the tx=... number in the SetBestChain debug.log lines)
+            500	        // * estimated number of transactions per day after checkpoint
+        };
     }
 };
 static CMainParams mainParams;
