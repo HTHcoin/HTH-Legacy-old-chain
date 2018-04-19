@@ -53,8 +53,7 @@ namespace Checkpoints {
             fWorkAfter = nExpensiveAfter*fSigcheckVerificationFactor;
         }
 
-       // return fWorkBefore / (fWorkBefore + fWorkAfter);
-	return 0.0;
+        return fWorkBefore / (fWorkBefore + fWorkAfter);
     }
 
     int GetTotalBlocksEstimate(const CCheckpointData& data)
@@ -64,8 +63,7 @@ namespace Checkpoints {
         if (checkpoints.empty())
             return 0;
 
-        //return checkpoints.rbegin()->first;
-	return 0;
+        return checkpoints.rbegin()->first;
     }
 
     CBlockIndex* GetLastCheckpoint(const CCheckpointData& data)
@@ -77,8 +75,7 @@ namespace Checkpoints {
             const uint256& hash = i.second;
             BlockMap::const_iterator t = mapBlockIndex.find(hash);
             if (t != mapBlockIndex.end())
-                //return t->second;
-		return NULL;
+                return t->second;
         }
         return NULL;
     }
