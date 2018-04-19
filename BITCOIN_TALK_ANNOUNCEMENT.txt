@@ -1,0 +1,12 @@
+REDEN: The Anti-Scam, De-risking, Community Run Altcoin
+What in the world is REDEN?
+REDEN is a direct continuation of the coin once known as EDEN. On [April 4?], the developer of EDEN, iodev, ran off with almost [16 btc?] worth of investment money that was to be used for exchanges, listings, and devlopments. Today, the community's response to this terrible incident is the birth of a new coin, headed by theBeard.be (a trusted escrow on Discord): REDEN. 
+How will REDEN help stop scams from occuring?
+1. New and current Altcoins will have the opportunity to list on the reden.io website with any amount of collateral in REDEN. There will be no maximum or minimum.
+2. On reden.io, anyone can publicly view the collateral offered by the developer.
+3. It is then up to the investor whether he wants to invest. Should the dev run away with the investor's money, scam victims may exchange their coins for a portion the REDEN collateral. (these exchanges will be verified and users will have a [week?] to submit their complaints.
+REDEN will be the altcoin that ends developer scamming:
+a) Investors will have the opportunity to view publicly offered collateral
+b) There is a scam-watch channel in the current Discord to help advise investors of possible scams
+c) There is a #scam-stories channel [or scam stories section of the website..], where scam victims may publicly post their scam stories, whether it be by a developer or Discord user, and post donation addresses for community members to help.
+
