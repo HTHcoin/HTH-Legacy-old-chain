@@ -172,14 +172,14 @@ public:
         //printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         //assert(consensus.hashGenesisBlock == uint256S("a51381143c954ecdd9584989a01b37e673867a11309f592dbe6fc2ab92a160f2"));
         //assert(genesis.hashMerkleRoot == uint256S("a71192f5fff635cd240db0f34a5662de6ba73787f96d6bf29e527b2f79272737"));
-        /*vSeeds.push_back(CDNSSeedData("redencoin1", "seed1.redencoin.info"));
-        vSeeds.push_back(CDNSSeedData("redencoin2", "seed2.redencoin.info"));
-        vSeeds.push_back(CDNSSeedData("redencoin3", "seed3.redencoin.info"));
-        vSeeds.push_back(CDNSSeedData("redencoin4", "seed4.redencoin.info"));
-        vSeeds.push_back(CDNSSeedData("dnsseed", "dnsseed.redencoin.info"));
-	*/
-	vSeeds.clear();
-	vFixedSeeds.clear();
+        //vSeeds.push_back(CDNSSeedData("redencoin1", "seed1.redencoin.info"));
+        //vSeeds.push_back(CDNSSeedData("redencoin2", "seed2.redencoin.info"));
+        //vSeeds.push_back(CDNSSeedData("redencoin3", "seed3.redencoin.info"));
+        vSeeds.push_back(CDNSSeedData("beardseed2", "redenseed2.bunkens.be"));
+        vSeeds.push_back(CDNSSeedData("beardseed1", "redenseed1.bunkens.be"));
+	
+	//vSeeds.clear();
+	//vFixedSeeds.clear();
         // Reden addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         // Reden script addresses start with '7'
