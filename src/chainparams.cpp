@@ -119,9 +119,9 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1523764582, 141614, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1523764583, 141614, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-   /*
+   
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -161,7 +161,7 @@ public:
                     // Mainnet --- nonce: 296277 time: 1390095618 hash: 000000bdd771b14e5a031806292305e563956ce2584278de414d9965f6ab54b0
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
-        */
+        
 	assert(consensus.hashGenesisBlock == uint256S("00000691672cdbd146c2aea9a4c2fc274101f516be720e539b2a5b7736455c1a"));
         assert(genesis.hashMerkleRoot == uint256S("434a400aa5632397845d9379b4d27d0befcb2649ac34c7ccbb015f74b1235888"));
 
