@@ -20,9 +20,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(REDEN);
-    unitlist.append(mREDEN);
-    unitlist.append(uREDEN);
+    unitlist.append(REDN);
+    unitlist.append(mREDN);
+    unitlist.append(uREDN);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -31,9 +31,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case REDEN:
-    case mREDEN:
-    case uREDEN:
+    case REDN:
+    case mREDN:
+    case uREDN:
     case duffs:
         return true;
     default:
@@ -47,9 +47,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case REDEN: return QString("REDEN");
-            case mREDEN: return QString("mREDEN");
-            case uREDEN: return QString::fromUtf8("μREDEN");
+            case REDN: return QString("REDEN");
+            case mREDN: return QString("mREDEN");
+            case uREDN: return QString::fromUtf8("μREDEN");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -58,9 +58,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case REDEN: return QString("tREDEN");
-            case mREDEN: return QString("mtREDEN");
-            case uREDEN: return QString::fromUtf8("μtREDEN");
+            case REDN: return QString("tREDEN");
+            case mREDN: return QString("mtREDEN");
+            case uREDN: return QString::fromUtf8("μtREDEN");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -73,9 +73,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case REDEN: return QString("Reden");
-            case mREDEN: return QString("Milli-Reden (1 / 1" THIN_SP_UTF8 "000)");
-            case uREDEN: return QString("Micro-Reden (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case REDN: return QString("Reden");
+            case mREDN: return QString("Milli-Reden (1 / 1" THIN_SP_UTF8 "000)");
+            case uREDN: return QString("Micro-Reden (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-Reden (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -84,9 +84,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case REDEN: return QString("TestRedens");
-            case mREDEN: return QString("Milli-TestReden (1 / 1" THIN_SP_UTF8 "000)");
-            case uREDEN: return QString("Micro-TestReden (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case REDN: return QString("TestRedens");
+            case mREDN: return QString("Milli-TestReden (1 / 1" THIN_SP_UTF8 "000)");
+            case uREDN: return QString("Micro-TestReden (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestReden (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -97,9 +97,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case REDEN:  return 100000000;
-    case mREDEN: return 100000;
-    case uREDEN: return 100;
+    case REDN:  return 100000000;
+    case mREDN: return 100000;
+    case uREDN: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -109,9 +109,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case REDEN: return 8;
-    case mREDEN: return 5;
-    case uREDEN: return 2;
+    case REDN: return 8;
+    case mREDN: return 5;
+    case uREDN: return 2;
     case duffs: return 0;
     default: return 0;
     }
