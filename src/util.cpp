@@ -634,8 +634,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
         if (configFile != NULL) {
         	AddSeedsToConfigFile(configFile);
         	fclose(configFile);
-        	streamConfig = boost::filesystem::ifstream(GetConfigFile());
-        	//ReadConfigFile(*mapSettingsRet, *mapMultiSettingsRet);
+        	ReadConfigFile(mapSettingsRet, mapMultiSettingsRet);
         } else {
         	LogPrintf("reden.conf file not found or can't be created\n");
         	return; // Nothing to read, so just return
