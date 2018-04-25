@@ -165,21 +165,9 @@ public:
 	assert(consensus.hashGenesisBlock == uint256S("00000a8144601b679fc258d5aba342076e89e81573676eda958f75ff0a0a8561"));
         assert(genesis.hashMerkleRoot == uint256S("b45ba0de34d2c0f9440de4f7bbbda79989a0d41757f5e145aab55cf386d15e80"));
 
-	//genesis = CreateGenesisBlock(1504653953, 0, 0x1d00ffff, 1, 50 * COIN);
-	//genesis = CreateGenesisBlock(1523513141, 25449000, 0x1e00ffff, 4, 50 * COIN);
-	//consensus.hashGenesisBlock = genesis.GetHash();
-        //printf("%s\n", consensus.hashGenesisBlock.ToString().c_str());
-        //printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
-        //assert(consensus.hashGenesisBlock == uint256S("a51381143c954ecdd9584989a01b37e673867a11309f592dbe6fc2ab92a160f2"));
-        //assert(genesis.hashMerkleRoot == uint256S("a71192f5fff635cd240db0f34a5662de6ba73787f96d6bf29e527b2f79272737"));
-        //vSeeds.push_back(CDNSSeedData("redencoin1", "seed1.redencoin.info"));
-        //vSeeds.push_back(CDNSSeedData("redencoin2", "seed2.redencoin.info"));
-        //vSeeds.push_back(CDNSSeedData("redencoin3", "seed3.redencoin.info"));
-        vSeeds.push_back(CDNSSeedData("beardseed2", "redenseed2.bunkens.be"));
-        vSeeds.push_back(CDNSSeedData("beardseed1", "redenseed1.bunkens.be"));
 	
-	//vSeeds.clear();
-	//vFixedSeeds.clear();
+        vSeeds.clear();
+        vFixedSeeds.clear();
         // Reden addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         // Reden script addresses start with '7'
@@ -193,9 +181,7 @@ public:
         // Reden BIP44 coin type is '5'
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x05).convert_to_container<std::vector<unsigned char> >();
 
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
-
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -206,20 +192,6 @@ public:
         strSporkPubKey = "04d9491a6cf40a2afaf51de3939eadca259a95843b637f82c772a5719bc64051409031803a1c33f1f9b14c24a2d6937fe5b76ffa99a9730aa27726f9934cabf7f4";
         strMasternodePaymentsPubKey = "041fda8a1eff0a55d4d5c2d10f426e9c204d8faa228e3bbbaccd716a0db59bbfbe15dc17975f41e554ad551316b97586ddf5bec909a9fc3fc36c17a9611294fcf8";
 
-        /*checkpointData = (CCheckpointData) {
-            boost::assign::map_list_of
-            (    0, uint256S("0x00000e1728b630fd83aecbc51546c7915fffb7d3c897b5fd8c4b14043070b7f0"))
-            ( 1000, uint256S("0x00000040520462647ef6997ab360d95af29e5288d8bc393643357f8ff433c366"))
-            ( 1900, uint256S("0x000000000071b6d0803cd72115d51445bc1703ed5b4cfcd18e6c7bc3fa72c167"))
-            ( 1938, uint256S("0x0000000009cc1f28c974798e6222442be48a61a8f23a1497d4cdada1c38a76c4"))
-            ( 2261, uint256S("0x00000000016d36f27c5a082407e5fbbf27760f769202165fc9ca2303db8f8da3"))
-            ( 2500, uint256S("0x000000001d9c136b34055b16c604e81cc516cedcf0d6e02358178c1096f71271"))
-            ( 8800, uint256S("0x0000000002241f4c3a10353ec625b642490dfff01734fcebbdeb733778e58635")),
-            1521392251, // * UNIX timestamp of last checkpoint block
-            10020,      // * total number of transactions between genesis and last checkpoint
-                        //   (the tx=... number in the SetBestChain debug.log lines)
-            2800        // * estimated number of transactions per day after checkpoint
-        };*/
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             ( 0, uint256S("00000a8144601b679fc258d5aba342076e89e81573676eda958f75ff0a0a8561")),
