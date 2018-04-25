@@ -3799,8 +3799,12 @@ Zaleca się również aby ustawić alarm powiadomień tzw. alertnotify, aby dać
         <translation>Prawo autorskie (c) 2009-%i deweloperzy Bitcoin</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>Prawa autorskie (C) 2014-%i deweloperzy Reden</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>Prawa autorskie (C) 2014-%i deweloperzy Proton</translation>
+    </message>
+    <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>Prawa autorskie (C) %i deweloperzy Reden</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>

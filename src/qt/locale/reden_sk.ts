@@ -3631,8 +3631,12 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Autorské práva (C) 2009-%i Vývojári Bitcoin Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>Autorské práva (C) 2014-%i Vývojári jadra Reden</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>Autorské práva (C) 2014-%i Vývojári jadra Proton</translation>
+    </message>
+    <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>Autorské práva (C) %i Vývojári jadra Reden</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>

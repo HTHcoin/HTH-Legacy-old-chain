@@ -1,4 +1,5 @@
-// Copyright (c) 2014-2018 The Reden Core developers
+// Copyright (c) 2014-2018 The Proton Core developers
+// Copyright (c) 2018 The Reden Core developers
 
 #include "cachemap.h"
 
