@@ -633,8 +633,10 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
         if (configFile != NULL) {
         	AddSeedsToConfigFile(configFile);
         	fclose(configFile);
+        	boost::filesystem::ifstream streamConfig(GetConfigFile());
+        } else {
+        	return; // Nothing to read, so just return
         }
-        return; // Nothing to read, so just return
     }
 
     set<string> setOptions;
