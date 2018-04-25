@@ -88,6 +88,7 @@ static std::string FormatVersion(int nVersion)
 
 std::string FormatFullVersion()
 {
+	LogPrintf("Full version: %s\n", CLIENT_BUILD);
     return CLIENT_BUILD;
 }
 
@@ -108,5 +109,6 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
         ss << ")";
     }
     ss << "/";
+    LogPrintf("Format SubVersion: nClientVersion-%d, comment-%s, return ss-%s\n", nClientVersion, comments, ss);
     return ss.str();
 }
