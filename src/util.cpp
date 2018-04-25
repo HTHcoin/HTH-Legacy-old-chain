@@ -1,7 +1,8 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2017-2018 The Reden Core developers
+// Copyright (c) 2017-2018 The Proton Core developers
+// Copyright (c) 2018 The Reden Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -630,9 +631,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     if (!streamConfig.good()){
         // Create empty reden.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
-        if (configFile != NULL)
-            fclose(configFile);
-        return; // Nothing to read, so just return
+        if (configFile != NULL) {
+        	AddSeedsToConfigFile(configFile);
+        	fclose(configFile);
+        	ReadConfigFile(mapSettingsRet, mapMultiSettingsRet);
+        } else {
+        	LogPrintf("reden.conf file not found or can't be created\n");
+        	return; // Nothing to read, so just return
+        }
     }
 
     set<string> setOptions;
@@ -650,6 +656,26 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     }
     // If datadir is changed in .conf file:
     ClearDatadirCache();
+}
+
+void AddSeedsToConfigFile(FILE* configFile) {
+	fprintf(configFile,"onlynet=ipv4\r\n");
+	fprintf(configFile,"addnode=144.202.109.173:13058\r\n");
+	fprintf(configFile,"addnode=140.143.129.82:13058\r\n");
+	fprintf(configFile,"addnode=113.243.73.116:13058\r\n");
+	fprintf(configFile,"addnode=45.32.226.148:13058\r\n");
+	fprintf(configFile,"addnode=141.101.14.64:13058\r\n");
+	fprintf(configFile,"addnode=84.55.19.210:13058\r\n");
+	fprintf(configFile,"addnode=108.61.142.63:13058\r\n");
+	fprintf(configFile,"addnode=8.12.22.78:13058\r\n");
+	fprintf(configFile,"addnode=108.160.138.215:13058\r\n");
+	fprintf(configFile,"addnode=167.99.206.101\r\n");
+	fprintf(configFile,"addnode=159.65.152.125\r\n");
+	fprintf(configFile,"addnode=104.236.81.19\r\n");
+	fprintf(configFile,"addnode=167.88.163.202:13058\r\n");
+	fprintf(configFile,"addnode=167.88.163.204:13058\r\n");
+	fprintf(configFile,"addnode=35.178.15.243:13058\r\n");
+	fprintf(configFile,"addnode=155.94.174.81:13058\r\n");
 }
 
 #ifndef WIN32

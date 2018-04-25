@@ -4006,8 +4006,12 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Запазени права (C) 2009-%i Bitcoin Core разработчици</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>Запазени права (C) 2014-%i Reden Core разработчиците</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>Запазени права (C) 2014-%i Porton Core разработчиците</translation>
+    </message>
+    <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>Запазени права (C) %i Reden Core разработчиците</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>

@@ -4009,8 +4009,12 @@ Dies kann passieren, wenn einige Reden aus ihrer Wallet bereits ausgegeben wurde
         <translation>Copyright (C) 2009-%i Die "Bitcoin Core"-Entwickler</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>Copyright (C) 2014-%i Die "Reden Core"-Entwickler</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>Copyright (C) 2014-%i Die "Proton Core"-Entwickler</translation>
+    </message>
+    <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>Copyright (C) %i Die "Reden Core"-Entwickler</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>

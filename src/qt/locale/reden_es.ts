@@ -3801,8 +3801,12 @@ por ejemplo: alertnotify=echo %%s | mail -s "Alerta de Reden" admin@foo.com
         <translation>Copyright (C) 2009-%i Los Desarrolladores de Bitcoin Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>Copyright (C) 2014-%i Los Desarrolladores de Reden Core</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>Copyright (C) 2014-%i Los Desarrolladores de Proton Core</translation>
+    </message>
+     <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>Copyright (C) %i Los Desarrolladores de Reden Core</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>

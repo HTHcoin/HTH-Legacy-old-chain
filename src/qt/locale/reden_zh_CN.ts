@@ -3653,8 +3653,12 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>版权(C) 2009-%i The Bitcoin Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>版权 (C) 2014-%i The Reden Core Developers</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>版权 (C) 2014-%i The Proton Core Developers</translation>
+    </message>
+    <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>版权 (C) %i The Reden Core Developers</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>

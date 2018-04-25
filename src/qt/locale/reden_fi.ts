@@ -4015,8 +4015,12 @@ Käännös päivitetty: 11.3.2017 by AjM.</translation>
         <translation>Copyright (C) 2009-%i Bitcoin Core Kehittäjät</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>Copyright (C) 2014-%i Reden Core Kehittäjät</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>Copyright (C) 2014-%i Proton Core Kehittäjät</translation>
+    </message>
+    <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>Copyright (C) %i Reden Core Kehittäjät</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
