@@ -21,7 +21,7 @@
 #define CLIENT_VERSION_MINOR 0
 
 /* Build revision */
-#define CLIENT_VERSION_REVISION 1
+#define CLIENT_VERSION_REVISION 2
 
 /* Copyright holder(s) before %s replacement */
 #define COPYRIGHT_HOLDERS "The %s developers"
@@ -356,7 +356,7 @@
 #define PACKAGE_NAME "Reden Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Reden Core 1.0.1"
+#define PACKAGE_STRING "Reden Core 1.0.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "redencore"
@@ -365,7 +365,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.0.1"
+#define PACKAGE_VERSION "1.0.2"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
