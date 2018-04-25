@@ -164,10 +164,8 @@ public:
      */   
 	assert(consensus.hashGenesisBlock == uint256S("00000a8144601b679fc258d5aba342076e89e81573676eda958f75ff0a0a8561"));
         assert(genesis.hashMerkleRoot == uint256S("b45ba0de34d2c0f9440de4f7bbbda79989a0d41757f5e145aab55cf386d15e80"));
-
-	
-        vSeeds.clear();
-        vFixedSeeds.clear();
+	vSeeds.push_back(CDNSSeedData("beardseed2", "dnsseeder1.bunkens.be"));
+        vSeeds.push_back(CDNSSeedData("beardseed1", "dnsseeder2.bunkens.be"));
         // Reden addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         // Reden script addresses start with '7'
