@@ -4006,8 +4006,12 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Bản quyền (C) 2009-%i bởi Nhóm phát triển Bitcoin Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Reden Core Developers</source>
-        <translation>Bản quyền (C) 2014-%i bởi Nhóm phát triển Reden Core</translation>
+        <source>Copyright (C) 2014-%i The Proton Core Developers</source>
+        <translation>Bản quyền (C) 2014-%i bởi Nhóm phát triển Proton Core</translation>
+    </message>
+     <message>
+        <source>Copyright (C) %i The Reden Core Developers</source>
+        <translation>Bản quyền (C) %i bởi Nhóm phát triển Reden Core</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
