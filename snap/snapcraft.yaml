@@ -1,0 +1,92 @@
+name: reden
+version: '0.1'
+summary: Reden cryptocurrency wallet
+description: |
+  Reden is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
+icon: snap/gui/reden-qt.png
+grade: stable
+confinement: strict
+
+apps:
+  reden-cli:
+    command: bin/reden-cli
+    plugs:
+      - network
+
+  redend:
+    command: bin/redend
+    plugs:
+      - network
+      - network-bind
+
+  reden-tx:
+    command: bin/reden-tx
+    plugs:
+      - network
+
+  reden-qt:
+    command: desktop-launch $SNAP/bin/reden-qt -datadir=$SNAP_USER_COMMON
+    desktop: reden-qt.desktop
+    plugs:
+      - desktop
+      - x11
+      - network
+      - network-bind
+
+parts:
+  ppa:
+    plugin: nil
+    override-pull: |
+      add-apt-repository -yu ppa:bitcoin/bitcoin
+      apt install -y libdb4.8-dev libdb4.8++-dev
+    build-packages:
+      - software-properties-common
+  reden:
+    plugin: autotools
+    after:
+      - ppa
+      - desktop-qt5
+    source: https://github.com/RedenCore/Reden.git
+    source-depth: 1
+    configflags: [--disable-tests, --disable-bench]
+    override-build: |
+      snapcraftctl build
+      cp contrib/debian/reden-qt.desktop.desktop $SNAPCRAFT_PART_INSTALL/reden-qt.desktop
+      sed -i -e 's/Icon=reden128/Icon=${SNAP}\/meta\/gui\/reden-qt.png/; s/reden-qt.desktop/Reden Core/' $SNAPCRAFT_PART_INSTALL/reden-qt.desktop
+    build-packages:
+      - bsdmainutils
+      - libboost-chrono-dev
+      - libboost-filesystem-dev
+      - libboost-program-options-dev
+      - libboost-system-dev
+      - libboost-test-dev
+      - libboost-thread-dev
+      - libevent-dev
+      - libminiupnpc-dev
+      - libprotobuf-dev
+      - libqrencode-dev
+      - libqt5core5a
+      - libqt5dbus5
+      - libqt5gui5
+      - libssl-dev
+      - libzmq3-dev
+      - pkg-config
+      - protobuf-compiler
+      - qttools5-dev
+      - qttools5-dev-tools
+    stage-packages:
+      - libatk-adaptor
+      - libboost-chrono1.58.0
+      - libboost-program-options1.58.0
+      - libboost-thread1.58.0
+      - libcanberra-gtk-module
+      - libcanberra-gtk3-module
+      - libdb4.8
+      - libdb4.8++
+      - libevent-2.0-5
+      - libevent-pthreads-2.0-5
+      - libgail-common
+      - libminiupnpc10
+      - libprotobuf9v5
+      - libqrencode3
+      - libzmq5
