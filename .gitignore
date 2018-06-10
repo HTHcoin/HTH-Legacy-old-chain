@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Snap
+reden*.snap
+reden_source.tar.bz2

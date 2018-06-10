@@ -25,13 +25,14 @@ apps:
       - network
 
   reden-qt:
-    command: desktop-launch $SNAP/bin/reden-qt -datadir=$SNAP_USER_COMMON
+    command: desktop-launch $SNAP/bin/reden-qt
     desktop: reden-qt.desktop
     plugs:
       - desktop
-      - x11
+      - home
       - network
       - network-bind
+      - x11
 
 parts:
   ppa:
