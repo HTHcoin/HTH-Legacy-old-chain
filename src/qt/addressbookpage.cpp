@@ -1,12 +1,12 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reden-config.h"
+#include "config/hth-config.h"
 #endif
 
 #include "addressbookpage.h"
@@ -70,11 +70,11 @@ AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode mode, 
     switch(tab)
     {
     case SendingTab:
-        ui->labelExplanation->setText(tr("These are your Reden addresses for sending payments. Always check the amount and the receiving address before sending coins."));
+        ui->labelExplanation->setText(tr("These are your HTH addresses for sending payments. Always check the amount and the receiving address before sending coins."));
         ui->deleteAddress->setVisible(true);
         break;
     case ReceivingTab:
-        ui->labelExplanation->setText(tr("These are your Reden addresses for receiving payments. It is recommended to use a new receiving address for each transaction."));
+        ui->labelExplanation->setText(tr("These are your HTH addresses for receiving payments. It is recommended to use a new receiving address for each transaction."));
         ui->deleteAddress->setVisible(false);
         break;
     }

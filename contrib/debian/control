@@ -1,8 +1,8 @@
-Source: reden
+Source: hth
 Section: utils
 Priority: optional
-Maintainer: Holger Schinzel <holger@redencoin.info>
-Uploaders: Holger Schinzel <holger@redencoin.info>
+Maintainer: Holger Schinzel <holger@hthcoin.info>
+Uploaders: Holger Schinzel <holger@hthcoin.info>
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -24,45 +24,45 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler,
  python
 Standards-Version: 3.9.2
-Homepage: https://redencoin.io/
-Vcs-Git: git://github.com/redencoin/redencoin.git
-Vcs-Browser: https://github.com/redencoin/redencoin
+Homepage: https://hthcoin.io/
+Vcs-Git: git://github.com/hthcoin/hthcoin.git
+Vcs-Browser: https://github.com/hthcoin/hthcoin
 
-Package: redend
+Package: hthd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Reden is an experimental new digital currency that enables anonymous, instant
- payments to anyone, anywhere in the world. Reden uses peer-to-peer
+ HTH is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. HTH uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Reden Core
+ and issuing money are carried out collectively by the network. HTH Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, redend, and the CLI tool
- reden-cli to interact with the daemon.
+ This package provides the daemon, hthd, and the CLI tool
+ hth-cli to interact with the daemon.
 
-Package: reden-qt
+Package: hth-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Reden is an experimental new digital currency that enables anonymous, instant
- payments to anyone, anywhere in the world. Reden uses peer-to-peer
+ HTH is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. HTH uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Reden Core
+ and issuing money are carried out collectively by the network. HTH Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides Reden-Qt, a GUI for Reden based on Qt.
+ This package provides HTH-Qt, a GUI for HTH based on Qt.
 
-Package: reden-tx
+Package: hth-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Reden is an experimental new digital currency that enables anonymous, instant
- payments to anyone, anywhere in the world. Reden uses peer-to-peer
+ HTH is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. HTH uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Reden Core
+ and issuing money are carried out collectively by the network. HTH Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides reden-tx, a command-line transaction creation
- tool which can be used without a reden daemon.  Some means of
+ This package provides hth-tx, a command-line transaction creation
+ tool which can be used without a hth daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

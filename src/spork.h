@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -32,7 +32,7 @@ static const int SPORK_14_REQUIRE_SENTINEL_FLAG                         = 10013;
 
 static const int64_t SPORK_2_INSTANTSEND_ENABLED_DEFAULT                = 0;            // ON
 static const int64_t SPORK_3_INSTANTSEND_BLOCK_FILTERING_DEFAULT        = 0;            // ON
-static const int64_t SPORK_5_INSTANTSEND_MAX_VALUE_DEFAULT              = 5000;         // 5000 REDEN
+static const int64_t SPORK_5_INSTANTSEND_MAX_VALUE_DEFAULT              = 5000;         // 5000 HTH
 static const int64_t SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT_DEFAULT     = 1519862400;   // ON at 2018/03/01 @ 00:00 UTC
 static const int64_t SPORK_9_SUPERBLOCKS_ENABLED_DEFAULT                = 4070908800ULL;// OFF
 static const int64_t SPORK_10_MASTERNODE_PAY_UPDATED_NODES_DEFAULT      = 4070908800ULL;// OFF

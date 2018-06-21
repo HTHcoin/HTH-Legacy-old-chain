@@ -61,7 +61,7 @@ dansmith
 Gavin Andresen
 Gregory Maxwell
 Jeff Garzik
-Luke Redenjr
+Luke HTHjr
 Philip Kaufmann
 Pieter Wuille
 Wladimir J. van der Laan

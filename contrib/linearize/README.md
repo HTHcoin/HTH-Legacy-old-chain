@@ -1,9 +1,9 @@
 # Linearize
 Construct a linear, no-fork, best version of the blockchain.
 
-## Step 0: Install reden_hash
+## Step 0: Install hth_hash
 
-https://github.com/redencoin/reden_hash
+https://github.com/hthcoin/hth_hash
 
 ## Step 1: Download hash list
 

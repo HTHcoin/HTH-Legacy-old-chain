@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -2496,10 +2496,10 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount 
     std::random_shuffle(vCoins.rbegin(), vCoins.rend(), GetRandInt);
 
     // ( bit on if present )
-    // bit 0 - 100REDEN+1
-    // bit 1 - 10REDEN+1
-    // bit 2 - 1REDEN+1
-    // bit 3 - .1REDEN+1
+    // bit 0 - 100HTH+1
+    // bit 1 - 10HTH+1
+    // bit 2 - 1HTH+1
+    // bit 3 - .1HTH+1
 
     std::vector<int> vecBits;
     if (!darkSendPool.GetDenominationsBits(nDenom, vecBits)) {
@@ -3001,9 +3001,9 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 if (!SelectCoins(nValueToSelect, setCoins, nValueIn, coinControl, nCoinType, fUseInstantSend))
                 {
                     if (nCoinType == ONLY_NOT5000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 5000 REDEN.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 5000 HTH.");
                     } else if (nCoinType == ONLY_NONDENOMINATED_NOT5000IFMN) {
-                        strFailReason = _("Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 5000 REDEN.");
+                        strFailReason = _("Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 5000 HTH.");
                     } else if (nCoinType == ONLY_DENOMINATED) {
                         strFailReason = _("Unable to locate enough PrivateSend denominated funds for this transaction.");
                         strFailReason += " " + _("PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");
@@ -3012,7 +3012,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     }
                     if (fUseInstantSend) {
                         if (nValueIn > sporkManager.GetSporkValue(SPORK_5_INSTANTSEND_MAX_VALUE)*COIN) {
-                            strFailReason += " " + strprintf(_("InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 REDEN."), sporkManager.GetSporkValue(SPORK_5_INSTANTSEND_MAX_VALUE));
+                            strFailReason += " " + strprintf(_("InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 HTH."), sporkManager.GetSporkValue(SPORK_5_INSTANTSEND_MAX_VALUE));
                         } else {
                             // could be not true but most likely that's the reason
                             strFailReason += " " + strprintf(_("InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again."), INSTANTSEND_CONFIRMATIONS_REQUIRED);
@@ -3053,7 +3053,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 
                         // Fill a vout to ourself
                         // TODO: pass in scriptChange instead of reservekey so
-                        // change transaction isn't always pay-to-reden-address
+                        // change transaction isn't always pay-to-hth-address
                         CScript scriptChange;
 
                         // coin control: send change to custom address

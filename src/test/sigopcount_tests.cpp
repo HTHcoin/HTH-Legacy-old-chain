@@ -7,7 +7,7 @@
 #include "script/script.h"
 #include "script/standard.h"
 #include "uint256.h"
-#include "test/test_reden.h"
+#include "test/test_hth.h"
 
 #include <vector>
 

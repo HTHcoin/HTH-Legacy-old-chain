@@ -1,11 +1,11 @@
 // Copyright (c) 2014-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef GOVERNANCE_CLASSES_H
 #define GOVERNANCE_CLASSES_H
 
-//#define ENABLE_REDEN_DEBUG
+//#define ENABLE_HTH_DEBUG
 
 #include "base58.h"
 #include "governance.h"

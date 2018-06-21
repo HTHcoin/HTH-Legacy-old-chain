@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -43,9 +43,9 @@ SendCoinsEntry::SendCoinsEntry(const PlatformStyle *platformStyle, QWidget *pare
     ui->deleteButton_is->setIcon(QIcon(":/icons/" + theme + "/remove"));
     ui->deleteButton_s->setIcon(QIcon(":/icons/" + theme + "/remove"));
       
-    // normal reden address field
+    // normal hth address field
     GUIUtil::setupAddressWidget(ui->payTo, this);
-    // just a label for displaying reden address(es)
+    // just a label for displaying hth address(es)
     ui->payTo_is->setFont(GUIUtil::fixedPitchFont());
 
     // Connect signals

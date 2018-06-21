@@ -1,13 +1,13 @@
 # Notes
 The sources in this directory are unit test cases.  Boost includes a
-unit testing framework, and since Reden Core already uses boost, it makes
+unit testing framework, and since HTH Core already uses boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is setup to compile an executable called "test_reden"
+The build system is setup to compile an executable called "test_hth"
 that runs all of the unit tests.  The main source file is called
-test_reden.cpp, which simply includes other files that contain the
+test_hth.cpp, which simply includes other files that contain the
 actual unit tests (outside of a couple required preprocessor
 directives).  The pattern is to create one test file for each class or
 source file for which you want to create unit tests.  The file naming
@@ -22,14 +22,14 @@ For further reading, I found the following website to be helpful in
 explaining how the boost unit test framework works:
 [http://www.alittlemadness.com/2009/03/31/c-unit-testing-with-boosttest/](http://www.alittlemadness.com/2009/03/31/c-unit-testing-with-boosttest/).
 
-test_reden has some built-in command-line arguments; for
+test_hth has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_reden --log_level=all --run_test=getarg_tests
+    test_hth --log_level=all --run_test=getarg_tests
 
-... or to run just the doublereden test:
+... or to run just the doublehth test:
 
-    test_reden --run_test=getarg_tests/doublereden
+    test_hth --run_test=getarg_tests/doublehth
 
-Run  test_reden --help   for the full list.
+Run  test_hth --help   for the full list.
 

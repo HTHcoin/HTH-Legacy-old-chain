@@ -137,7 +137,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../reden.qrc"/>
+  <include location="../hth.qrc"/>
  </resources>
  <connections/>
 </ui>

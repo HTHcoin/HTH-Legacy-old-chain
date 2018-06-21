@@ -5,7 +5,7 @@
 #include "chain.h"
 #include "random.h"
 #include "versionbits.h"
-#include "test/test_reden.h"
+#include "test/test_hth.h"
 #include "chainparams.h"
 #include "main.h"
 #include "consensus/params.h"

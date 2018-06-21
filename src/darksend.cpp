@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -33,7 +33,7 @@ std::vector<CAmount> vecPrivateSendDenominations;
 
 void CDarksendPool::ProcessMessage(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
 {
-    if(fLiteMode) return; // ignore all Reden related functionality
+    if(fLiteMode) return; // ignore all HTH related functionality
     if(!masternodeSync.IsBlockchainSynced()) return;
 
     if(strCommand == NetMsgType::DSACCEPT) {
@@ -748,7 +748,7 @@ void CDarksendPool::ChargeFees()
 
     Being that mixing has "no fees" we need to have some kind of cost associated
     with using it to stop abuse. Otherwise it could serve as an attack vector and
-    allow endless transaction that would bloat Reden and make it unusable. To
+    allow endless transaction that would bloat HTH and make it unusable. To
     stop these kinds of attacks 1 in 10 successful transactions are charged. This
     adds up to a cost of 0.001DRK per transaction on average.
 */
@@ -2197,10 +2197,10 @@ int CDarksendPool::GetDenominations(const std::vector<CTxOut>& vecTxOut, bool fS
 bool CDarksendPool::GetDenominationsBits(int nDenom, std::vector<int> &vecBitsRet)
 {
     // ( bit on if present, 4 denominations example )
-    // bit 0 - 100REDEN+1
-    // bit 1 - 10REDEN+1
-    // bit 2 - 1REDEN+1
-    // bit 3 - .1REDEN+1
+    // bit 0 - 100HTH+1
+    // bit 1 - 10HTH+1
+    // bit 2 - 1HTH+1
+    // bit 3 - .1HTH+1
 
     int nMaxDenoms = vecPrivateSendDenominations.size();
 
@@ -2464,14 +2464,14 @@ void CDarksendPool::UpdatedBlockTip(const CBlockIndex *pindex)
 //TODO: Rename/move to core
 void ThreadCheckDarkSendPool()
 {
-    if(fLiteMode) return; // disable all Reden specific functionality
+    if(fLiteMode) return; // disable all HTH specific functionality
 
     static bool fOneThread;
     if(fOneThread) return;
     fOneThread = true;
 
     // Make this thread recognisable as the PrivateSend thread
-    RenameThread("reden-privatesend");
+    RenameThread("hth-privatesend");
 
     unsigned int nTick = 0;
     unsigned int nDoAutoNextRun = nTick + PRIVATESEND_AUTO_TIMEOUT_MIN;

@@ -143,9 +143,9 @@ class ProxyTest(BitcoinTestFramework):
 
         # -proxy plus -onion, -proxyrandomize
         rv = self.node_test(self.nodes[2], [self.serv2, self.serv2, self.serv2, self.serv2], True)
-        # Check that credentials as used for -proxyrandomize connections are unique
-        credentials = set((x.username,x.password) for x in rv)
-        assert_equal(len(credentials), len(rv))
+        # Check that chthtials as used for -proxyrandomize connections are unique
+        chthtials = set((x.username,x.password) for x in rv)
+        assert_equal(len(chthtials), len(rv))
 
         if self.have_ipv6:
             # proxy on IPv6 localhost
@@ -161,28 +161,28 @@ class ProxyTest(BitcoinTestFramework):
         n0 = networks_dict(self.nodes[0].getnetworkinfo())
         for net in ['ipv4','ipv6','onion']:
             assert_equal(n0[net]['proxy'], '%s:%i' % (self.conf1.addr))
-            assert_equal(n0[net]['proxy_randomize_credentials'], True)
+            assert_equal(n0[net]['proxy_randomize_chthtials'], True)
         assert_equal(n0['onion']['reachable'], True)
 
         n1 = networks_dict(self.nodes[1].getnetworkinfo())
         for net in ['ipv4','ipv6']:
             assert_equal(n1[net]['proxy'], '%s:%i' % (self.conf1.addr))
-            assert_equal(n1[net]['proxy_randomize_credentials'], False)
+            assert_equal(n1[net]['proxy_randomize_chthtials'], False)
         assert_equal(n1['onion']['proxy'], '%s:%i' % (self.conf2.addr))
-        assert_equal(n1['onion']['proxy_randomize_credentials'], False)
+        assert_equal(n1['onion']['proxy_randomize_chthtials'], False)
         assert_equal(n1['onion']['reachable'], True)
         
         n2 = networks_dict(self.nodes[2].getnetworkinfo())
         for net in ['ipv4','ipv6','onion']:
             assert_equal(n2[net]['proxy'], '%s:%i' % (self.conf2.addr))
-            assert_equal(n2[net]['proxy_randomize_credentials'], True)
+            assert_equal(n2[net]['proxy_randomize_chthtials'], True)
         assert_equal(n2['onion']['reachable'], True)
 
         if self.have_ipv6:
             n3 = networks_dict(self.nodes[3].getnetworkinfo())
             for net in ['ipv4','ipv6']:
                 assert_equal(n3[net]['proxy'], '[%s]:%i' % (self.conf3.addr))
-                assert_equal(n3[net]['proxy_randomize_credentials'], False)
+                assert_equal(n3[net]['proxy_randomize_chthtials'], False)
             assert_equal(n3['onion']['reachable'], False)
 
 if __name__ == '__main__':

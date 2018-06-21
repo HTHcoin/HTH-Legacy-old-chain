@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: redend.service
-Upstart: redend.conf
-OpenRC:  redend.openrc
-         redend.openrcconf
-CentOS:  redend.init
-OS X:    org.reden.redend.plist
+SystemD: hthd.service
+Upstart: hthd.conf
+OpenRC:  hthd.openrc
+         hthd.openrcconf
+CentOS:  hthd.init
+OS X:    org.hth.hthd.plist
 
 have been made available to assist packagers in creating node packages here.
 

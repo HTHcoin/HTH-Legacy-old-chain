@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-//#define ENABLE_REDEN_DEBUG
+//#define ENABLE_HTH_DEBUG
 
 #include "core_io.h"
 #include "governance-classes.h"
@@ -437,7 +437,7 @@ void CSuperblockManager::CreateSuperblock(CMutableTransaction& txNewRet, int nBl
             ExtractDestination(payment.script, address1);
             CBitcoinAddress address2(address1);
 
-            // TODO: PRINT NICE N.N REDEN OUTPUT
+            // TODO: PRINT NICE N.N HTH OUTPUT
 
             DBG( cout << "CSuperblockManager::CreateSuperblock Before LogPrintf call, nAmount = " << payment.nAmount << endl; );
             LogPrintf("NEW Superblock : output %d (addr %s, amount %d)\n", i, address2.ToString(), payment.nAmount);
@@ -581,7 +581,7 @@ void CSuperblock::ParsePaymentSchedule(std::string& strPaymentAddresses, std::st
         CBitcoinAddress address(vecParsed1[i]);
         if (!address.IsValid()) {
             std::ostringstream ostr;
-            ostr << "CSuperblock::ParsePaymentSchedule -- Invalid Reden Address : " <<  vecParsed1[i];
+            ostr << "CSuperblock::ParsePaymentSchedule -- Invalid HTH Address : " <<  vecParsed1[i];
             LogPrintf("%s\n", ostr.str());
             throw std::runtime_error(ostr.str());
         }

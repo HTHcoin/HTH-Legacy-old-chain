@@ -1,15 +1,15 @@
 [Unit]
-Description=Reden's distributed currency daemon
+Description=HTH's distributed currency daemon
 After=network.target
 
 [Service]
-User=redencore
-Group=redencore
+User=hthcore
+Group=hthcore
 
 Type=forking
-PIDFile=/var/lib/redend/redend.pid
-ExecStart=/usr/bin/redend -daemon -pid=/var/lib/redend/redend.pid \
--conf=/etc/redencore/reden.conf -datadir=/var/lib/redend -disablewallet
+PIDFile=/var/lib/hthd/hthd.pid
+ExecStart=/usr/bin/hthd -daemon -pid=/var/lib/hthd/hthd.pid \
+-conf=/etc/hthcore/hth.conf -datadir=/var/lib/hthd -disablewallet
 
 Restart=always
 PrivateTmp=true

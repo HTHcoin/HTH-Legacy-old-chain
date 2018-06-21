@@ -1,6 +1,6 @@
 [Protocol]
-exec=reden-qt '%u'
-protocol=reden
+exec=hth-qt '%u'
+protocol=hth
 input=none
 output=none
 helper=true

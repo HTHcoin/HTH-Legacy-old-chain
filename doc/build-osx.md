@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build redend (headless client) for OSX.
+This guide will show you how to build hthd (headless client) for OSX.
 
 Notes
 -----
@@ -34,18 +34,18 @@ Instructions: Homebrew
 
     brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf libevent
 
-NOTE: Building with Qt4 is still supported, however, could result in a broken UI. As such, building with Qt5 is recommended. Qt5 5.7 requires C++11 which Reden Core doesn't fully support yet, Qt5 5.6.2 has some other issues, so make sure to install Qt version < 5.6.2 (5.6.1-1 is recommended).
+NOTE: Building with Qt4 is still supported, however, could result in a broken UI. As such, building with Qt5 is recommended. Qt5 5.7 requires C++11 which HTH Core doesn't fully support yet, Qt5 5.6.2 has some other issues, so make sure to install Qt version < 5.6.2 (5.6.1-1 is recommended).
     brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/e6d954bab88e89c5582498157077756900865070/Formula/qt5.rb
 
-### Building Reden Core
+### Building HTH Core
 
 1. Clone the GitHub tree to get the source code and go into the directory.
 
-        git clone https://github.com/redencoin/redencoin.git
-        cd reden
+        git clone https://github.com/hthcoin/hthcoin.git
+        cd hth
 
-2.  Build Reden Core:
-    This will configure and build the headless reden binaries as well as the gui (if Qt is found).
+2.  Build HTH Core:
+    This will configure and build the headless hth binaries as well as the gui (if Qt is found).
     You can disable the gui build by passing `--without-gui` to configure.
 
         ./autogen.sh
@@ -56,7 +56,7 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
         make check
 
-4.  (Optional) You can also install redend to your path:
+4.  (Optional) You can also install hthd to your path:
 
         make install
 
@@ -68,7 +68,7 @@ Download Qt Creator from https://www.qt.io/download/. Download the "community ed
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "reden-qt" as project name, enter src/qt as location
+4. Enter "hth-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -78,11 +78,11 @@ Download Qt Creator from https://www.qt.io/download/. Download the "community ed
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `redend` for your own use.
+You can ignore this section if you are building `hthd` for your own use.
 
-redend/reden-cli binaries are not included in the Reden-Qt.app bundle.
+hthd/hth-cli binaries are not included in the HTH-Qt.app bundle.
 
-If you are building `redend` or `Reden Core` for others, your build machine should be set up
+If you are building `hthd` or `HTH Core` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -91,30 +91,30 @@ All dependencies should be compiled with these flags:
  -arch x86_64
  -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 
-Once dependencies are compiled, see [doc/release-process.md](release-process.md) for how the Reden Core
+Once dependencies are compiled, see [doc/release-process.md](release-process.md) for how the HTH Core
 bundle is packaged and signed to create the .dmg disk image that is distributed.
 
 Running
 -------
 
-It's now available at `./redend`, provided that you are still in the `src`
+It's now available at `./hthd`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./redend` to get the filename where it should be put, or just try these
+Run `./hthd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=redenrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/RedenCore/reden.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/RedenCore/reden.conf"
+    echo -e "rpcuser=hthrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/HTHCore/hth.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/HTHCore/hth.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
 you can monitor its process by looking at the debug.log file, like this:
 
-    tail -f $HOME/Library/Application\ Support/RedenCore/debug.log
+    tail -f $HOME/Library/Application\ Support/HTHCore/debug.log
 
 Other commands:
 -------
 
-    ./redend -daemon # to start the reden daemon.
-    ./reden-cli --help  # for a list of command-line options.
-    ./reden-cli help    # When the daemon is running, to get a list of RPC commands
+    ./hthd -daemon # to start the hth daemon.
+    ./hth-cli --help  # for a list of command-line options.
+    ./hth-cli help    # When the daemon is running, to get a list of RPC commands

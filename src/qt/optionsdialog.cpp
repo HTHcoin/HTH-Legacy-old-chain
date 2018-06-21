@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reden-config.h"
+#include "config/hth-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -90,10 +90,10 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
     
     /* Theme selector */
-    ui->theme->addItem(QString("REDEN-light"), QVariant("light"));
-    ui->theme->addItem(QString("REDEN-blue"), QVariant("drkblue"));
-    ui->theme->addItem(QString("REDEN-Crownium"), QVariant("crownium"));
-    ui->theme->addItem(QString("REDEN-traditional"), QVariant("trad"));
+    ui->theme->addItem(QString("HTH-light"), QVariant("light"));
+    ui->theme->addItem(QString("HTH-blue"), QVariant("drkblue"));
+    ui->theme->addItem(QString("HTH-Crownium"), QVariant("crownium"));
+    ui->theme->addItem(QString("HTH-traditional"), QVariant("trad"));
     
     /* Language selector */
     QDir translations(":translations");

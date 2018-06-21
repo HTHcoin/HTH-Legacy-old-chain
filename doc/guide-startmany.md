@@ -4,7 +4,7 @@
 There are many ways to setup a wallet to support start-many. This guide will walk through two of them.
 
 1. [Importing an existing wallet (recommended if you are consolidating wallets).](#option1)
-2. [Sending 1000 REDEN to new wallet addresses.](#option2)
+2. [Sending 1000 HTH to new wallet addresses.](#option2)
 
 ## <a name="option1"></a>Option 1. Importing an existing wallet
 
@@ -56,9 +56,9 @@ Create a new wallet address for each Masternode.
 
 Close your QT Wallet.
 
-### Send 1000 REDEN to New Addresses
+### Send 1000 HTH to New Addresses
 
-Just like setting up a standard MN. Send exactly 1000 REDEN to each new address created above.
+Just like setting up a standard MN. Send exactly 1000 HTH to each new address created above.
 
 ### Create New Masternode Private Keys
 
@@ -78,11 +78,11 @@ Remember... this is local. Make sure your QT is not running.
 
 Create the `masternode.conf` file in the same directory as your `wallet.dat`.
 
-Copy the masternode private key and correspondig collateral output transaction that holds the 1000 REDEN.
+Copy the masternode private key and correspondig collateral output transaction that holds the 1000 HTH.
 
 The masternode private key may be an existing key from [Option 1](#option1), or a newly generated key from [Option 2](#option2). 
 
-*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 REDEN on the remote server and defeats the purpose of a hot/cold setup.*
+*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 HTH on the remote server and defeats the purpose of a hot/cold setup.*
 
 ### Get the collateral output
 
@@ -95,7 +95,7 @@ Issue the following:
 Make note of the hash (which is your collateral_output) and index.
 
 ### Enter your Masternode details into your masternode.conf file
-[From the reden github repo](https://github.com/redencoin/redencoin/blob/master/doc/masternode_conf.md)
+[From the hth github repo](https://github.com/hthcoin/hthcoin/blob/master/doc/masternode_conf.md)
 
 `masternode.conf` format is a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id and collateral output index.
 
@@ -110,20 +110,20 @@ mn01 127.0.0.1:9999 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84
 mn02 127.0.0.2:9999 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0
 ```
 
-## What about the reden.conf file?
+## What about the hth.conf file?
 
-If you are using a `masternode.conf` file you no longer need the `reden.conf` file. The exception is if you need custom settings (_thanks oblox_). In that case you **must** remove `masternode=1` from local `reden.conf` file. This option should be used only to start local Hot masternode now.
+If you are using a `masternode.conf` file you no longer need the `hth.conf` file. The exception is if you need custom settings (_thanks oblox_). In that case you **must** remove `masternode=1` from local `hth.conf` file. This option should be used only to start local Hot masternode now.
 
-## Update reden.conf on server
+## Update hth.conf on server
 
-If you generated a new masternode private key, you will need to update the remote `reden.conf` files.
+If you generated a new masternode private key, you will need to update the remote `hth.conf` files.
 
 Shut down the daemon and then edit the file.
 
-```nano .redencore/reden.conf```
+```nano .hthcore/hth.conf```
 
 ### Edit the masternodeprivkey
-If you generated a new masternode private key, you will need to update the `masternodeprivkey` value in your remote `reden.conf` file.
+If you generated a new masternode private key, you will need to update the `masternodeprivkey` value in your remote `hth.conf` file.
 
 ## Start your Masternodes
 
@@ -133,9 +133,9 @@ If your remote server is not running, start your remote daemon as you normally w
 
 You can confirm that remote server is on the correct block by issuing
 
-```reden-cli getinfo```
+```hth-cli getinfo```
 
-and comparing with the official explorer at https://explorer.redencoin.info/chain/Reden
+and comparing with the official explorer at https://explorer.hthcoin.info/chain/HTH
 
 ### Local
 
@@ -162,11 +162,11 @@ Example ```masternode start-alias mn01```
 Issue command `masternode status`
 It should return you something like that:
 ```
-reden-cli masternode status
+hth-cli masternode status
 {
     "vin" : "CTxIn(COutPoint(<collateral_output>, <collateral_output_index>), scriptSig=)",
     "service" : "<ipaddress>:<port>",
-    "pubkey" : "<1000 REDEN address>",
+    "pubkey" : "<1000 HTH address>",
     "status" : "Masternode successfully started"
 }
 ```
@@ -174,6 +174,6 @@ Command output should have "_Masternode successfully started_" in its `status` f
 
 ### Local
 
-Search your Masternodes on https://redenninja.pl/masternodes.html
+Search your Masternodes on https://hthninja.pl/masternodes.html
 
 _Hint: Bookmark it, you definitely will be using this site a lot._

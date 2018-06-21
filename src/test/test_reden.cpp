@@ -2,9 +2,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#define BOOST_TEST_MODULE Reden Test Suite
+#define BOOST_TEST_MODULE HTH Test Suite
 
-#include "test_reden.h"
+#include "test_hth.h"
 
 #include "chainparams.h"
 #include "consensus/consensus.h"
@@ -56,7 +56,7 @@ TestingSetup::TestingSetup(const std::string& chainName) : BasicTestingSetup(cha
         bitdb.MakeMock();
 #endif
         ClearDatadirCache();
-        pathTemp = GetTempPath() / strprintf("test_reden_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
+        pathTemp = GetTempPath() / strprintf("test_hth_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
         boost::filesystem::create_directories(pathTemp);
         mapArgs["-datadir"] = pathTemp.string();
         pblocktree = new CBlockTreeDB(1 << 20, true);

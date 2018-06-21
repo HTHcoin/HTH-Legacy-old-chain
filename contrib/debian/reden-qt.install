@@ -1,6 +1,6 @@
-usr/local/bin/reden-qt usr/bin
-share/pixmaps/reden32.xpm usr/share/pixmaps
-share/pixmaps/reden16.xpm usr/share/pixmaps
-share/pixmaps/reden128.png usr/share/pixmaps
-debian/reden-qt.desktop usr/share/applications
-debian/reden-qt.protocol usr/share/kde4/services/
+usr/local/bin/hth-qt usr/bin
+share/pixmaps/hth32.xpm usr/share/pixmaps
+share/pixmaps/hth16.xpm usr/share/pixmaps
+share/pixmaps/hth128.png usr/share/pixmaps
+debian/hth-qt.desktop usr/share/applications
+debian/hth-qt.protocol usr/share/kde4/services/

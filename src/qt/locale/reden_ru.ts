@@ -62,12 +62,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your Reden addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши адреса Reden для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
+        <source>These are your HTH addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши адреса HTH для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
-        <source>These are your Reden addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши адреса Reden для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
+        <source>These are your HTH addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши адреса HTH для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REDEN&lt;/b&gt;!</source>
-        <translation>Внимание: если Вы зашифруете кошелёк и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ REDEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HTH&lt;/b&gt;!</source>
+        <translation>Внимание: если Вы зашифруете кошелёк и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ HTH&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Введите старый пароль и новый пароль для бумажника.</translation>
     </message>
     <message>
-        <source>Reden Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your redens from being stolen by malware infecting your computer.</source>
-        <translation>Сейчас Reden Core закроется для завершения процесса шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши даши от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
+        <source>HTH Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hths from being stolen by malware infecting your computer.</source>
+        <translation>Сейчас HTH Core закроется для завершения процесса шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши даши от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -242,8 +242,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Reden Core</source>
-        <translation>Reden Core</translation>
+        <source>HTH Core</source>
+        <translation>HTH Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -266,16 +266,16 @@
         <translation>&amp;Отправить</translation>
     </message>
     <message>
-        <source>Send coins to a Reden address</source>
-        <translation>Отправить монеты на указанный адрес Reden</translation>
+        <source>Send coins to a HTH address</source>
+        <translation>Отправить монеты на указанный адрес HTH</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
         <translation>&amp;Получить</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and reden: URIs)</source>
-        <translation>Запросить платежи (создать QR-коды и reden: URI)</translation>
+        <source>Request payments (generates QR codes and hth: URIs)</source>
+        <translation>Запросить платежи (создать QR-коды и hth: URI)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -302,12 +302,12 @@
         <translation>Закрыть приложение</translation>
     </message>
     <message>
-        <source>&amp;About Reden Core</source>
-        <translation>О &amp;Reden Core</translation>
+        <source>&amp;About HTH Core</source>
+        <translation>О &amp;HTH Core</translation>
     </message>
     <message>
-        <source>Show information about Reden Core</source>
-        <translation>Показать информацию о Reden Core</translation>
+        <source>Show information about HTH Core</source>
+        <translation>Показать информацию о HTH Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -370,16 +370,16 @@
         <translation>П&amp;одписать сообщение...</translation>
     </message>
     <message>
-        <source>Sign messages with your Reden addresses to prove you own them</source>
-        <translation>Подписать сообщения вашими адресами Reden, чтобы доказать, что вы ими владеете</translation>
+        <source>Sign messages with your HTH addresses to prove you own them</source>
+        <translation>Подписать сообщения вашими адресами HTH, чтобы доказать, что вы ими владеете</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>П&amp;роверить сообщение...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Reden addresses</source>
-        <translation>Проверить сообщения, чтобы удостовериться, что они были подписаны определёнными адресами Reden</translation>
+        <source>Verify messages to ensure they were signed with specified HTH addresses</source>
+        <translation>Проверить сообщения, чтобы удостовериться, что они были подписаны определёнными адресами HTH</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -454,16 +454,16 @@
         <translation>Открыть &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a reden: URI or payment request</source>
-        <translation>Открыть reden: URI или запрос платежа</translation>
+        <source>Open a hth: URI or payment request</source>
+        <translation>Открыть hth: URI или запрос платежа</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Параметры командной строки</translation>
     </message>
     <message>
-        <source>Reden Core client</source>
-        <translation>Клиент Reden Core</translation>
+        <source>HTH Core client</source>
+        <translation>Клиент HTH Core</translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
@@ -490,8 +490,8 @@
         <translation>Панель вкладок</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Reden network</source>
-        <translation><numerusform>%n активное соединение с сетью Reden</numerusform><numerusform>%n активных соединения с сетью Reden</numerusform><numerusform>%n активных соединений с сетью Reden</numerusform><numerusform>%n активных соединений с сетью Reden</numerusform></translation>
+        <source>%n active connection(s) to HTH network</source>
+        <translation><numerusform>%n активное соединение с сетью HTH</numerusform><numerusform>%n активных соединения с сетью HTH</numerusform><numerusform>%n активных соединений с сетью HTH</numerusform><numerusform>%n активных соединений с сетью HTH</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -518,8 +518,8 @@
         <translation><numerusform>%n час</numerusform><numerusform>%n часа</numerusform><numerusform>%n часов</numerusform><numerusform>%n часов</numerusform></translation>
     </message>
     <message>
-        <source>Modify configuration options for Reden Core</source>
-        <translation>Изменить параметры конфигурации Reden Core</translation>
+        <source>Modify configuration options for HTH Core</source>
+        <translation>Изменить параметры конфигурации HTH Core</translation>
     </message>
     <message>
         <source>Open Wallet &amp;Configuration File</source>
@@ -534,8 +534,8 @@
         <translation>Открыть файл настроек мастернод</translation>
     </message>
     <message>
-        <source>Show the Reden Core help message to get a list with possible Reden Core command-line options</source>
-        <translation>Показать помощь о Reden Core со списком возможных параметров командной строки</translation>
+        <source>Show the HTH Core help message to get a list with possible HTH Core command-line options</source>
+        <translation>Показать помощь о HTH Core со списком возможных параметров командной строки</translation>
     </message>
     <message>
         <source>&amp;PrivateSend information</source>
@@ -925,28 +925,28 @@
         <translation>Пожалуйста, выберите уровень приватности.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 REDEN</source>
-        <translation>Использовать 2 отдельные мастерноды для перемешивания до 1000 REDEN</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 HTH</source>
+        <translation>Использовать 2 отдельные мастерноды для перемешивания до 1000 HTH</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 REDEN</source>
-        <translation>Использовать 8 отдельных мастернод для перемешивания до 1000 REDEN</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 HTH</source>
+        <translation>Использовать 8 отдельных мастернод для перемешивания до 1000 HTH</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Использовать 16 отдельных мастернод</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 REDEN to anonymize 1000 REDEN</source>
-        <translation>Это самый быстрый вариант, анонимизация 1000 REDEN будет стоить вам примерно 0.025 REDEN</translation>
+        <source>This option is the quickest and will cost about ~0.025 HTH to anonymize 1000 HTH</source>
+        <translation>Это самый быстрый вариант, анонимизация 1000 HTH будет стоить вам примерно 0.025 HTH</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 REDEN to anonymize 1000 REDEN</source>
-        <translation>Это относительно быстрый вариант, анонимизация 1000 REDEN будет стоить вам примерно 0.05 REDEN</translation>
+        <source>This option is moderately fast and will cost about 0.05 HTH to anonymize 1000 HTH</source>
+        <translation>Это относительно быстрый вариант, анонимизация 1000 HTH будет стоить вам примерно 0.05 HTH</translation>
     </message>
     <message>
-        <source>0.1 REDEN per 1000 REDEN you anonymize.</source>
-        <translation>0.1 REDEN за каждые анонимизированные 1000 REDEN.</translation>
+        <source>0.1 HTH per 1000 HTH you anonymize.</source>
+        <translation>0.1 HTH за каждые анонимизированные 1000 HTH.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -957,15 +957,15 @@
         <translation>Настройки PrivateSend</translation>
     </message>
     <message>
-        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Reden's configuration screen.</source>
+        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening HTH's configuration screen.</source>
         <translation>PrivateSend успешно установлен в режим базовой приватности (%1 и 2 раунда). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
-        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Reden's configuration screen.</source>
+        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening HTH's configuration screen.</source>
         <translation>PrivateSend успешно установлен в режим высокой приватности (%1 и 8 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
-        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Reden's configuration screen.</source>
+        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening HTH's configuration screen.</source>
         <translation>PrivateSend успешно установлен в режим максимальной приватности (%1 и 16 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
 </context>
@@ -1008,8 +1008,8 @@
         <translation>Изменение адреса для отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Reden address.</source>
-        <translation>Введённый адрес "%1" не является правильным адресом Reden.</translation>
+        <source>The entered address "%1" is not a valid HTH address.</source>
+        <translation>Введённый адрес "%1" не является правильным адресом HTH.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1050,8 +1050,8 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Reden Core</source>
-        <translation>Reden Core</translation>
+        <source>HTH Core</source>
+        <translation>HTH Core</translation>
     </message>
     <message>
         <source>version</source>
@@ -1062,8 +1062,8 @@
         <translation>(%1-бит)</translation>
     </message>
     <message>
-        <source>About Reden Core</source>
-        <translation>О Reden Core</translation>
+        <source>About HTH Core</source>
+        <translation>О HTH Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1098,8 +1098,8 @@
         <translation>Информация о PrivateSend</translation>
     </message>
     <message>
-        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Reden in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an redentive process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 REDEN, 0.1 REDEN, 1 REDEN and 10 REDEN -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="https://redencoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://redencoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
-        <translation>&lt;h3&gt;Основы PrivateSend&lt;/h3&gt;PrivateSend позволяет Вам получить настоящую финансовую конфиденциальность за счет скрытия источников Ваших средств. Все Reden в  Вашем кошельке состоят из различных ""входов", Вы можете думать о них как об отдельных монетах.&lt;br&gt;PrivateSend использует инновационный процесс для перемешивания Ваших входов со входами еще двоих человек, но при этом Ваши монеты никогда не покидают Ваш кошелек. Вы сохраняете контроль над Вашими деньгами на протяжении всего времени.&lt;hr&gt; &lt;b&gt;PrivateSend работает так:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend начинается с разбиения Ваших входов транзакций на стандартные номиналы. Такими номиналами являются 0.01 REDEN, 0.1 REDEN, 1 REDEN и 10 REDEN -- что-то вроде купюр, которыми вы пользуетесь каждый день.&lt;/li&gt; &lt;li&gt;Ваш кошелек затем отправляет запросы к особым образом настроенным сетевым узлам, называемым "мастернодами". Эти мастерноды знают только то, что Вы хотите перемешать определенные номиналы. Никакой идентифицирующей информации мастернодам не отравляется, так что они не знают "кто" Вы конкретно.&lt;/li&gt; &lt;li&gt;Сессия перемешивания начинается тогда, когда еще двое человек отправляют схожее сообщение, подтверждающее, что они хотят перемешать точно такой же номинал. Мастернода перемешивает входы и просит кошельки всех пользователей осуществить платежи по ним. Ваш кошелек осуществляет выплату самому себе, но на другой адрес (тоже из вашего кошелька).&lt;/li&gt; &lt;li&gt;Для скрытия Ваших средств кошелек должен повторить этот процесс несколько раз с каждым номиналом. Каждый раз, когда такой процесс завершается, называется "раундом". С каждым раундом PrivateSend становится экспоненциально сложнее определить откуда поступили средства.&lt;/li&gt; &lt;li&gt;Процесс перемешивания выполняется в фоне, без участия пользователя. Когда Вы захотите провести транзакцию, средства уже будут анонимизированы. Дополнительно ждать не требуется.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;ВАЖНО:&lt;/b&gt; Ваш кошелек содержит 1000 адресов. Каждое перемешивание использует до 9 из этих адресов. Это означает, что 1000 адресов хватит примерно на 100 перемешиваний. Когда 900 адресов будут уже использованы, Ваш кошелек должен создать новые адреса. Однако, он может сделать это, только если у Вас включены автоматические резервные копии.&lt;br&gt;Соответственно, пользователям с отключенным резервным копированием PrivateSend не доступен. &lt;hr&gt;Дополнительная информация доступна по ссылке &lt;a href="https://redencoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://redencoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
+        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the HTH in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an hthtive process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 HTH, 0.1 HTH, 1 HTH and 10 HTH -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="https://hthcoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://hthcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
+        <translation>&lt;h3&gt;Основы PrivateSend&lt;/h3&gt;PrivateSend позволяет Вам получить настоящую финансовую конфиденциальность за счет скрытия источников Ваших средств. Все HTH в  Вашем кошельке состоят из различных ""входов", Вы можете думать о них как об отдельных монетах.&lt;br&gt;PrivateSend использует инновационный процесс для перемешивания Ваших входов со входами еще двоих человек, но при этом Ваши монеты никогда не покидают Ваш кошелек. Вы сохраняете контроль над Вашими деньгами на протяжении всего времени.&lt;hr&gt; &lt;b&gt;PrivateSend работает так:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend начинается с разбиения Ваших входов транзакций на стандартные номиналы. Такими номиналами являются 0.01 HTH, 0.1 HTH, 1 HTH и 10 HTH -- что-то вроде купюр, которыми вы пользуетесь каждый день.&lt;/li&gt; &lt;li&gt;Ваш кошелек затем отправляет запросы к особым образом настроенным сетевым узлам, называемым "мастернодами". Эти мастерноды знают только то, что Вы хотите перемешать определенные номиналы. Никакой идентифицирующей информации мастернодам не отравляется, так что они не знают "кто" Вы конкретно.&lt;/li&gt; &lt;li&gt;Сессия перемешивания начинается тогда, когда еще двое человек отправляют схожее сообщение, подтверждающее, что они хотят перемешать точно такой же номинал. Мастернода перемешивает входы и просит кошельки всех пользователей осуществить платежи по ним. Ваш кошелек осуществляет выплату самому себе, но на другой адрес (тоже из вашего кошелька).&lt;/li&gt; &lt;li&gt;Для скрытия Ваших средств кошелек должен повторить этот процесс несколько раз с каждым номиналом. Каждый раз, когда такой процесс завершается, называется "раундом". С каждым раундом PrivateSend становится экспоненциально сложнее определить откуда поступили средства.&lt;/li&gt; &lt;li&gt;Процесс перемешивания выполняется в фоне, без участия пользователя. Когда Вы захотите провести транзакцию, средства уже будут анонимизированы. Дополнительно ждать не требуется.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;ВАЖНО:&lt;/b&gt; Ваш кошелек содержит 1000 адресов. Каждое перемешивание использует до 9 из этих адресов. Это означает, что 1000 адресов хватит примерно на 100 перемешиваний. Когда 900 адресов будут уже использованы, Ваш кошелек должен создать новые адреса. Однако, он может сделать это, только если у Вас включены автоматические резервные копии.&lt;br&gt;Соответственно, пользователям с отключенным резервным копированием PrivateSend не доступен. &lt;hr&gt;Дополнительная информация доступна по ссылке &lt;a href="https://hthcoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://hthcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
     </message>
     <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
@@ -1121,16 +1121,16 @@
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <source>Welcome to Reden Core.</source>
-        <translation>Добро пожаловать в Reden Core.</translation>
+        <source>Welcome to HTH Core.</source>
+        <translation>Добро пожаловать в HTH Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Reden Core will store its data.</source>
-        <translation>Так как вы впервые запустили программу, вы можете выбрать, где Reden Core будет хранить данные.</translation>
+        <source>As this is the first time the program is launched, you can choose where HTH Core will store its data.</source>
+        <translation>Так как вы впервые запустили программу, вы можете выбрать, где HTH Core будет хранить данные.</translation>
     </message>
     <message>
-        <source>Reden Core will download and store a copy of the Reden block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Reden Core скачает и сохранит копию цепочки блоков. Как минимум %1ГБ данных будет храниться в этом каталоге и размер данных будет со временем расти. В этом же каталоге будет сохранён кошелёк.</translation>
+        <source>HTH Core will download and store a copy of the HTH block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>HTH Core скачает и сохранит копию цепочки блоков. Как минимум %1ГБ данных будет храниться в этом каталоге и размер данных будет со временем расти. В этом же каталоге будет сохранён кошелёк.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1141,8 +1141,8 @@
         <translation>Использовать другой каталог данных:</translation>
     </message>
     <message>
-        <source>Reden Core</source>
-        <translation>Reden Core</translation>
+        <source>HTH Core</source>
+        <translation>HTH Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1330,20 +1330,20 @@
         <translation>(0 = автоматически, &lt;0 = оставить столько незагруженных ядер)</translation>
     </message>
     <message>
-        <source>Amount of Reden to keep anonymized</source>
-        <translation>Сумма постоянно анонимизированных Reden</translation>
+        <source>Amount of HTH to keep anonymized</source>
+        <translation>Сумма постоянно анонимизированных HTH</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
         <translation>К&amp;ошелёк</translation>
     </message>
     <message>
-        <source>Automatically start Reden Core after logging in to the system.</source>
-        <translation>Автоматически запускать Reden Core после входа в систему.</translation>
+        <source>Automatically start HTH Core after logging in to the system.</source>
+        <translation>Автоматически запускать HTH Core после входа в систему.</translation>
     </message>
     <message>
-        <source>&amp;Start Reden Core on system login</source>
-        <translation>&amp;Запускать Reden Core при входе в систему</translation>
+        <source>&amp;Start HTH Core on system login</source>
+        <translation>&amp;Запускать HTH Core при входе в систему</translation>
     </message>
     <message>
         <source>Show additional tab listing all your masternodes in first sub-tab&lt;br/&gt;and all masternodes on the network in second sub-tab.</source>
@@ -1390,8 +1390,8 @@
         <translation>Это пороговое значение, при достижении которого PrivateSend отключается.</translation>
     </message>
     <message>
-        <source>Automatically open the Reden Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть порт для Reden Core на роутере. Работает только в том случае, если Ваш роутер поддерживает UPnP и данная функция включена.</translation>
+        <source>Automatically open the HTH Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть порт для HTH Core на роутере. Работает только в том случае, если Ваш роутер поддерживает UPnP и данная функция включена.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1402,8 +1402,8 @@
         <translation>Принимать входящие подключения</translation>
     </message>
     <message>
-        <source>Connect to the Reden network through a SOCKS5 proxy.</source>
-        <translation>Подключаться к сети Reden через прокси SOCKS5.</translation>
+        <source>Connect to the HTH network through a SOCKS5 proxy.</source>
+        <translation>Подключаться к сети HTH через прокси SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1414,8 +1414,8 @@
         <translation>Сворачивать вместо закрытия. Если данная настройка будет выбрана, то приложение закроется только после выбора пункта меню Завершить.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Reden Core.</source>
-        <translation>Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска Reden Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting HTH Core.</source>
+        <translation>Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска HTH Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items.&lt;br/&gt;%s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1486,8 +1486,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Reden network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Подключаться к сети Reden через отдельный прокси SOCKS5 для скрытых сервисов Tor.</translation>
+        <source>Connect to the HTH network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Подключаться к сети HTH через отдельный прокси SOCKS5 для скрытых сервисов Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1519,9 +1519,9 @@
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/reden/</source>
+https://www.transifex.com/projects/p/hth/</source>
         <translation>Нет Вашего языка или перевод неполон? Помогите нам сделать перевод лучше:
-https://www.transifex.com/projects/p/reden/</translation>
+https://www.transifex.com/projects/p/hth/</translation>
     </message>
     <message>
         <source>User Interface Theme:</source>
@@ -1599,8 +1599,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Reden network after a connection is established, but this process has not completed yet.</source>
-        <translation>Отображаемая информация может быть устаревшей. Ваш кошелёк автоматически синхронизируется с сетью Reden после подключения, но этот процесс пока не завершён.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HTH network after a connection is established, but this process has not completed yet.</source>
+        <translation>Отображаемая информация может быть устаревшей. Ваш кошелёк автоматически синхронизируется с сетью HTH после подключения, но этот процесс пока не завершён.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1699,8 +1699,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Сумма и раунды:</translation>
     </message>
     <message>
-        <source>0 REDEN / 0 Rounds</source>
-        <translation>0 REDEN / 0 раундов</translation>
+        <source>0 HTH / 0 Rounds</source>
+        <translation>0 HTH / 0 раундов</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -1868,8 +1868,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Ошибка запроса платежа</translation>
     </message>
     <message>
-        <source>Cannot start reden: click-to-pay handler</source>
-        <translation>Не удаётся запустить обработчик reden: click-to-pay</translation>
+        <source>Cannot start hth: click-to-pay handler</source>
+        <translation>Не удаётся запустить обработчик hth: click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1892,8 +1892,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Неверный адрес платежа %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Reden address or malformed URI parameters.</source>
-        <translation>Не удалось разобрать URI! Возможно указан некорректный адрес Reden либо параметры URI сформированы неверно.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid HTH address or malformed URI parameters.</source>
+        <translation>Не удалось разобрать URI! Возможно указан некорректный адрес HTH либо параметры URI сформированы неверно.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1974,8 +1974,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Сумма</translation>
     </message>
     <message>
-        <source>Enter a Reden address (e.g. %1)</source>
-        <translation>Введите адрес Reden (например, %1)</translation>
+        <source>Enter a HTH address (e.g. %1)</source>
+        <translation>Введите адрес HTH (например, %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2112,8 +2112,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Использование памяти</translation>
     </message>
     <message>
-        <source>Open the Reden Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть отладочный лог-файл Reden Core из текущего каталога данных. Для больших лог-файлов эта операция может занять несколько секунд.</translation>
+        <source>Open the HTH Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть отладочный лог-файл HTH Core из текущего каталога данных. Для больших лог-файлов эта операция может занять несколько секунд.</translation>
     </message>
     <message>
         <source>&amp;Console</source>
@@ -2320,8 +2320,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>&amp;Разблокировать узел</translation>
     </message>
     <message>
-        <source>Welcome to the Reden Core RPC console.</source>
-        <translation>Добро пожаловать в RPC-консоль Reden Core.</translation>
+        <source>Welcome to the HTH Core RPC console.</source>
+        <translation>Добро пожаловать в RPC-консоль HTH Core.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2391,8 +2391,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>&amp;Повторно использовать существующий адрес получения (не рекомендуется)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Reden network.</source>
-        <translation>Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса. Обратите внимание: сообщение не будет отправлено вместе с платежом через сеть Reden.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the HTH network.</source>
+        <translation>Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса. Обратите внимание: сообщение не будет отправлено вместе с платежом через сеть HTH.</translation>
     </message>
     <message>
         <source>&amp;Message:</source>
@@ -2403,8 +2403,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Необязательная метка для нового адреса получения.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Reden network.</source>
-        <translation>Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса.&lt;br&gt;Обратите внимание: сообщение не будет отправлено вместе с платежом через сеть Reden.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the HTH network.</source>
+        <translation>Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса.&lt;br&gt;Обратите внимание: сообщение не будет отправлено вместе с платежом через сеть HTH.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -2660,7 +2660,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Если ручная комиссия  установлена в 1000 duff, а транзакция по размеру только 250 байт, то плата "за килобайт" составит лишь 250 duff,&lt;br&gt;в то время как "итого минимум" будет равна 1000 duff. Для тразакций больше килобайта в любом случае идет расчет "за килобайт".</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for reden transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for hth transactions than the network can process.</source>
         <translation>Оплаты только минимальной комиссии должно быть достаточно во всех случаях, пока в блоках достаточно места.&lt;br&gt;Однако, будьте готовы к тому, что транзакция может вовсе не получить подтверждения,&lt;br&gt;если количество транзакций будет стабильно больше, чем сеть способна обработать.</translation>
     </message>
     <message>
@@ -2860,8 +2860,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Транзакция была отклонена! Такое может произойти, если некоторые монеты уже были потрачены, например, если Вы используете одну копию кошелька (wallet.dat), а монеты были потрачены из другой копии, но не были отмечены как потраченные в этой.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Reden address</source>
-        <translation>Внимание: неверный адрес Reden</translation>
+        <source>Warning: Invalid HTH address</source>
+        <translation>Внимание: неверный адрес HTH</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2883,8 +2883,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Полу&amp;чатель:</translation>
     </message>
     <message>
-        <source>The Reden address to send the payment to</source>
-        <translation>Адрес Reden для отправки на него монет</translation>
+        <source>The HTH address to send the payment to</source>
+        <translation>Адрес HTH для отправки на него монет</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2919,8 +2919,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Ко&amp;личество:</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Reden than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Комиссия будет вычтена из отправляемой суммы. Получателю придет меньше Reden, сем указано в поле "Сумма". Если указано несколько получателей, то комиссия будет разделена между ними поровну.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of HTH than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Комиссия будет вычтена из отправляемой суммы. Получателю придет меньше HTH, сем указано в поле "Сумма". Если указано несколько получателей, то комиссия будет разделена между ними поровну.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2931,8 +2931,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Сообщение:</translation>
     </message>
     <message>
-        <source>A message that was attached to the reden: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Reden network.</source>
-        <translation>К reden: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть Reden.</translation>
+        <source>A message that was attached to the hth: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HTH network.</source>
+        <translation>К hth: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть HTH.</translation>
     </message>
     <message>
         <source>This is an unauthenticated payment request.</source>
@@ -2958,8 +2958,8 @@ https://www.transifex.com/projects/p/reden/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Reden Core is shutting down...</source>
-        <translation>Reden Core выключается...</translation>
+        <source>HTH Core is shutting down...</source>
+        <translation>HTH Core выключается...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2977,12 +2977,12 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>&amp;Подписать сообщение</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Reden sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Вы можете подписывать сообщения своими адресами, чтобы доказать, что Вы можете получать Reden на них. Будьте осторожны, не подписывайте что-то неопределённое, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive HTH sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Вы можете подписывать сообщения своими адресами, чтобы доказать, что Вы можете получать HTH на них. Будьте осторожны, не подписывайте что-то неопределённое, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
-        <source>The Reden address to sign the message with</source>
-        <translation>Адрес Reden, которым Вы хотите подписать сообщение</translation>
+        <source>The HTH address to sign the message with</source>
+        <translation>Адрес HTH, которым Вы хотите подписать сообщение</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3013,8 +3013,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Скопировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Reden address</source>
-        <translation>Подписать сообщение, чтобы доказать владение этим адресом Reden</translation>
+        <source>Sign the message to prove you own this HTH address</source>
+        <translation>Подписать сообщение, чтобы доказать владение этим адресом HTH</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3037,12 +3037,12 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Введите ниже адрес для подписи, сообщение (убедитесь, что переводы строк, пробелы, табы и т.п. в точности скопированы) и подпись, чтобы проверить сообщение. Убедитесь, что не скопировали лишнего в подпись, кроме самого подписываемого сообщения, чтобы не стать жертвой атаки "man-in-the-middle". Обратите внимание, что это лишь подтверждает, что подписывающий может получить средства на этот адрес, это не подтверждает, что он является отправителем какой-либо транзакции!</translation>
     </message>
     <message>
-        <source>The Reden address the message was signed with</source>
-        <translation>Адрес Reden, которым было подписано сообщение</translation>
+        <source>The HTH address the message was signed with</source>
+        <translation>Адрес HTH, которым было подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Reden address</source>
-        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом Reden</translation>
+        <source>Verify the message to ensure it was signed with the specified HTH address</source>
+        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом HTH</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3108,8 +3108,8 @@ https://www.transifex.com/projects/p/reden/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Reden Core</source>
-        <translation>Reden Core</translation>
+        <source>HTH Core</source>
+        <translation>HTH Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -3120,8 +3120,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Разработчики Bitcoin Core</translation>
     </message>
     <message>
-        <source>The Reden Core developers</source>
-        <translation>Разработчики Reden Core</translation>
+        <source>The HTH Core developers</source>
+        <translation>Разработчики HTH Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3632,8 +3632,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Отправка</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 REDEN.</source>
-        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 REDEN.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 HTH.</source>
+        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 HTH.</translation>
     </message>
     <message>
         <source>Used way too many inputs (&gt;%1) for this InstantSend transaction, fees could be huge.</source>
@@ -3680,14 +3680,14 @@ https://www.transifex.com/projects/p/reden/</translation>
     </message>
 </context>
 <context>
-    <name>reden-core</name>
+    <name>hth-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Привязаться к указанному адресу и всегда прослушивать только его. Используйте [хост]:порт для IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Reden Core is probably already running.</source>
-        <translation>Не удалось установить блокировку на каталог данных %s. Возможно, Reden Core уже запущен.</translation>
+        <source>Cannot obtain a lock on data directory %s. HTH Core is probably already running.</source>
+        <translation>Не удалось установить блокировку на каталог данных %s. Возможно, HTH Core уже запущен.</translation>
     </message>
     <message>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>
@@ -3726,8 +3726,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Это пре-релизная тестовая сборка - используйте на свой страх и риск - не используйте для добычи или торговых приложений</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Reden Core is probably already running.</source>
-        <translation>Не удалось привязаться к %s на этом компьютере. Возможно, Reden Core уже запущен.</translation>
+        <source>Unable to bind to %s on this computer. HTH Core is probably already running.</source>
+        <translation>Не удалось привязаться к %s на этом компьютере. Возможно, HTH Core уже запущен.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -3962,7 +3962,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Этот продукт включает ПО, разработанное проектом OpenSSL Project для использования в OpenSSL Toolkit &lt;https://www.openssl.org/&gt;, криптографическое ПО, написанное Eric Young и ПО для работы с UPnP, написанное Thomas Bernard.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 REDEN.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 HTH.</source>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции средств, отличающихся от 1000DRK.</translation>
     </message>
     <message>
@@ -4010,8 +4010,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Copyright (C) 2014-%i The Proton Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) %i The Reden Core Developers</source>
-        <translation>Copyright (C) %i The Reden Core Developers</translation>
+        <source>Copyright (C) %i The HTH Core Developers</source>
+        <translation>Copyright (C) %i The HTH Core Developers</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
@@ -4022,8 +4022,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Ошибка соединения с мастернодой.</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Reden Core</source>
-        <translation>Ошибка загрузки wallet.dat: кошелёк требует более новой версии Reden Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of HTH Core</source>
+        <translation>Ошибка загрузки wallet.dat: кошелёк требует более новой версии HTH Core</translation>
     </message>
     <message>
         <source>Found enough users, signing ( waiting %s )</source>
@@ -4066,8 +4066,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Reden Core is shutting down.</source>
-        <translation>Проверка на непротиворечивость закончилась неудачно. Reden Core выключается.</translation>
+        <source>Initialization sanity check failed. HTH Core is shutting down.</source>
+        <translation>Проверка на непротиворечивость закончилась неудачно. HTH Core выключается.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -4298,8 +4298,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Превышено значение допустимой для пула PrivateSend суммы.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Reden Core to complete</source>
-        <translation>Необходимо перезаписать кошелёк: перезапустите Reden Core для завершения операции</translation>
+        <source>Wallet needed to be rewritten: restart HTH Core to complete</source>
+        <translation>Необходимо перезаписать кошелёк: перезапустите HTH Core для завершения операции</translation>
     </message>
     <message>
         <source>Will retry...</source>
@@ -4342,16 +4342,16 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Ключ KeePassHttp для зашифрованной коммуникации с KeePass</translation>
     </message>
     <message>
-        <source>Keep N REDEN anonymized (default: %u)</source>
-        <translation>Держать N REDEN анонимизированными (по умолчанию: %u)</translation>
+        <source>Keep N HTH anonymized (default: %u)</source>
+        <translation>Держать N HTH анонимизированными (по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>Держать в памяти до &lt;n&gt; несвязных транзакций (по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Disable all Reden specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
-        <translation>Отключить всю функциональность, относящуюся к Reden (Мастерноды, PrivateSend, InstantSend, Governance) (0-1, по умолчанию: %u)</translation>
+        <source>Disable all HTH specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
+        <translation>Отключить всю функциональность, относящуюся к HTH (Мастерноды, PrivateSend, InstantSend, Governance) (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Discover own IP addresses (default: 1 when listening and no -externalip or -proxy)</source>
@@ -4402,8 +4402,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Если &lt;category&gt; не указана или &lt;category&gt; = 1, выводит всю отладочную информацию.</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 REDEN.</source>
-        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 REDEN.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 HTH.</source>
+        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 HTH.</translation>
     </message>
     <message>
         <source>InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again.</source>
@@ -4430,8 +4430,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Максимальная сумма комиссии (в %s), допустимая в одной транзакции. Установка слишком низкого значения может привести к невозможности отправить большие транзакции (по умолчанию: %s)</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong Reden Core will not work properly.</source>
-        <translation>Пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! Reden Core не сможет работать корректно, если часы настроены неверно.</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong HTH Core will not work properly.</source>
+        <translation>Пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! HTH Core не сможет работать корректно, если часы настроены неверно.</translation>
     </message>
     <message>
         <source>PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -4450,7 +4450,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Удаление блоков: последняя синхронизация кошелька выходит за рамки удаленных данных. Вам нужно запустить клиента с ключом -reindex (в случае узла с удаленными блоками это означает повторное скачивание всей цепи блоков)</translation>
     </message>
     <message>
-        <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
+        <source>Randomize chthtials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
         <translation>Использовать случайные учётные данные для каждого прокси-подключения. Эта функция позволяет изолировать потоки Tor (по умолчанию: %u)</translation>
     </message>
     <message>
@@ -4490,8 +4490,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции номиналов PrivateSend.</translation>
     </message>
     <message>
-        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 REDEN.</source>
-        <translation>Не удалось обнаружить достаточных для выполнения этой транзакции неденоминированных средств, отличающихся от 1000 REDEN.</translation>
+        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 HTH.</source>
+        <translation>Не удалось обнаружить достаточных для выполнения этой транзакции неденоминированных средств, отличающихся от 1000 HTH.</translation>
     </message>
     <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>

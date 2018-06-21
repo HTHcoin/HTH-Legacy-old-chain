@@ -1,9 +1,9 @@
-/* src/config/reden-config.h.  Generated from reden-config.h.in by configure.  */
-/* src/config/reden-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/hth-config.h.  Generated from hth-config.h.in by configure.  */
+/* src/config/hth-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef REDEN_CONFIG_H
+#ifndef HTH_CONFIG_H
 
-#define REDEN_CONFIG_H
+#define HTH_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -28,10 +28,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The Reden Core developers"
+#define COPYRIGHT_HOLDERS_FINAL "The HTH Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Reden Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "HTH Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2018
@@ -351,16 +351,16 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/NicholasAdmin/Reden/issues"
+#define PACKAGE_BUGREPORT "https://github.com/NicholasAdmin/HTH/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Reden Core"
+#define PACKAGE_NAME "HTH Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Reden Core 1.0.2"
+#define PACKAGE_STRING "HTH Core 1.0.2"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "redencore"
+#define PACKAGE_TARNAME "hthcore"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""
@@ -432,4 +432,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //REDEN_CONFIG_H
+#endif //HTH_CONFIG_H

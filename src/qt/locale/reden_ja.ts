@@ -2485,7 +2485,7 @@
     </message>
 </context>
 <context>
-    <name>reden-core</name>
+    <name>hth-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>指定のアドレスへバインドし、その上で常にリスンします。IPv6 は [host]:port 番号 と表記します</translation>
@@ -2784,8 +2784,8 @@
         <translation>Copyright (C) 2014-%i Proton Core 開発者</translation>
     </message>
      <message>
-        <source>Copyright (C) %i The Reden Core Developers</source>
-        <translation>Copyright (C) %i Reden Core 開発者</translation>
+        <source>Copyright (C) %i The HTH Core Developers</source>
+        <translation>Copyright (C) %i HTH Core 開発者</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>

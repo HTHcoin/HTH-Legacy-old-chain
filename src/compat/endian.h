@@ -6,7 +6,7 @@
 #define BITCOIN_COMPAT_ENDIAN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reden-config.h"
+#include "config/hth-config.h"
 #endif
 
 #include "compat/byteswap.h"

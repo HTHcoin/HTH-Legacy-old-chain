@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -592,7 +592,7 @@ void RPCConsole::clear()
             ).arg(fixedFontInfo.family(), ptSize)
         );
 
-    message(CMD_REPLY, (tr("Welcome to the Reden Core RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the HTH Core RPC console.") + "<br>" +
                         tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                         tr("Type <b>help</b> for an overview of available commands.")), true);
 }

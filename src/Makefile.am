@@ -55,15 +55,15 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += redend
+  bin_PROGRAMS += hthd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += reden-cli reden-tx
+  bin_PROGRAMS += hth-cli hth-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# reden core #
+# hth core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addressindex.h \
@@ -191,7 +191,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between redend and reden-qt
+# server: shared between hthd and hth-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -249,7 +249,7 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between redend and reden-qt, but only linked
+# wallet: shared between hthd and hth-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -338,7 +338,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sha512.cpp \
   crypto/sha512.h
 
-# common: shared between redend, and reden-qt and non-server tools
+# common: shared between hthd, and hth-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -395,7 +395,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between reden-cli and reden-qt
+# cli: shared between hth-cli and hth-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -406,16 +406,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-redend_SOURCES = redend.cpp
-redend_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-redend_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-redend_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+hthd_SOURCES = hthd.cpp
+hthd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+hthd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+hthd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-redend_SOURCES += redend-res.rc
+hthd_SOURCES += hthd-res.rc
 endif
 
-redend_LDADD = \
+hthd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -426,50 +426,50 @@ redend_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-redend_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+hthd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-redend_LDADD += libbitcoin_wallet.a
+hthd_LDADD += libbitcoin_wallet.a
 endif
 
-redend_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+hthd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
-# reden-cli binary #
-reden_cli_SOURCES = reden-cli.cpp
-reden_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-reden_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-reden_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# hth-cli binary #
+hth_cli_SOURCES = hth-cli.cpp
+hth_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+hth_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+hth_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-reden_cli_SOURCES += reden-cli-res.rc
+hth_cli_SOURCES += hth-cli-res.rc
 endif
 
-reden_cli_LDADD = \
+hth_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL)
-reden_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+hth_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# reden-tx binary #
-reden_tx_SOURCES = reden-tx.cpp
-reden_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-reden_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-reden_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# hth-tx binary #
+hth_tx_SOURCES = hth-tx.cpp
+hth_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+hth_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+hth_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-reden_tx_SOURCES += reden-tx-res.rc
+hth_tx_SOURCES += hth-tx-res.rc
 endif
 
-reden_tx_LDADD = \
+hth_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-reden_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+hth_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

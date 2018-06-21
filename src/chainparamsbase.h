@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between reden-cli and redend)
- * of a given instance of the Reden system.
+ * CBaseChainParams defines the base parameters (shared between hth-cli and hthd)
+ * of a given instance of the HTH system.
  */
 class CBaseChainParams
 {

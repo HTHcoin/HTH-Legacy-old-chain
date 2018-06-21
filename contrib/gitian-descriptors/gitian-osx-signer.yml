@@ -1,5 +1,5 @@
 ---
-name: "reden-dmg-signer"
+name: "hth-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -8,10 +8,10 @@ packages:
 - "faketime"
 reference_datetime: "2017-01-01 00:00:00"
 remotes:
-- "url": "https://github.com/redencoin/redencoin-detached-sigs.git"
+- "url": "https://github.com/hthcoin/hthcoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "reden-osx-unsigned.tar.gz"
+- "hth-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -28,10 +28,10 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=reden-osx-unsigned.tar.gz
-  SIGNED=reden-osx-signed.dmg
+  UNSIGNED=hth-osx-unsigned.tar.gz
+  SIGNED=hth-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   ./detached-sig-apply.sh ${UNSIGNED} signature/osx
-  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "Reden-Core" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
+  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "HTH-Core" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
   ${WRAP_DIR}/dmg dmg uncompressed.dmg ${OUTDIR}/${SIGNED}

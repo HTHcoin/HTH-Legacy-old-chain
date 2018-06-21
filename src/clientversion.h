@@ -6,14 +6,14 @@
 #define BITCOIN_CLIENTVERSION_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reden-config.h"
+#include "config/hth-config.h"
 #else
 
 /**
  * client versioning and copyright year
  */
 
-//! These need to be macros, as clientversion.cpp's and reden*-res.rc's voodoo requires it
+//! These need to be macros, as clientversion.cpp's and hth*-res.rc's voodoo requires it
 #define CLIENT_VERSION_MAJOR 1
 #define CLIENT_VERSION_MINOR 0
 #define CLIENT_VERSION_REVISION 2
@@ -38,10 +38,10 @@
 #define DO_STRINGIZE(X) #X
 
 //! Copyright string used in Windows .rc files
-#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2017-" STRINGIZE(COPYRIGHT_YEAR) " The Proton Core Developers, " STRINGIZE(COPYRIGHT_YEAR) " The Reden Core Developers"
+#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2017-" STRINGIZE(COPYRIGHT_YEAR) " The Proton Core Developers, " STRINGIZE(COPYRIGHT_YEAR) " The HTH Core Developers"
 
 /**
- * redend-res.rc includes this file, but it cannot cope with real c++ code.
+ * hthd-res.rc includes this file, but it cannot cope with real c++ code.
  * WINDRES_PREPROC is defined to indicate that its pre-processor is running.
  * Anything other than a define should be guarded below.
  */

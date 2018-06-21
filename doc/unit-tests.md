@@ -6,13 +6,13 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the redend tests manually, launch `src/test/test_reden`.
+To run the hthd tests manually, launch `src/test/test_hth`.
 
-To add more redend tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more hthd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the reden-qt tests manually, launch `src/qt/test/test_reden-qt`
+To run the hth-qt tests manually, launch `src/qt/test/test_hth-qt`
 
-To add more reden-qt tests, add them to the `src/qt/test/` directory and
+To add more hth-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.

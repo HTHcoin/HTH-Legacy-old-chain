@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Reden"
-            VALUE "FileDescription",    "reden-tx (CLI Reden transaction editor utility)"
+            VALUE "CompanyName",        "HTH"
+            VALUE "FileDescription",    "hth-tx (CLI HTH transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "reden-tx"
+            VALUE "InternalName",       "hth-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "reden-tx.exe"
-            VALUE "ProductName",        "reden-tx"
+            VALUE "OriginalFilename",   "hth-tx.exe"
+            VALUE "ProductName",        "hth-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -1,7 +1,7 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://github.com/redencoin/reden/blob/master/doc/translation_process.md#syncing-with-transifex)
+* Update translations, see [translation_process.md](https://github.com/hthcoin/hth/blob/master/doc/translation_process.md#syncing-with-transifex)
 * Update hardcoded [seeds](/contrib/seeds)
 
 * * *
@@ -10,14 +10,14 @@ Release Process
 Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
-	git clone https://github.com/redencoin/gitian.sigs.git
-	git clone https://github.com/redencoin/redencoin-detached-sigs.git
+	git clone https://github.com/hthcoin/gitian.sigs.git
+	git clone https://github.com/hthcoin/hthcoin-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://github.com/redencoin/redencoin.git
+	git clone https://github.com/hthcoin/hthcoin.git
 
-###Reden Core maintainers/release engineers, update (commit) version in sources
+###HTH Core maintainers/release engineers, update (commit) version in sources
 
-	pushd ./reden
+	pushd ./hth
 	contrib/verifysfbinaries/verify.sh
 	configure.ac
 	doc/README*
@@ -40,7 +40,7 @@ Check out the source code in the following directory hierarchy.
 
  Setup Gitian descriptors:
 
-	pushd ./reden
+	pushd ./hth
 	export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
 	export VERSION=(new version, e.g. 0.8.0)
 	git fetch
@@ -76,52 +76,52 @@ Check out the source code in the following directory hierarchy.
 
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
-	make -C ../reden/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../hth/depends download SOURCES_PATH=`pwd`/cache/common
 
 Only missing files will be fetched, so this is safe to re-run for each build.
 
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 ```
-./bin/gbuild --url reden=/path/to/reden,signature=/path/to/sigs {rest of arguments}
+./bin/gbuild --url hth=/path/to/hth,signature=/path/to/sigs {rest of arguments}
 ```
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-###Build and sign Reden Core for Linux, Windows, and OS X:
+###Build and sign HTH Core for Linux, Windows, and OS X:
 
-	./bin/gbuild --commit reden=v${VERSION} ../reden/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../reden/contrib/gitian-descriptors/gitian-linux.yml
-	mv build/out/reden-*.tar.gz build/out/src/reden-*.tar.gz ../
+	./bin/gbuild --commit hth=v${VERSION} ../hth/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../hth/contrib/gitian-descriptors/gitian-linux.yml
+	mv build/out/hth-*.tar.gz build/out/src/hth-*.tar.gz ../
 
-	./bin/gbuild --commit reden=v${VERSION} ../reden/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../reden/contrib/gitian-descriptors/gitian-win.yml
-	mv build/out/reden-*-win-unsigned.tar.gz inputs/reden-win-unsigned.tar.gz
-	mv build/out/reden-*.zip build/out/reden-*.exe ../
+	./bin/gbuild --commit hth=v${VERSION} ../hth/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../hth/contrib/gitian-descriptors/gitian-win.yml
+	mv build/out/hth-*-win-unsigned.tar.gz inputs/hth-win-unsigned.tar.gz
+	mv build/out/hth-*.zip build/out/hth-*.exe ../
 
-	./bin/gbuild --commit reden=v${VERSION} ../reden/contrib/gitian-descriptors/gitian-osx.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../reden/contrib/gitian-descriptors/gitian-osx.yml
-	mv build/out/reden-*-osx-unsigned.tar.gz inputs/reden-osx-unsigned.tar.gz
-	mv build/out/reden-*.tar.gz build/out/reden-*.dmg ../
+	./bin/gbuild --commit hth=v${VERSION} ../hth/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../hth/contrib/gitian-descriptors/gitian-osx.yml
+	mv build/out/hth-*-osx-unsigned.tar.gz inputs/hth-osx-unsigned.tar.gz
+	mv build/out/hth-*.tar.gz build/out/hth-*.dmg ../
 	popd
 
   Build output expected:
 
-  1. source tarball (reden-${VERSION}.tar.gz)
-  2. linux 32-bit and 64-bit dist tarballs (reden-${VERSION}-linux[32|64].tar.gz)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (reden-${VERSION}-win[32|64]-setup-unsigned.exe, reden-${VERSION}-win[32|64].zip)
-  4. OS X unsigned installer and dist tarball (reden-${VERSION}-osx-unsigned.dmg, reden-${VERSION}-osx64.tar.gz)
+  1. source tarball (hth-${VERSION}.tar.gz)
+  2. linux 32-bit and 64-bit dist tarballs (hth-${VERSION}-linux[32|64].tar.gz)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (hth-${VERSION}-win[32|64]-setup-unsigned.exe, hth-${VERSION}-win[32|64].zip)
+  4. OS X unsigned installer and dist tarball (hth-${VERSION}-osx-unsigned.dmg, hth-${VERSION}-osx64.tar.gz)
   5. Gitian signatures (in gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/
 
 ###Verify other gitian builders signatures to your own. (Optional)
 
   Add other gitian builders keys to your gpg keyring
 
-	gpg --import ../reden/contrib/gitian-downloader/*.pgp
+	gpg --import ../hth/contrib/gitian-downloader/*.pgp
 
   Verify the signatures
 
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../reden/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../reden/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../reden/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../hth/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../hth/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../hth/contrib/gitian-descriptors/gitian-osx.yml
 
 	popd
 
@@ -139,25 +139,25 @@ Commit your signature to gitian.sigs:
 
   Wait for Windows/OS X detached signatures:
 	Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-	Detached signatures will then be committed to the [redencoin-detached-sigs](https://github.com/redencoin/redencoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+	Detached signatures will then be committed to the [hthcoin-detached-sigs](https://github.com/hthcoin/hthcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
   Create (and optionally verify) the signed OS X binary:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../reden/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../reden/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../reden/contrib/gitian-descriptors/gitian-osx-signer.yml
-	mv build/out/reden-osx-signed.dmg ../reden-${VERSION}-osx.dmg
+	./bin/gbuild -i --commit signature=v${VERSION} ../hth/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../hth/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../hth/contrib/gitian-descriptors/gitian-osx-signer.yml
+	mv build/out/hth-osx-signed.dmg ../hth-${VERSION}-osx.dmg
 	popd
 
   Create (and optionally verify) the signed Windows binaries:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../reden/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../reden/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../reden/contrib/gitian-descriptors/gitian-win-signer.yml
-	mv build/out/reden-*win64-setup.exe ../reden-${VERSION}-win64-setup.exe
-	mv build/out/reden-*win32-setup.exe ../reden-${VERSION}-win32-setup.exe
+	./bin/gbuild -i --commit signature=v${VERSION} ../hth/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../hth/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../hth/contrib/gitian-descriptors/gitian-win-signer.yml
+	mv build/out/hth-*win64-setup.exe ../hth-${VERSION}-win64-setup.exe
+	mv build/out/hth-*win32-setup.exe ../hth-${VERSION}-win32-setup.exe
 	popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -182,18 +182,18 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the redencoin.info server
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the hthcoin.info server
 
-- Update redencoin.info
+- Update hthcoin.info
 
 - Announce the release:
-  - Reden-development mailing list
+  - HTH-development mailing list
 
-  - Update title of #redencoin on Freenode IRC
+  - Update title of #hthcoin on Freenode IRC
 
-  - Optionally reddit /r/Redenpay, ... but this will usually sort out itself
+  - Optionally reddit /r/HTHpay, ... but this will usually sort out itself
 
-- Notify flare so that he can start building [the PPAs](https://launchpad.net/~redencoin.info/+archive/ubuntu/reden)
+- Notify flare so that he can start building [the PPAs](https://launchpad.net/~hthcoin.info/+archive/ubuntu/hth)
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

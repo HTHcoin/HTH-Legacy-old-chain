@@ -1,20 +1,20 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/translations">
-        <file alias="bg">locale/reden_bg.qm</file>
-        <file alias="de">locale/reden_de.qm</file>
-        <file alias="en">locale/reden_en.qm</file>
-        <file alias="es">locale/reden_es.qm</file>
-        <file alias="fi">locale/reden_fi.qm</file>
-        <file alias="fr">locale/reden_fr.qm</file>
-        <file alias="it">locale/reden_it.qm</file>
-        <file alias="ja">locale/reden_ja.qm</file>
-        <file alias="pl">locale/reden_pl.qm</file>
-        <file alias="pt">locale/reden_pt.qm</file>
-        <file alias="ru">locale/reden_ru.qm</file>
-        <file alias="sk">locale/reden_sk.qm</file>
-        <file alias="sv">locale/reden_sv.qm</file>
-        <file alias="vi">locale/reden_vi.qm</file>
-        <file alias="zh_CN">locale/reden_zh_CN.qm</file>
-        <file alias="zh_TW">locale/reden_zh_TW.qm</file>
+        <file alias="bg">locale/hth_bg.qm</file>
+        <file alias="de">locale/hth_de.qm</file>
+        <file alias="en">locale/hth_en.qm</file>
+        <file alias="es">locale/hth_es.qm</file>
+        <file alias="fi">locale/hth_fi.qm</file>
+        <file alias="fr">locale/hth_fr.qm</file>
+        <file alias="it">locale/hth_it.qm</file>
+        <file alias="ja">locale/hth_ja.qm</file>
+        <file alias="pl">locale/hth_pl.qm</file>
+        <file alias="pt">locale/hth_pt.qm</file>
+        <file alias="ru">locale/hth_ru.qm</file>
+        <file alias="sk">locale/hth_sk.qm</file>
+        <file alias="sv">locale/hth_sv.qm</file>
+        <file alias="vi">locale/hth_vi.qm</file>
+        <file alias="zh_CN">locale/hth_zh_CN.qm</file>
+        <file alias="zh_TW">locale/hth_zh_TW.qm</file>
     </qresource>
 </RCC>

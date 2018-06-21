@@ -62,11 +62,11 @@
         <translation>收款位址</translation>
     </message>
     <message>
-        <source>These are your Reden addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your HTH addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>這些是你要付款過去的達世幣位址。在付錢之前，務必要檢查金額和收款位址是否正確。</translation>
     </message>
     <message>
-        <source>These are your Reden addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your HTH addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>這些是你用來收款的達世幣位址。建議在每次交易時，都使用一個新的收款位址。</translation>
     </message>
     <message>
@@ -172,7 +172,7 @@
         <translation>確認錢包加密</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REDEN&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HTH&lt;/b&gt;!</source>
         <translation>警告: 如果把錢包加密後又忘記密碼，你就會從此&lt;b&gt;失去其中所有的達世幣了&lt;/b&gt;！</translation>
     </message>
     <message>
@@ -188,7 +188,7 @@
         <translation>輸入舊密碼和新密碼到錢包。</translation>
     </message>
     <message>
-        <source>Reden Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your redens from being stolen by malware infecting your computer.</source>
+        <source>HTH Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hths from being stolen by malware infecting your computer.</source>
         <translation>達世幣核心現在要關閉，以便完成加密程序。請注意，加密錢包不能完全防止入侵你的電腦的惡意程式偷取達世幣。</translation>
     </message>
     <message>
@@ -238,7 +238,7 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Reden Core</source>
+        <source>HTH Core</source>
         <translation>達世幣核心</translation>
     </message>
     <message>
@@ -262,7 +262,7 @@
         <translation>發送(&amp;S)</translation>
     </message>
     <message>
-        <source>Send coins to a Reden address</source>
+        <source>Send coins to a HTH address</source>
         <translation>付錢給一個達世幣位址</translation>
     </message>
     <message>
@@ -270,7 +270,7 @@
         <translation>接收(&amp;R)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and reden: URIs)</source>
+        <source>Request payments (generates QR codes and hth: URIs)</source>
         <translation>要求付款(產生 QR Code 和達世幣付款協議的 URI)</translation>
     </message>
     <message>
@@ -298,11 +298,11 @@
         <translation>結束應用程式</translation>
     </message>
     <message>
-        <source>&amp;About Reden Core</source>
+        <source>&amp;About HTH Core</source>
         <translation>關於達世幣核心(&amp;A)</translation>
     </message>
     <message>
-        <source>Show information about Reden Core</source>
+        <source>Show information about HTH Core</source>
         <translation>顯示達世幣核心的相關資訊</translation>
     </message>
     <message>
@@ -366,7 +366,7 @@
         <translation>簽署訊息(&amp;M)...</translation>
     </message>
     <message>
-        <source>Sign messages with your Reden addresses to prove you own them</source>
+        <source>Sign messages with your HTH addresses to prove you own them</source>
         <translation>用達世幣位址簽署訊息來證明位址是你的</translation>
     </message>
     <message>
@@ -374,7 +374,7 @@
         <translation>驗證訊息(&amp;V)...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Reden addresses</source>
+        <source>Verify messages to ensure they were signed with specified HTH addresses</source>
         <translation>驗證訊息是用來確定訊息是用指定的達世幣位址簽署的</translation>
     </message>
     <message>
@@ -450,7 +450,7 @@
         <translation>開啓 &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a reden: URI or payment request</source>
+        <source>Open a hth: URI or payment request</source>
         <translation>開啓一個達世幣協議的 URI 或付款要求</translation>
     </message>
     <message>
@@ -458,7 +458,7 @@
         <translation>命令列選項(&amp;C)</translation>
     </message>
     <message>
-        <source>Reden Core client</source>
+        <source>HTH Core client</source>
         <translation>達世幣核心客戶端軟體</translation>
     </message>
     <message>
@@ -486,7 +486,7 @@
         <translation>分頁工具列</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Reden network</source>
+        <source>%n active connection(s) to HTH network</source>
         <translation><numerusform>%n 個運作中的達世幣網路連線</numerusform></translation>
     </message>
     <message>
@@ -514,7 +514,7 @@
         <translation><numerusform>%n 個小時</numerusform></translation>
     </message>
     <message>
-        <source>Modify configuration options for Reden Core</source>
+        <source>Modify configuration options for HTH Core</source>
         <translation>修改達世幣核心的設定選項</translation>
     </message>
     <message>
@@ -530,7 +530,7 @@
         <translation>開啟主節點配置文件</translation>
     </message>
     <message>
-        <source>Show the Reden Core help message to get a list with possible Reden Core command-line options</source>
+        <source>Show the HTH Core help message to get a list with possible HTH Core command-line options</source>
         <translation>顯示達世幣核心的說明訊息，來取得可用命令列選項的列表</translation>
     </message>
     <message>
@@ -913,11 +913,11 @@
         <translation>請選擇穩私級別。</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 REDEN</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 HTH</source>
         <translation>使用2個獨立的主節點來混合最高達1000達世幣的資金</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 REDEN</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 HTH</source>
         <translation>使用8個獨立的主節點來混合最高達1000達世幣的資金</translation>
     </message>
     <message>
@@ -925,15 +925,15 @@
         <translation>使用16個獨立的主節點</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 REDEN to anonymize 1000 REDEN</source>
+        <source>This option is the quickest and will cost about ~0.025 HTH to anonymize 1000 HTH</source>
         <translation>這個是最快的選項，將耗費約~0.025達世幣作為匿名處理1000達世幣的費用</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 REDEN to anonymize 1000 REDEN</source>
+        <source>This option is moderately fast and will cost about 0.05 HTH to anonymize 1000 HTH</source>
         <translation>這個是一般的選項，將耗費約0.05達世幣作為匿名處理1000達世幣的費用</translation>
     </message>
     <message>
-        <source>0.1 REDEN per 1000 REDEN you anonymize.</source>
+        <source>0.1 HTH per 1000 HTH you anonymize.</source>
         <translation>每1000達世幣耗費0.1達世幣作為匿名處理費用</translation>
     </message>
     <message>
@@ -945,15 +945,15 @@
         <translation>匿名發送配置</translation>
     </message>
     <message>
-        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Reden's configuration screen.</source>
+        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening HTH's configuration screen.</source>
         <translation>匿名發送已成功設置為一般(%1 到2次循環)。你可以隨時打開達世幣配置窗口來修改。</translation>
     </message>
     <message>
-        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Reden's configuration screen.</source>
+        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening HTH's configuration screen.</source>
         <translation>匿名發送已成功設置為高(%1 到8次循環)。你可以隨時打開達世幣配置窗口來修改。</translation>
     </message>
     <message>
-        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Reden's configuration screen.</source>
+        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening HTH's configuration screen.</source>
         <translation>匿名發送已成功設置為最高(%1 到16次循環)。你可以隨時打開達世幣配置窗口來修改。</translation>
     </message>
 </context>
@@ -996,7 +996,7 @@
         <translation>編輯付款位址</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Reden address.</source>
+        <source>The entered address "%1" is not a valid HTH address.</source>
         <translation>輸入的位址 %1 並不是有效的達世幣位址。</translation>
     </message>
     <message>
@@ -1038,7 +1038,7 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Reden Core</source>
+        <source>HTH Core</source>
         <translation>達世幣核心</translation>
     </message>
     <message>
@@ -1050,7 +1050,7 @@
         <translation>(%1 位元)</translation>
     </message>
     <message>
-        <source>About Reden Core</source>
+        <source>About HTH Core</source>
         <translation>關於達世幣核心</translation>
     </message>
     <message>
@@ -1105,15 +1105,15 @@
         <translation>歡迎</translation>
     </message>
     <message>
-        <source>Welcome to Reden Core.</source>
+        <source>Welcome to HTH Core.</source>
         <translation>歡迎使用達世幣核心</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Reden Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where HTH Core will store its data.</source>
         <translation>因為這是程式第一次啓動，你可以選擇達世幣核心儲存資料的地方。</translation>
     </message>
     <message>
-        <source>Reden Core will download and store a copy of the Reden block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>HTH Core will download and store a copy of the HTH block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation>達世幣核心會下載並儲存一份達世幣區塊鏈的副本。至少有 %1GB 的資料會儲存到這個目錄中，並且還會持續增長。另外錢包資料也會儲存在這個目錄。</translation>
     </message>
     <message>
@@ -1125,7 +1125,7 @@
         <translation>使用自定的資料目錄:</translation>
     </message>
     <message>
-        <source>Reden Core</source>
+        <source>HTH Core</source>
         <translation>達世幣核心</translation>
     </message>
     <message>
@@ -1294,7 +1294,7 @@
         <translation>(0 表示程式自動決定，小於 0 表示保留處理器核心不用的數目)</translation>
     </message>
     <message>
-        <source>Amount of Reden to keep anonymized</source>
+        <source>Amount of HTH to keep anonymized</source>
         <translation>保持匿名的達世幣數量</translation>
     </message>
     <message>
@@ -1302,7 +1302,7 @@
         <translation>錢包(&amp;W)</translation>
     </message>
     <message>
-        <source>Automatically start Reden Core after logging in to the system.</source>
+        <source>Automatically start HTH Core after logging in to the system.</source>
         <translation>在登入系統後自動啓動達世幣核心。</translation>
     </message>
     <message>
@@ -1326,7 +1326,7 @@
         <translation>此金額為關閉匿名發送的門檻。</translation>
     </message>
     <message>
-        <source>Automatically open the Reden Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the HTH Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>自動在路由器上開放達世幣核心客戶端的通訊埠。只有在你的路由器支援且開啓「通用即插即用」協定(UPnP)時才有作用。</translation>
     </message>
     <message>
@@ -1338,7 +1338,7 @@
         <translation>接受外來連線</translation>
     </message>
     <message>
-        <source>Connect to the Reden network through a SOCKS5 proxy.</source>
+        <source>Connect to the HTH network through a SOCKS5 proxy.</source>
         <translation>透過 SOCKS5 代理伺服器來連線到達世幣網路。</translation>
     </message>
     <message>
@@ -1350,7 +1350,7 @@
         <translation>當視窗關閉時，把應用程式縮到最小，而不是結束。當勾選這個選項時，只能夠用選單中的結束來關掉應用程式。</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Reden Core.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting HTH Core.</source>
         <translation>可以在這裡設定用戶介面的語言。這個設定在重啓達世幣核心後才會生效。</translation>
     </message>
     <message>
@@ -1414,7 +1414,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Reden network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the HTH network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>透過另一個SOCKS5 代理伺服器作為Tor隱藏服務來連線到達世幣網路。</translation>
     </message>
     <message>
@@ -1443,9 +1443,9 @@
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/reden/</source>
+https://www.transifex.com/projects/p/hth/</source>
         <translation>缺少相關語言或翻譯不完整？請到這裡協助翻譯
-https://www.transifex.com/projects/p/reden/</translation>
+https://www.transifex.com/projects/p/hth/</translation>
     </message>
     <message>
         <source>User Interface Theme:</source>
@@ -1523,7 +1523,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>表單</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Reden network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HTH network after a connection is established, but this process has not completed yet.</source>
         <translation>顯示的資訊可能是過期的。跟達世幣網路的連線建立後，你的錢包會自動和網路同步，但是這個步驟還沒完成。</translation>
     </message>
     <message>
@@ -1623,7 +1623,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>金額和循環次數:</translation>
     </message>
     <message>
-        <source>0 REDEN / 0 Rounds</source>
+        <source>0 HTH / 0 Rounds</source>
         <translation>0 達世幣 / 0 循環次數</translation>
     </message>
     <message>
@@ -1776,7 +1776,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>要求付款時發生錯誤</translation>
     </message>
     <message>
-        <source>Cannot start reden: click-to-pay handler</source>
+        <source>Cannot start hth: click-to-pay handler</source>
         <translation>無法啟動達世幣 : 點擊支付處理程序</translation>
     </message>
     <message>
@@ -1800,7 +1800,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>無效的付款位址 %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Reden address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid HTH address or malformed URI parameters.</source>
         <translation>沒辦法解析 URI 位址！可能是因為達世幣位址無效，或是 URI 參數格式錯誤。</translation>
     </message>
     <message>
@@ -1878,7 +1878,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>金額</translation>
     </message>
     <message>
-        <source>Enter a Reden address (e.g. %1)</source>
+        <source>Enter a HTH address (e.g. %1)</source>
         <translation>輸入達世幣位址 (例如 %1)</translation>
     </message>
     <message>
@@ -2016,7 +2016,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>內存使用情況</translation>
     </message>
     <message>
-        <source>Open the Reden Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the HTH Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>從目前的資料目錄下開啓達世幣核心的除錯紀錄檔。當紀錄檔很大時，可能會花好幾秒的時間。</translation>
     </message>
     <message>
@@ -2172,7 +2172,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>解禁節點(&amp;U)</translation>
     </message>
     <message>
-        <source>Welcome to the Reden Core RPC console.</source>
+        <source>Welcome to the HTH Core RPC console.</source>
         <translation>歡迎使用達世幣核心 RPC 主控台。</translation>
     </message>
     <message>
@@ -2243,7 +2243,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>重複使用現有的收款位址(不建議)(&amp;e)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Reden network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the HTH network.</source>
         <translation>附加在付款要求中的訊息，可以不填，打開要求內容時會顯示。注意: 這個訊息不會隨著付款送到達世幣網路上。</translation>
     </message>
     <message>
@@ -2255,7 +2255,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>跟新收款位址關聯的標記，可以不填。</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Reden network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the HTH network.</source>
         <translation>附加在付款要求中的訊息，可以不填，打開要求內容時會顯示。&lt;br&gt;注意: 這個訊息不會隨著付款送到達世幣網路上。</translation>
     </message>
     <message>
@@ -2512,7 +2512,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>如果自訂手續費設定為 1000 duffs ，而交易資料大小只有 250 個位元組的話，那麽選擇「每千位元組」就只會付 250 duffs 的手續費，&lt;br /&gt;而「總共至少」會支付 1000 duffs。但是如果交易資料大小超過一千個位元組，那麽兩者都是每千位元組的費用。</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for reden transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for hth transactions than the network can process.</source>
         <translation>當交易量少於區塊可容納的空間時，只付最低手續費不會有什麽問題。&lt;br /&gt;但是當交易量的需求成長到超過整體網路可以處理的量時，可能會造成一筆一直不會被確認的交易。</translation>
     </message>
     <message>
@@ -2704,7 +2704,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>交易被拒絕了！有時候會發生這種錯誤，是因為你錢包中的一些錢已經被花掉了。比如說你複製了錢包檔 wallet.dat, 然後用複製的錢包花掉了錢，你現在所用的原來的錢包中，卻沒有那筆錢已經花掉的紀錄。</translation>
     </message>
     <message>
-        <source>Warning: Invalid Reden address</source>
+        <source>Warning: Invalid HTH address</source>
         <translation>警告: 無效的達世幣位址</translation>
     </message>
     <message>
@@ -2727,7 +2727,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>付給:(&amp;T)</translation>
     </message>
     <message>
-        <source>The Reden address to send the payment to</source>
+        <source>The HTH address to send the payment to</source>
         <translation>接收付款的達世幣位址</translation>
     </message>
     <message>
@@ -2767,7 +2767,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>訊息:</translation>
     </message>
     <message>
-        <source>A message that was attached to the reden: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Reden network.</source>
+        <source>A message that was attached to the hth: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HTH network.</source>
         <translation>附加在達世幣付款協議 URI 中的訊息，會和交易內容一起存起來，給你自己做參考。注意: 這個訊息不會送到達世幣網路上。</translation>
     </message>
     <message>
@@ -2786,7 +2786,7 @@ https://www.transifex.com/projects/p/reden/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Reden Core is shutting down...</source>
+        <source>HTH Core is shutting down...</source>
         <translation>達世幣核心正在關閉中...</translation>
     </message>
     <message>
@@ -2805,7 +2805,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>簽署訊息(&amp;S)</translation>
     </message>
     <message>
-        <source>The Reden address to sign the message with</source>
+        <source>The HTH address to sign the message with</source>
         <translation>用來簽署訊息的達世幣位址</translation>
     </message>
     <message>
@@ -2837,7 +2837,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>複製目前的簽章到系統剪貼簿</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Reden address</source>
+        <source>Sign the message to prove you own this HTH address</source>
         <translation>簽署這個訊息來證明這個達世幣位址是你的</translation>
     </message>
     <message>
@@ -2857,11 +2857,11 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>驗證訊息</translation>
     </message>
     <message>
-        <source>The Reden address the message was signed with</source>
+        <source>The HTH address the message was signed with</source>
         <translation>簽署這個訊息的達世幣位址</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Reden address</source>
+        <source>Verify the message to ensure it was signed with the specified HTH address</source>
         <translation>驗證這個訊息來確定是用指定的達世幣位址簽署的</translation>
     </message>
     <message>
@@ -2928,7 +2928,7 @@ https://www.transifex.com/projects/p/reden/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Reden Core</source>
+        <source>HTH Core</source>
         <translation>達世幣核心</translation>
     </message>
     <message>
@@ -2940,7 +2940,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>位元幣核心開發人員</translation>
     </message>
     <message>
-        <source>The Reden Core developers</source>
+        <source>The HTH Core developers</source>
         <translation>達世幣核心開發人員</translation>
     </message>
     <message>
@@ -3428,8 +3428,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>付款</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 REDEN.</source>
-        <translation>即時到帳系統暫時並不支援這麼高的交易金額。目前的金額僅限於%1 REDEN。</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 HTH.</source>
+        <translation>即時到帳系統暫時並不支援這麼高的交易金額。目前的金額僅限於%1 HTH。</translation>
     </message>
     </context>
 <context>
@@ -3472,13 +3472,13 @@ https://www.transifex.com/projects/p/reden/</translation>
     </message>
 </context>
 <context>
-    <name>reden-core</name>
+    <name>hth-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>和指定的位址繫結，並且一直在指定位址聽候連線。IPv6 請用 [主機]:通訊埠 這種格式</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Reden Core is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. HTH Core is probably already running.</source>
         <translation>沒辦法鎖定資料目錄 %s。達世幣核心可能已經在執行了。</translation>
     </message>
     <message>
@@ -3518,7 +3518,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>這是個還沒發表的測試版本 - 使用請自負風險 - 請不要用來開採或商業應用</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Reden Core is probably already running.</source>
+        <source>Unable to bind to %s on this computer. HTH Core is probably already running.</source>
         <translation>沒辦法繫結在這台電腦上的 %s 。達世幣核心可能已經在執行了。</translation>
     </message>
     <message>
@@ -3734,8 +3734,8 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>此產品也包含了由 OpenSSL Project 所開發的 OpenSSL Toolkit 軟體 &lt;https://www.openssl.org/&gt;, 和由 Eric Young 撰寫的加解密軟體，以及由 Thomas Bernard 所撰寫的 UPnP 軟體。</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 REDEN.</source>
-        <translation>在本次交易中，無法找到不等於 1000 REDEN 的足夠資金用。</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 HTH.</source>
+        <translation>在本次交易中，無法找到不等於 1000 HTH 的足夠資金用。</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3782,7 +3782,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>版權為達世幣核心開發人員自西元 2014 至 %i 年起所有</translation>
     </message>
     <message>
-        <source>Copyright (C) %i The Reden Core Developers</source>
+        <source>Copyright (C) %i The HTH Core Developers</source>
         <translation>版權為達世幣核心開發人員自西元 至 %i 年起所有</translation>
     </message>
     <message>
@@ -3794,7 +3794,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>連接到主節點時發生錯誤。</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Reden Core</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of HTH Core</source>
         <translation>載入 wallet.dat 檔案時發生錯誤: 這個錢包需要新版的達世幣核心</translation>
     </message>
     <message>
@@ -3838,7 +3838,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>資訊</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Reden Core is shutting down.</source>
+        <source>Initialization sanity check failed. HTH Core is shutting down.</source>
         <translation>初始化時的基本檢查失敗了。達世幣核心即將關閉。</translation>
     </message>
     <message>
@@ -4034,7 +4034,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>金額超過匿名發送池容許的上限。</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Reden Core to complete</source>
+        <source>Wallet needed to be rewritten: restart HTH Core to complete</source>
         <translation>錢包需要重寫: 請重新啓動達世幣核心來完成</translation>
     </message>
     <message>
@@ -4078,7 +4078,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>KeePassHttp  的密鑰，用作與KeePass 的AES加密通信</translation>
     </message>
     <message>
-        <source>Keep N REDEN anonymized (default: %u)</source>
+        <source>Keep N HTH anonymized (default: %u)</source>
         <translation>保留 N 個已經匿名處理的達世幣 (預設值: %u)</translation>
     </message>
     <message>
@@ -4086,7 +4086,7 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>保留最多 &lt;n&gt; 個不可連接的交易於記憶體 (預設值: %u)</translation>
     </message>
     <message>
-        <source>Disable all Reden specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
+        <source>Disable all HTH specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
         <translation>禁止所有達世幣的附加功能 (主節點，匿名發送，即時到帳，預算案) (0-1，預設值: %u)</translation>
     </message>
     <message>
@@ -4106,15 +4106,15 @@ https://www.transifex.com/projects/p/reden/</translation>
         <translation>當建立交易時，如果每千位元組(%s/Kb)的手續費比這個值低，就視為沒付手續費 (預設值: %s)</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 REDEN.</source>
-        <translation>即時到帳系統暫時並不支援這麼高的交易金額。目前的金額僅限於%1 REDEN。</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 HTH.</source>
+        <translation>即時到帳系統暫時並不支援這麼高的交易金額。目前的金額僅限於%1 HTH。</translation>
     </message>
     <message>
         <source>InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again.</source>
         <translation>即時到帳系統要求輸入的資金最少要有%d個確認，你可能需要等待數分鐘然後再重試。</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong Reden Core will not work properly.</source>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong HTH Core will not work properly.</source>
         <translation>請檢查電腦日期和時間是否正確！達世幣核心沒辦法在時鐘不準的情況下正常運作。</translation>
     </message>
     <message>

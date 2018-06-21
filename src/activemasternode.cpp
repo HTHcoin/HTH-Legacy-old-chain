@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -211,7 +211,7 @@ void CActiveMasternode::ManageStateInitial()
     }
 
     if(pwalletMain->GetBalance() < 5000*COIN) {
-        LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 5000 REDEN\n", GetStateString());
+        LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 5000 HTH\n", GetStateString());
         return;
     }
 

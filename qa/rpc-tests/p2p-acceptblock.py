@@ -109,7 +109,7 @@ class TestNode(NodeConnCB):
 class AcceptBlockTest(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("REDEND", "redend"),
+                          default=os.getenv("HTHD", "hthd"),
                           help="bitcoind binary to test")
 
     def setup_chain(self):

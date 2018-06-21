@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven Reden tests.
+Utilities to generate test vectors for the data-driven HTH tests.
 
 Usage: 
 

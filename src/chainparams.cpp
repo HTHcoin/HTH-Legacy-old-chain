@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2014-2018 The Reden Core developers
+// Copyright (c) 2014-2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -85,8 +85,8 @@ public:
         consensus.BIP34Height = 227931; // FIX
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8"); // FIX
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        consensus.nPowTargetTimespan = 2 * 60; // Reden: every blocks
-        consensus.nPowTargetSpacing = 2 * 60; // Reden: 2 minutes
+        consensus.nPowTargetTimespan = 2 * 60; // HTH: every blocks
+        consensus.nPowTargetSpacing = 2 * 60; // HTH: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -166,17 +166,17 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("b45ba0de34d2c0f9440de4f7bbbda79989a0d41757f5e145aab55cf386d15e80"));
         vSeeds.push_back(CDNSSeedData("beardseed2", "dnsseeder1.bunkens.be"));
         vSeeds.push_back(CDNSSeedData("beardseed1", "dnsseeder2.bunkens.be"));
-        // Reden addresses start with 'R'
+        // HTH addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
-        // Reden script addresses start with '7'
+        // HTH script addresses start with '7'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
-        // Reden private keys start with 'E'
+        // HTH private keys start with 'E'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
-        // Reden BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // HTH BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Reden BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // HTH BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // Reden BIP44 coin type is '5'
+        // HTH BIP44 coin type is '5'
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x05).convert_to_container<std::vector<unsigned char> >();
 
         fMiningRequiresPeers = true;
@@ -229,8 +229,8 @@ public:
         consensus.BIP34Height = 21111; // FIX
         consensus.BIP34Hash = uint256S("0x0000000023b3a96d3484e5abb3755c413e7d41500f8e2a5c3f0dd01299cd8ef8"); // FIX
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        consensus.nPowTargetTimespan = 60 * 60; // Reden: 1 hour
-        consensus.nPowTargetSpacing = 2 * 60; // Reden: 2 minutes
+        consensus.nPowTargetTimespan = 60 * 60; // HTH: 1 hour
+        consensus.nPowTargetSpacing = 2 * 60; // HTH: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
@@ -263,17 +263,17 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        // Testnet Reden addresses start with 'R'
+        // Testnet HTH addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,61);
-        // Testnet Reden script addresses start with '5'
+        // Testnet HTH script addresses start with '5'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
         // Testnet private keys start with '5' or 'n' (Bitcoin defaults) (?)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
-        // Testnet Reden BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet HTH BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Reden BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet HTH BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Reden BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet HTH BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
@@ -329,8 +329,8 @@ public:
         consensus.BIP34Height = -1; // BIP34 has not necessarily activated on regtest
         consensus.BIP34Hash = uint256();
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 60 * 60; // Reden: 1 hour
-        consensus.nPowTargetSpacing = 2 * 60; // Reden: 2 minutes
+        consensus.nPowTargetTimespan = 60 * 60; // HTH: 1 hour
+        consensus.nPowTargetSpacing = 2 * 60; // HTH: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
@@ -374,17 +374,17 @@ public:
             0,
             0
         };
-        // Regtest Reden addresses start with 'n'
+        // Regtest HTH addresses start with 'n'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,112);
-        // Regtest Reden script addresses start with '5'
+        // Regtest HTH script addresses start with '5'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
         // Regtest private keys start with '5' or 'c' (Bitcoin defaults) (?)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,240);
-        // Regtest Reden BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Regtest HTH BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Reden BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Regtest HTH BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Reden BIP44 coin type is '1' (All coin's testnet default)
+        // Regtest HTH BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
    }
 };

@@ -21,7 +21,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the Reden network. This means one can have an always-on redend instance running, and another local redend/reden-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the HTH network. This means one can have an always-on hthd instance running, and another local hthd/hth-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
@@ -30,8 +30,8 @@ Build Tools and Keys
 ---------------------
 
 ### [Debian](/contrib/debian) ###
-Contains files used to package redend/reden-qt
-for Debian-based Linux systems. If you compile redend/reden-qt yourself, there are some useful files here.
+Contains files used to package hthd/hth-qt
+for Debian-based Linux systems. If you compile hthd/hth-qt yourself, there are some useful files here.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
 Gavin's notes on getting gitian builds up and running using KVM.
@@ -46,7 +46,7 @@ Test and Verify Tools
 ---------------------
 
 ### [TestGen](/contrib/testgen) ###
-Utilities to generate test vectors for the data-driven Reden tests.
+Utilities to generate test vectors for the data-driven HTH tests.
 
 ### [Test Patches](/contrib/test-patches) ###
 These patches are applied when the automated pull-tester

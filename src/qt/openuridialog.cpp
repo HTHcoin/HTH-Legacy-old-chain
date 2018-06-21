@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2013 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +19,7 @@ OpenURIDialog::OpenURIDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 #if QT_VERSION >= 0x040700
-    ui->uriEdit->setPlaceholderText("reden:");
+    ui->uriEdit->setPlaceholderText("hth:");
 #endif
 }
 
@@ -51,5 +51,5 @@ void OpenURIDialog::on_selectFileButton_clicked()
     if(filename.isEmpty())
         return;
     QUrl fileUri = QUrl::fromLocalFile(filename);
-    ui->uriEdit->setText("reden:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
+    ui->uriEdit->setText("hth:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
 }

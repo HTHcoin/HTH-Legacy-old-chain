@@ -9,7 +9,7 @@
 #include "checkpoints.h"
 
 #include "uint256.h"
-#include "test/test_reden.h"
+#include "test/test_hth.h"
 #include "chainparams.h"
 
 #include <boost/test/unit_test.hpp>

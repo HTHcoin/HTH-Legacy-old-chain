@@ -19,4 +19,4 @@ FORMS += \
     ../src/qt/forms/transactiondescdialog.ui
 
 RESOURCES += \
-    ../src/qt/reden.qrc
+    ../src/qt/hth.qrc

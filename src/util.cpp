@@ -2,12 +2,12 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reden Core developers
+// Copyright (c) 2018 The HTH Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reden-config.h"
+#include "config/hth-config.h"
 #endif
 
 #include "util.h"
@@ -104,7 +104,7 @@ namespace boost {
 
 using namespace std;
 
-//Reden only features
+//HTH only features
 bool fMasterNode = false;
 bool fLiteMode = false;
 /**
@@ -116,8 +116,8 @@ bool fLiteMode = false;
 */
 int nWalletBackups = 10;
 
-const char * const BITCOIN_CONF_FILENAME = "reden.conf";
-const char * const BITCOIN_PID_FILENAME = "redend.pid";
+const char * const BITCOIN_CONF_FILENAME = "hth.conf";
+const char * const BITCOIN_PID_FILENAME = "hthd.pid";
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
@@ -271,8 +271,8 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "reden" is a composite category enabling all Reden-related debug output
-            if(ptrCategory->count(string("reden"))) {
+            // "hth" is a composite category enabling all HTH-related debug output
+            if(ptrCategory->count(string("hth"))) {
                 ptrCategory->insert(string("privatesend"));
                 ptrCategory->insert(string("instantsend"));
                 ptrCategory->insert(string("masternode"));
@@ -496,7 +496,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "reden";
+    const char* pszModule = "hth";
 #endif
     if (pex)
         return strprintf(
@@ -516,13 +516,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\RedenCore
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\RedenCore
-    // Mac: ~/Library/Application Support/RedenCore
-    // Unix: ~/.redencore
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\HTHCore
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\HTHCore
+    // Mac: ~/Library/Application Support/HTHCore
+    // Unix: ~/.hthcore
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "RedenCore";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "HTHCore";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -532,10 +532,10 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/RedenCore";
+    return pathRet / "Library/Application Support/HTHCore";
 #else
     // Unix
-    return pathRet / ".redencore";
+    return pathRet / ".hthcore";
 #endif
 #endif
 }
@@ -629,14 +629,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()){
-        // Create empty reden.conf if it does not excist
+        // Create empty hth.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL) {
         	AddSeedsToConfigFile(configFile);
         	fclose(configFile);
         	ReadConfigFile(mapSettingsRet, mapMultiSettingsRet);
         } else {
-        	LogPrintf("reden.conf file not found or can't be created\n");
+        	LogPrintf("hth.conf file not found or can't be created\n");
         	return; // Nothing to read, so just return
         }
     }
@@ -646,7 +646,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override reden.conf
+        // Don't overwrite existing settings so command line settings override hth.conf
         string strKey = string("-") + it->string_key;
         string strValue = it->value[0];
         InterpretNegativeSetting(strKey, strValue);

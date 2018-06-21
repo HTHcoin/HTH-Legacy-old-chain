@@ -13,7 +13,7 @@
 #include "serialize.h"
 #include "util.h"
 
-#include "test/test_reden.h"
+#include "test/test_hth.h"
 
 #include <stdint.h>
 

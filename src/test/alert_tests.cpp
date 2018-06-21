@@ -15,7 +15,7 @@
 #include "util.h"
 #include "utilstrencodings.h"
 
-#include "test/test_reden.h"
+#include "test/test_hth.h"
 
 #include <fstream>
 
@@ -146,7 +146,7 @@ BOOST_FIXTURE_TEST_SUITE(Alert_tests, ReadAlerts)
 // - update alerts in GenerateAlertTests() (optional)
 // - enable code below (#if 1)
 // - replace "fffffffffffffffffffffffffffffffffffffffffffffffffff" with the actual MAINNET privkey
-// - recompile and run "/path/to/test_reden -t Alert_test"
+// - recompile and run "/path/to/test_hth -t Alert_test"
 //
 // NOTE: make sure to disable code and remove alert privkey when you're done!
 //
