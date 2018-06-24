@@ -46,7 +46,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "4/21/2018 iodev regrets the day he scammed the EDEN community";
+    const char* pszTimestamp = "help the homeless";
     const CScript genesisOutputScript = CScript() << ParseHex("040a3ada5ba6280b99f49a92ba47221e6a72af844ec49d0c8bbdae1ec09a4c79b22e42eefe670ae04490556f91780eb57de76493d020c91d0c421c2fa052b28a2b") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -65,7 +65,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 60000; // every130k blocks
+        consensus.nSubsidyHalvingInterval = 1036800; // every130k blocks
         consensus.nMasternodePaymentsStartBlock = 2; // block after premine
         consensus.nMasternodePaymentsIncreaseBlock = 158000000; // not used
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // not used
@@ -85,8 +85,8 @@ public:
         consensus.BIP34Height = 227931; // FIX
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8"); // FIX
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        consensus.nPowTargetTimespan = 2 * 60; // HTH: every blocks
-        consensus.nPowTargetSpacing = 2 * 60; // HTH: 2 minutes
+        consensus.nPowTargetTimespan = 1 * 60; // HTH: every blocks
+        consensus.nPowTargetSpacing = 1 * 60; // HTH: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -119,7 +119,7 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1523764584, 360505, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1529878570, 749203, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
    /*
 	 //////////////
@@ -162,16 +162,16 @@ public:
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
      */   
-        assert(consensus.hashGenesisBlock == uint256S("00000a8144601b679fc258d5aba342076e89e81573676eda958f75ff0a0a8561"));
-        assert(genesis.hashMerkleRoot == uint256S("b45ba0de34d2c0f9440de4f7bbbda79989a0d41757f5e145aab55cf386d15e80"));
-        vSeeds.push_back(CDNSSeedData("beardseed2", "dnsseeder1.bunkens.be"));
-        vSeeds.push_back(CDNSSeedData("beardseed1", "dnsseeder2.bunkens.be"));
-        // HTH addresses start with 'R'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
+        assert(consensus.hashGenesisBlock == uint256S("000002ec3a1977ce2b036b1ab386eed53ea2f2ed4de1938c9c5fef918424023a"));
+        assert(genesis.hashMerkleRoot == uint256S("55ca58e05f1e4d9996744c024ba1291e6ce61df3afbada7af1c8d64d22512be5"));
+       // vSeeds.push_back(CDNSSeedData("beardseed2", "dnsseeder1.bunkens.be"));
+        //vSeeds.push_back(CDNSSeedData("beardseed1", "dnsseeder2.bunkens.be"));
+        // HTH addresses start with 'H'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
         // HTH script addresses start with '7'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
         // HTH private keys start with 'E'
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128+40);
         // HTH BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         // HTH BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
@@ -179,7 +179,7 @@ public:
         // HTH BIP44 coin type is '5'
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x05).convert_to_container<std::vector<unsigned char> >();
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -192,8 +192,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("00000a8144601b679fc258d5aba342076e89e81573676eda958f75ff0a0a8561")),
-            1523764584, // * UNIX timestamp of last checkpoint block
+            ( 0, uint256S("000002ec3a1977ce2b036b1ab386eed53ea2f2ed4de1938c9c5fef918424023a")),
+            1529878570, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             500	        // * estimated number of transactions per day after checkpoint

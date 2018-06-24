@@ -1748,23 +1748,31 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     if (nPrevHeight == 0) {
         return 3400000 * COIN;
     }
-    if (nPrevHeight < 800) {
-	return 0 * COIN;
+    if (nPrevHeight < 500) {
+	return 250 * COIN;
     }
 
-    CAmount nSubsidy = 50 * COIN;
+    CAmount nSubsidy = 2500 * COIN;
 
     // yearly decline of production by 25% per 3 months.
     for (int i = consensusParams.nSubsidyHalvingInterval; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
-        nSubsidy -= nSubsidy * 0.25;
+        nSubsidy -= nSubsidy * 0.5;
     }
 
+   if(((nPrevHeight) % 100 == 0) && nPrevHeight >= 3) {
+        nSubsidy = ((nSubsidy*.25)*100) + (nSubsidy * .75);
+    } else {
+	nSubsidy *= .75;
+    }
     return fSuperblockPartOnly ? 0 : nSubsidy;
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    return blockValue * 0.40;
+    if ((nHeight-1) % 100 == 0 && nHeight > 2){
+	return blockValue * .9709;
+	}
+    return 0.0000001 * COIN;
 }
 
 bool IsInitialBlockDownload()

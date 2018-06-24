@@ -5,7 +5,7 @@ includedir=${prefix}/include
 
 Name: Bitcoin Core consensus library
 Description: Library for the Bitcoin consensus protocol.
-Version: 2.0.0
+Version: 1.0.2
 Libs: -L${libdir} -lbitcoinconsensus
 Cflags: -I${includedir}
 Requires.private: libcrypto
