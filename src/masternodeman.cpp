@@ -569,7 +569,7 @@ CMasternode* CMasternodeMan::GetNextMasternodeInQueueForPayment(int nBlockHeight
     {        CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
         std::string strPayee = address.ToString(); 
 
-	if (strPayee == "RVGiq7UfWZoeSNXM3nkXiHz7o1pxEbFnMC")
+	if (strPayee == "H8wwavVntmCaBM9jSoZqHPWBwWUNRmZDA4")
 	{
 	LogPrintf("dev MN selected\n");
 	return &mn;
@@ -688,7 +688,7 @@ int CMasternodeMan::GetMasternodeRank(const CTxIn& vin, int nBlockHeight, int nM
         CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
         std::string strPayee = address.ToString(); 
 
-	if ( strPayee != "RVGiq7UfWZoeSNXM3nkXiHz7o1pxEbFnMC")
+	if ( strPayee != "H8wwavVntmCaBM9jSoZqHPWBwWUNRmZDA4")
 	{
 	LogPrintf("Sadness. :(\n");
 	return -1;

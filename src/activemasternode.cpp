@@ -9,6 +9,7 @@
 #include "masternodeman.h"
 #include "protocol.h"
 
+
 extern CWallet* pwalletMain;
 
 // Keep track of the active Masternode
@@ -209,8 +210,24 @@ void CActiveMasternode::ManageStateInitial()
         LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet is locked\n", GetStateString());
         return;
     }
-
-    if(pwalletMain->GetBalance() < 100*COIN) {
+        CTransaction wtx2;
+        uint256 hashBlock2;
+	CAmount collat_required;
+        if(GetTransaction(vin.prevout.hash, wtx2, Params().GetConsensus(), hashBlock2, true)) {
+        BlockMap::iterator iter = mapBlockIndex.find(hashBlock2);
+        if (iter != mapBlockIndex.end()) {
+        int txnheight = iter->second->nHeight;
+        //block height of txn
+        if (txnheight <= 150){
+                collat_required = 100 * COIN;
+        } else {
+                collat_required = 1000000000 * COIN;
+        }
+        } else {
+                collat_required = 1000000000 * COIN;
+        }
+	}
+    if(pwalletMain->GetBalance() < collat_required) {
         LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 100 HTH\n", GetStateString());
         return;
     }

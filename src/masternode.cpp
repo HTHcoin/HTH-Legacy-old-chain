@@ -626,8 +626,24 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
             LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Failed to find Masternode UTXO, masternode=%s\n", vin.prevout.ToStringShort());
             return false;
         }
-
-        if(coins.vout[vin.prevout.n].nValue != 100 * COIN) {
+	CAmount collat_required;
+	CTransaction wtx2;
+	uint256 hashBlock2;
+	if(GetTransaction(vin.prevout.hash, wtx2, Params().GetConsensus(),hashBlock2, true)) {
+	BlockMap::iterator iter = mapBlockIndex.find(hashBlock2);
+	if (iter != mapBlockIndex.end()) {
+	int txnheight = iter->second->nHeight;
+	//block height of txn
+	if (txnheight <= 150){
+		collat_required = 100 * COIN;
+	} else {
+		collat_required = 1000000000 * COIN;
+	}
+	} else {
+		collat_required = 1000000000 * COIN;
+	}
+}
+        if(coins.vout[vin.prevout.n].nValue != collat_required) {
             LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Masternode UTXO should have 100 HTH, masternode=%s\n", vin.prevout.ToStringShort());
             return false;
         }
