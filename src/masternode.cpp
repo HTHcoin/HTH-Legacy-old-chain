@@ -634,7 +634,7 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
 	if (iter != mapBlockIndex.end()) {
 	int txnheight = iter->second->nHeight;
 	//block height of txn
-	if (txnheight <= 150){
+	if (txnheight <= 80){
 		collat_required = 100 * COIN;
 	} else {
 		collat_required = 1000000000 * COIN;
