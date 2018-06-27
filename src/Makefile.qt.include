@@ -436,6 +436,7 @@ RES_IMAGES = \
   qt/res/images/crownium/splash.png \
   qt/res/images/crownium/splash_testnet.png \
   qt/res/images/crownium/hth_logo_horizontal.png \
+  qt/res/images/crownium/reden_logo_horizontal.png \
   qt/res/images/crownium/unchecked.png \
   qt/res/images/crownium/checked.png \
   qt/res/images/crownium/drkblue_downArrow.png \
