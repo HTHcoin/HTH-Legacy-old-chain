@@ -1,0 +1,22 @@
+[Unit]
+Description=HTH's distributed currency daemon
+After=network.target
+
+[Service]
+User=hthcore
+Group=hthcore
+
+Type=forking
+PIDFile=/var/lib/hthd/hthd.pid
+ExecStart=/usr/bin/hthd -daemon -pid=/var/lib/hthd/hthd.pid \
+-conf=/etc/hthcore/hth.conf -datadir=/var/lib/hthd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

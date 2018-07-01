@@ -1,0 +1,6 @@
+usr/local/bin/hth-qt usr/bin
+share/pixmaps/hth32.xpm usr/share/pixmaps
+share/pixmaps/hth16.xpm usr/share/pixmaps
+share/pixmaps/hth128.png usr/share/pixmaps
+debian/hth-qt.desktop usr/share/applications
+debian/hth-qt.protocol usr/share/kde4/services/
