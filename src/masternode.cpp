@@ -627,7 +627,7 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
             return false;
         }
 	CAmount collat_required;
-	if (chainActive.height <= 24804) {
+	if (chainActive.Height() <= 24804) {
 	//CAmount collat_required;
 	CTransaction wtx2;
 	uint256 hashBlock2;

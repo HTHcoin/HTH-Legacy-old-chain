@@ -164,8 +164,8 @@ public:
      */   
         assert(consensus.hashGenesisBlock == uint256S("000002ec3a1977ce2b036b1ab386eed53ea2f2ed4de1938c9c5fef918424023a"));
         assert(genesis.hashMerkleRoot == uint256S("55ca58e05f1e4d9996744c024ba1291e6ce61df3afbada7af1c8d64d22512be5"));
-       // vSeeds.push_back(CDNSSeedData("beardseed2", "dnsseeder1.bunkens.be"));
-        //vSeeds.push_back(CDNSSeedData("beardseed1", "dnsseeder2.bunkens.be"));
+        vSeeds.push_back(CDNSSeedData("hthseed1", "seed.hthcoin.world"));
+        vSeeds.push_back(CDNSSeedData("hthseed1", "seed2.hthcoin.world"));
         // HTH addresses start with 'H'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
         // HTH script addresses start with '7'
