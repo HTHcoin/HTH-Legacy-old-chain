@@ -4060,9 +4060,16 @@ int CMerkleTx::GetDepthInMainChain(const CBlockIndex* &pindexRet, bool enableIX)
 
 int CMerkleTx::GetBlocksToMaturity() const
 {
-    if (!IsCoinBase())
+    if (!IsCoinBase()){
         return 0;
-    return max(0, (COINBASE_MATURITY+1) - GetDepthInMainChain());
+	}
+                int realmaturity;
+                if (chainActive.Height() > 24804) {
+                        realmaturity = 360;
+                } else {
+                        realmaturity = COINBASE_MATURITY;
+                }
+    return max(0, (realmaturity+1) - GetDepthInMainChain());
 }
 
 

@@ -1769,10 +1769,16 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
+//if (chainActive.Height() <= 24804)
     if ((nHeight-1) % 100 == 0 && nHeight > 2){
 	return blockValue * .9709;
 	}
+if (chainActive.Height() <= 24804){
     return 0.0000001 * COIN;
+} else {
+	return blockValue * .25;
+}
+return blockValue * .25;
 }
 
 bool IsInitialBlockDownload()
@@ -2009,7 +2015,13 @@ bool CheckTxInputs(const CTransaction& tx, CValidationState& state, const CCoins
 
             // If prev is coinbase, check that it's matured
             if (coins->IsCoinBase()) {
-                if (nSpendHeight - coins->nHeight < COINBASE_MATURITY)
+		                int realmaturity;
+                if (chainActive.Height() > 24804) {
+                        realmaturity = 360;
+                } else {
+                        realmaturity = COINBASE_MATURITY;
+                }
+                if (nSpendHeight - coins->nHeight < realmaturity)
                     return state.Invalid(false,
                         REJECT_INVALID, "bad-txns-premature-spend-of-coinbase",
                         strprintf("tried to spend coinbase at depth %d", nSpendHeight - coins->nHeight));
@@ -5340,12 +5352,18 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         CAddress addrFrom;
         uint64_t nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
-        if (pfrom->nVersion < MIN_PEER_PROTO_VERSION)
+	int minproto;
+	if (chainActive.Height() <= 24804) {
+		minproto = MIN_PEER_PROTO_VERSION;
+	} else {
+		minproto = 70207;
+	}
+        if (pfrom->nVersion < minproto)
         {
             // disconnect from peers older than this proto version
             LogPrintf("peer=%d using obsolete version %i; disconnecting\n", pfrom->id, pfrom->nVersion);
             pfrom->PushMessage(NetMsgType::REJECT, strCommand, REJECT_OBSOLETE,
-                               strprintf("Version must be %d or greater", MIN_PEER_PROTO_VERSION));
+                               strprintf("Version must be %d or greater", minproto));
             pfrom->fDisconnect = true;
             return false;
         }
