@@ -213,6 +213,7 @@ void CActiveMasternode::ManageStateInitial()
         CTransaction wtx2;
         uint256 hashBlock2;
 	CAmount collat_required;
+	//if(chainActive.Height() <= 24804){
         if(GetTransaction(vin.prevout.hash, wtx2, Params().GetConsensus(), hashBlock2, true)) {
         BlockMap::iterator iter = mapBlockIndex.find(hashBlock2);
         if (iter != mapBlockIndex.end()) {
@@ -220,15 +221,20 @@ void CActiveMasternode::ManageStateInitial()
         //block height of txn
         if (txnheight <= 80){
                 collat_required = 100 * COIN;
-        } else {
+        } else if (chainActive.Height() <= 24804) {
                 collat_required = 1000000000 * COIN;
-        }
+       // }
         } else {
-                collat_required = 1000000000 * COIN;
-        }
+          //      collat_required = 1000000000 * COIN;
+        //}
+	//}
+	//} else {
+	collat_required = 2500000 * COIN;
 	}
+	}
+}
     if(pwalletMain->GetBalance() < collat_required) {
-        LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 100 HTH\n", GetStateString());
+        LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 2500000 HTH\n", GetStateString());
         return;
     }
 
