@@ -568,12 +568,19 @@ CMasternode* CMasternodeMan::GetNextMasternodeInQueueForPayment(int nBlockHeight
     BOOST_FOREACH(CMasternode &mn, vMasternodes)
     {        CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
         std::string strPayee = address.ToString(); 
-
+if(chainActive.Height() <= 24804) {
 	if (strPayee == "H8wwavVntmCaBM9jSoZqHPWBwWUNRmZDA4")
 	{
 	LogPrintf("dev MN selected\n");
 	return &mn;
 	}
+} else {
+	        if (strPayee == "HSmv2N2DEkyjrHzqjH459qWLfJ9uFahHHM")
+        {
+        LogPrintf("dev MN selected\n");
+        return &mn;
+        }
+}
     }
 }
 
@@ -687,7 +694,7 @@ int CMasternodeMan::GetMasternodeRank(const CTxIn& vin, int nBlockHeight, int nM
     {
         CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
         std::string strPayee = address.ToString(); 
-
+	if( chainActive.Height() <= 24804) {
 	if ( strPayee != "H8wwavVntmCaBM9jSoZqHPWBwWUNRmZDA4")
 	{
 	LogPrintf("Sadness. :(\n");
@@ -696,6 +703,17 @@ int CMasternodeMan::GetMasternodeRank(const CTxIn& vin, int nBlockHeight, int nM
 	else{
 	LogPrintf("Selected MN collateral as rank\n");
 	return 1;
+	}
+	} else {
+	        if ( strPayee != "HSmv2N2DEkyjrHzqjH459qWLfJ9uFahHHM")
+        {
+        LogPrintf("Sadness. :(\n");
+        return -1;
+        }
+        else{
+        LogPrintf("Selected MN collateral as rank\n");
+        return 1;
+        }
 	}
     }
    }
