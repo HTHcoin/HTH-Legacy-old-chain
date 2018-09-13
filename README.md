@@ -25,7 +25,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate bran
-[Tags](https://github.com/HTHcoin/HTH/tags) are created to indicate new official,l.2.0.0
+[Tags](https://github.com/HTHcoin/HTH/tags) are created to indicate new official, 1.2.0.0
 stable release versions of HTH Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
