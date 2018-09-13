@@ -2,7 +2,7 @@
 HTH Core 1.2.0.0
 ===============================
 
-https://hth.io
+https://hthcoin.world/
 
 
 What is HTH?
@@ -12,7 +12,7 @@ HTH-Coin is a fully decentralised cryptocurrency built on the premise of providi
 
 
 For more information, as well as an immediately usable, binary version of
-the HTH Core software, see https://hth.io
+the HTH Core software, see https://hthcoin.world/
 
 
 License
@@ -25,7 +25,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate bran
-[Tags](https://github.com/HTH/HTH/tags) are created to indicate new official,l.2.0.0
+[Tags](https://github.com/HTHcoin/HTH/tags) are created to indicate new official,l.2.0.0
 stable release versions of HTH Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
