@@ -11,7 +11,8 @@ What is HTH?
 HTH-Coin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
 
 
-For more information see https://hthcoin.world/ or discord: https://discord.gg/xqGjacW
+For more information see https://hthcoin.world/ or discord: https://discord.gg/xqGjacW.
+
 An immediately usable, binary version of the HTH Core software is available at https://github.com/HTHcoin/HTH/releases.
 
 
