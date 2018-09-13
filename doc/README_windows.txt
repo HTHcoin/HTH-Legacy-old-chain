@@ -8,7 +8,6 @@ completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
 
-
 Setup
 -----
 Unpack the files into a directory and run hth-qt.exe.
@@ -19,5 +18,5 @@ depending on the speed of your computer and network connection, the synchronizat
 process can take anywhere from a few hours to a day or more.
 
 See the hth wiki at:
-  https://hthcoin.atlassian.net/wiki/
+  https://hthcoin.wiki/
 for more help and information.
