@@ -1,7 +1,7 @@
 HTH Core 1.0.0
 =====================
 
-This is the official reference wallet for HTH digital currency and comprises the backbone of the HTH peer-to-peer network. You can [download HTH Core](https://hthcoin.io) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for HTH digital currency and comprises the backbone of the HTH peer-to-peer network. You can [download HTH Core](https://github.com/HTHcoin/HTH/releases/latest) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -11,8 +11,8 @@ The following are some helpful notes on how to run HTH on your native platform.
 
 Unpack the files into a directory and run:
 
-- `bin/bitcoin-qt` (GUI) or
-- `bin/bitcoind` (headless)
+- `bin/hth-qt` (GUI) or
+- `bin/hthd` (headless)
 
 ### Windows
 
@@ -24,10 +24,10 @@ Drag HTH-Qt to your applications folder, and then run HTH-Qt.
 
 ### Need Help?
 
-* See the [HTH documentation](https://hthcoin.atlassian.net/wiki/display/DOC)
+* See the [HTH documentation wiki](https://hthcoin.wiki/index.php/Main_Page)
 for help and more information.
-* Ask for help on [#hthcoin](http://webchat.freenode.net?channels=hthcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=hthcoin).
-* Ask for help on the [HTHTalk](https://hthtalk.org/) forums.
+* Ask for help on [@hthcoin](https://twitter.com/HTHCoin) on Twitter. 
+* Ask for help in the [Discord](https://discord.gg/eUKyUbB) channels.
 
 Building
 ---------------------
@@ -57,7 +57,7 @@ The HTH Core repo's [root README](/README.md) contains relevant information on t
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [HTHTalk](https://hthtalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on the [Discord](https://discord.gg/eUKyUbB), in the Development & Technical Discussion board.
 * Discuss on [#hthcoin](http://webchat.freenode.net/?channels=hthcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=hthcoin).
 
 ### Miscellaneous

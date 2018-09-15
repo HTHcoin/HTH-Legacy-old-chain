@@ -1,8 +1,8 @@
 
-HTH Core 1.0.0
+HTH Core 1.2.0.0
 ===============================
 
-https://hth.io
+https://hthcoin.world/
 
 
 What is HTH?
@@ -11,8 +11,9 @@ What is HTH?
 HTH-Coin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
 
 
-For more information, as well as an immediately usable, binary version of
-the HTH Core software, see https://hth.io
+For more information see https://hthcoin.world/ or discord: https://discord.gg/xqGjacW.
+
+An immediately usable, binary version of the HTH Core software is available at https://github.com/HTHcoin/HTH/releases.
 
 
 License
@@ -25,7 +26,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate bran
-[Tags](https://github.com/HTH/HTH/tags) are created to indicate new official,l.0.0
+[Tags](https://github.com/HTHcoin/HTH/tags) are created to indicate new official, 1.2.0.0
 stable release versions of HTH Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

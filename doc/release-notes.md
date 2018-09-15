@@ -1,6 +1,6 @@
-HTH Core version 1.0.0 is now available from:
+HTH Core is available from:
 
-  <https://hthcoin.io>
+  <https://github.com/HTHcoin/HTH/releases/latest>
 
 
 
