@@ -174,6 +174,4 @@ Command output should have "_Masternode successfully started_" in its `status` f
 
 ### Local
 
-Search your Masternodes on https://hthninja.pl/masternodes.html
-
-_Hint: Bookmark it, you definitely will be using this site a lot._
+To add: Masternode explorer
