@@ -1,4 +1,4 @@
-HTH Core 1.0.0
+HTH Core 1.2.0.0
 =====================
 
 This is the official reference wallet for HTH digital currency and comprises the backbone of the HTH peer-to-peer network. You can [download HTH Core](https://github.com/HTHcoin/HTH/releases/latest) or [build it yourself](#building) using the guides below.
