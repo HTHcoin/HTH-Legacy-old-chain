@@ -4,7 +4,7 @@
 There are many ways to setup a wallet to support start-many. This guide will walk through two of them.
 
 1. [Importing an existing wallet (recommended if you are consolidating wallets).](#option1)
-2. [Sending 1000 HTH to new wallet addresses.](#option2)
+2. [Sending 2500000 HTH to new wallet addresses.](#option2)
 
 ## <a name="option1"></a>Option 1. Importing an existing wallet
 
@@ -48,7 +48,7 @@ The wallet will re-scan and you will see your available balance increase by the 
 2. Click the Receive tab.
 3. Fill in the form to request a payment.
     * Label: mn01
-    * Amount: 1000 (optional)
+    * Amount: 2500000 (optional)
     * Click *Request payment* button
 5. Click the *Copy Address* button
 
@@ -56,9 +56,9 @@ Create a new wallet address for each Masternode.
 
 Close your QT Wallet.
 
-### Send 1000 HTH to New Addresses
+### Send 2500000 HTH to New Addresses
 
-Just like setting up a standard MN. Send exactly 1000 HTH to each new address created above.
+Just like setting up a standard MN. Send exactly 2500000 HTH to each new address created above.
 
 ### Create New Masternode Private Keys
 
@@ -78,11 +78,11 @@ Remember... this is local. Make sure your QT is not running.
 
 Create the `masternode.conf` file in the same directory as your `wallet.dat`.
 
-Copy the masternode private key and correspondig collateral output transaction that holds the 1000 HTH.
+Copy the masternode private key and correspondig collateral output transaction that holds the 2500000 HTH.
 
 The masternode private key may be an existing key from [Option 1](#option1), or a newly generated key from [Option 2](#option2). 
 
-*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 HTH on the remote server and defeats the purpose of a hot/cold setup.*
+*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 2500000 HTH on the remote server and defeats the purpose of a hot/cold setup.*
 
 ### Get the collateral output
 
@@ -106,8 +106,8 @@ alias ipaddress:port masternode_private_key collateral_output collateral_output_
 Example:
 
 ```
-mn01 127.0.0.1:9999 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
-mn02 127.0.0.2:9999 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0
+mn01 127.0.0.1:35888 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
+mn02 127.0.0.2:35888 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0
 ```
 
 ## What about the hth.conf file?
@@ -166,7 +166,7 @@ hth-cli masternode status
 {
     "vin" : "CTxIn(COutPoint(<collateral_output>, <collateral_output_index>), scriptSig=)",
     "service" : "<ipaddress>:<port>",
-    "pubkey" : "<1000 HTH address>",
+    "pubkey" : "<2500000 HTH address>",
     "status" : "Masternode successfully started"
 }
 ```
@@ -174,6 +174,4 @@ Command output should have "_Masternode successfully started_" in its `status` f
 
 ### Local
 
-Search your Masternodes on https://hthninja.pl/masternodes.html
-
-_Hint: Bookmark it, you definitely will be using this site a lot._
+To add: Masternode explorer

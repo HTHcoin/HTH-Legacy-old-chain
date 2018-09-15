@@ -11,7 +11,7 @@ the same, tested dependencies are used and statically built into the executable.
 Multiple developers build the source code by following a specific descriptor
 ("recipe"), cryptographically sign the result, and upload the resulting signature.
 These results are compared and only if they match, the build is accepted and uploaded
-to hthcoin.info.
+to https://hthcoin.world.
 
 More independent Gitian builders are needed, which is why this guide exists.
 It is preferred you follow these steps yourself instead of using someone else's
@@ -222,7 +222,7 @@ Connecting to the VM
 
 After the VM has booted you can connect to it using SSH, and files can be copied from and to the VM using a SFTP utility.
 Connect to `localhost`, port `22222` (or the port configured when installing the VM).
-On Windows you can use [putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) and [WinSCP](http://winscp.net/eng/index.php).
+On Windows you can use [MobaXterm](https://mobaxterm.mobatek.net/download.html), [putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) and [WinSCP](http://winscp.net/eng/index.php).
 
 For example, to connect as `root` from a Linux command prompt use
 
