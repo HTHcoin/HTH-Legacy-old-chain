@@ -4,6 +4,7 @@ HTH Core 1.2.0.0
 
 https://hthcoin.world/
 
+![](https://github.com/Altcoin-Cash/HTH/blob/master/src/qt/res/images/light/hth_logo_horizontal.png)
 
 What is HTH?
 ----------------
