@@ -1,5 +1,5 @@
 
-HTH Core 1.2.0.0
+HTH Core 1.2.0.0 Test branch
 ===============================
 
 https://hthcoin.world/
