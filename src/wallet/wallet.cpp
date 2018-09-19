@@ -2115,13 +2115,27 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 if(nCoinType == ONLY_DENOMINATED) {
                     found = IsDenominatedAmount(pcoin->vout[i].nValue);
                 } else if(nCoinType == ONLY_NOT5000IFMN) {
-                    found = !(fMasterNode && pcoin->vout[i].nValue == 100*COIN);
+		    //if (chainActive.Height() > 24804){
+                    found = !(fMasterNode && (pcoin->vout[i].nValue == 100*COIN || pcoin->vout[i].nValue == 2500000*COIN));
+		    //} else {
+		      //              found = !(fMasterNode && pcoin->vout[i].nValue == 100*COIN);
+		//	}
                 } else if(nCoinType == ONLY_NONDENOMINATED_NOT5000IFMN) {
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if(found && fMasterNode) found = pcoin->vout[i].nValue != 100*COIN; // do not use Hot MN funds
+		//	CAmount hi;
+		//	if (chainActive.Height() > 24804) {
+		//	hi = 2500000 * COIN;
+		//	} else {
+		//	hi = 100 * COIN;
+		//	}
+                    if(found && fMasterNode) found = ((pcoin->vout[i].nValue != 100 * COIN || pcoin->vout[i].nValue != 2500000*COIN)); // do not use Hot MN funds
                 } else if(nCoinType == ONLY_5000) {
-                    found = pcoin->vout[i].nValue == 100*COIN;
+		    //if (chainActive.Height() > 24804) {
+                    found = (pcoin->vout[i].nValue == 2500000*COIN || pcoin->vout[i].nValue == 100*COIN);
+		    //} else {
+                    //found = pcoin->vout[i].nValue == 100*COIN;
+		//	}
                 } else if(nCoinType == ONLY_PRIVATESEND_COLLATERAL) {
                     found = IsCollateralAmount(pcoin->vout[i].nValue);
                 } else {
@@ -2512,7 +2526,7 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount 
     BOOST_FOREACH(const COutput& out, vCoins)
     {
         // masternode-like input should not be selected by AvailableCoins now anyway
-        //if(out.tx->vout[out.i].nValue == 100*COIN) continue;
+        //if(out.tx->vout[out.i].nValue == 2500000*COIN) continue;
         if(nValueRet + out.tx->vout[out.i].nValue <= nValueMax){
 
             CTxIn txin = CTxIn(out.tx->GetHash(), out.i);
@@ -2594,7 +2608,13 @@ bool CWallet::SelectCoinsGrouppedByAddresses(std::vector<CompactTallyItem>& vecT
             if(fAnonymizable) {
                 // ignore collaterals
                 if(IsCollateralAmount(wtx.vout[i].nValue)) continue;
-                if(fMasterNode && wtx.vout[i].nValue == 100*COIN) continue;
+	//	CAmount hi2;
+	//	if (chainActive.Height() > 24804) {
+	//	hi2 = 2500000 * COIN;
+	//	} else {
+	//	hi2 = 100 * COIN;
+	//	}
+                if(fMasterNode && (wtx.vout[i].nValue == 100 * COIN || wtx.vout[i].nValue == 2500000 * COIN )) continue;
                 // ignore outputs that are 10 times smaller then the smallest denomination
                 // otherwise they will just lead to higher fee / lower priority
                 if(wtx.vout[i].nValue <= vecPrivateSendDenominations.back()/10) continue;
@@ -2658,7 +2678,7 @@ bool CWallet::SelectCoinsDark(CAmount nValueMin, CAmount nValueMax, std::vector<
         if(out.tx->vout[out.i].nValue < nValueMin/10) continue;
         //do not allow collaterals to be selected
         if(IsCollateralAmount(out.tx->vout[out.i].nValue)) continue;
-        if(fMasterNode && out.tx->vout[out.i].nValue == 100*COIN) continue; //masternode input
+        if(fMasterNode && (out.tx->vout[out.i].nValue == 2500000*COIN || out.tx->vout[out.i].nValue == 100*COIN)) continue; //masternode input
 
         if(nValueRet + out.tx->vout[out.i].nValue <= nValueMax){
             CTxIn txin = CTxIn(out.tx->GetHash(),out.i);
@@ -4060,9 +4080,16 @@ int CMerkleTx::GetDepthInMainChain(const CBlockIndex* &pindexRet, bool enableIX)
 
 int CMerkleTx::GetBlocksToMaturity() const
 {
-    if (!IsCoinBase())
+    if (!IsCoinBase()){
         return 0;
-    return max(0, (COINBASE_MATURITY+1) - GetDepthInMainChain());
+	}
+                int realmaturity;
+                if (chainActive.Height() > 24804) {
+                        realmaturity = 360;
+                } else {
+                        realmaturity = COINBASE_MATURITY;
+                }
+    return max(0, (realmaturity+1) - GetDepthInMainChain());
 }
 
 

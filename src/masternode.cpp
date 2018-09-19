@@ -627,6 +627,8 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
             return false;
         }
 	CAmount collat_required;
+//	if (chainActive.Height() <= 24804) {
+	//CAmount collat_required;
 	CTransaction wtx2;
 	uint256 hashBlock2;
 	if(GetTransaction(vin.prevout.hash, wtx2, Params().GetConsensus(),hashBlock2, true)) {
@@ -636,15 +638,20 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
 	//block height of txn
 	if (txnheight <= 80){
 		collat_required = 100 * COIN;
-	} else {
+	} else if (chainActive.Height() <= 24804) {
 		collat_required = 1000000000 * COIN;
-	}
+	
 	} else {
-		collat_required = 1000000000 * COIN;
+		collat_required = 2500000 * COIN;
 	}
 }
+}
+//} else {
+//	collat_required = 2500000 * COIN;
+//	}
         if(coins.vout[vin.prevout.n].nValue != collat_required) {
-            LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Masternode UTXO should have 100 HTH, masternode=%s\n", vin.prevout.ToStringShort());
+		if (
+            LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Masternode UTXO should have 2500000 HTH, masternode=%s\n", vin.prevout.ToStringShort()));
             return false;
         }
 
