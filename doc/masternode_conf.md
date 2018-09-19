@@ -1,7 +1,7 @@
 Masternode config
 =======================
 
-HTH Core allows controlling multiple remote masternodes from a single wallet. The wallet needs to have a valid collateral output of 2,500,000 coins for each masternode and uses a configuration file named `masternode.conf` which can be found in the following data directory (depending on your operating system):
+HTH Core allows controlling multiple remote masternodes from a single wallet. The wallet needs to have a valid collateral output of 2500000 coins for each masternode and uses a configuration file named `masternode.conf` which can be found in the following data directory (depending on your operating system):
  * Windows: %APPDATA%\HTHCore\
  * Mac OS: ~/Library/Application Support/HTHCore/
  * Unix/Linux: ~/.hthcore/
@@ -15,8 +15,8 @@ mn2 127.0.0.4:35888 92Da1aYg6sbenP6uwskJgEY2XWB5LwJ7bXRqc3UPeShtHWJDjDv 5d898e78
 ```
 
 In the example above:
-* the collateral of 2,500,000 HTH for `mn1` is output `0` of transaction [7603c20a05258c208b58b0a0d77603b9fc93d47cfa403035f87f3ce0af814566](https://test.explorer.hthcoin.info/tx/7603c20a05258c208b58b0a0d77603b9fc93d47cfa403035f87f3ce0af814566)
-* the collateral of 2,500,000 HTH for `mn2` is output `1` of transaction [5d898e78244f3206e0105f421cdb071d95d111a51cd88eb5511fc0dbf4bfd95f](https://test.explorer.hthcoin.info/tx/5d898e78244f3206e0105f421cdb071d95d111a51cd88eb5511fc0dbf4bfd95f)
+* the collateral of 2500000 HTH for `mn1` is output `0` of transaction [7603c20a05258c208b58b0a0d77603b9fc93d47cfa403035f87f3ce0af814566](https://test.explorer.hthcoin.info/tx/7603c20a05258c208b58b0a0d77603b9fc93d47cfa403035f87f3ce0af814566)
+* the collateral of 2500000 HTH for `mn2` is output `1` of transaction [5d898e78244f3206e0105f421cdb071d95d111a51cd88eb5511fc0dbf4bfd95f](https://test.explorer.hthcoin.info/tx/5d898e78244f3206e0105f421cdb071d95d111a51cd88eb5511fc0dbf4bfd95f)
 
 _Note: IPs like 127.0.0.* are not allowed actually, we are using them here for explanatory purposes only. Make sure you have real reachable remote IPs in you `masternode.conf`._
 

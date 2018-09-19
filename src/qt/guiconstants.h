@@ -50,7 +50,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "HTH"
-#define QAPP_ORG_DOMAIN "hthcoin.io"
+#define QAPP_ORG_DOMAIN "hthcoin.world"
 #define QAPP_APP_NAME_DEFAULT "HTH-Qt"
 #define QAPP_APP_NAME_TESTNET "HTH-Qt-testnet"
 
