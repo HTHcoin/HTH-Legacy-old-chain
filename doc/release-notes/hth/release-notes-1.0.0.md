@@ -3,11 +3,11 @@
 
 HTH Core version 1.0.0 is now available from:
 
-  https://hthcoin.io/downloads
+  https://github.com/HTHcoin/HTH/releases/
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/hthcoin/hth/issues
+  https://github.com/HTHcoin/HTH/issues
 
 
 How to Upgrade
