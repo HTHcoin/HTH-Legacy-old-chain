@@ -193,6 +193,8 @@ RES_ICONS = \
   qt/res/icons/drkblue/eye_minus.png \
   qt/res/icons/drkblue/eye_plus.png \
   qt/res/icons/drkblue/filesave.png \
+  qt/res/icons/drkblue/hd_disabled.png \
+  qt/res/icons/drkblue/hd_enabled.png \
   qt/res/icons/drkblue/history.png \
   qt/res/icons/drkblue/key.png \
   qt/res/icons/drkblue/lock_closed.png \
@@ -241,6 +243,8 @@ RES_ICONS = \
   qt/res/icons/crownium/eye_minus.png \
   qt/res/icons/crownium/eye_plus.png \
   qt/res/icons/crownium/filesave.png \
+  qt/res/icons/crownium/hd_disabled.png \
+  qt/res/icons/crownium/hd_enabled.png \
   qt/res/icons/crownium/history.png \
   qt/res/icons/crownium/key.png \
   qt/res/icons/crownium/lock_closed.png \
@@ -289,6 +293,8 @@ RES_ICONS = \
   qt/res/icons/light/eye_minus.png \
   qt/res/icons/light/eye_plus.png \
   qt/res/icons/light/filesave.png \
+  qt/res/icons/light/hd_disabled.png \
+  qt/res/icons/light/hd_enabled.png \
   qt/res/icons/light/history.png \
   qt/res/icons/light/key.png \
   qt/res/icons/light/lock_closed.png \
