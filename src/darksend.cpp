@@ -1737,11 +1737,11 @@ bool CDarksendPool::PrepareDenominate(int nMinRounds, int nMaxRounds, std::strin
                     vecTxIn.erase(it);
                     vCoins.erase(it2);
 
-                    CScript scriptDenom;
+                    CScript scriptChange;
                     CPubKey vchPubKey;
                     // use a unique change address
                     assert(reservekey.GetReservedKey(vchPubKey, false)); // should never fail, as we just unlocked
-                    scriptDenom = GetScriptForDestination(vchPubKey.GetID());
+                    scriptChange = GetScriptForDestination(vchPubKey.GetID());
                     reservekey.KeepKey();
 
                     // add new output
