@@ -483,7 +483,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-hdseed", _("User defined seed for HD wallet (should be in hex). Only has effect during wallet creation/first start (default: randomly generated)"));
     strUsage += HelpMessageOpt("-upgradewallet", _("Upgrade wallet to latest format on startup"));
     strUsage += HelpMessageOpt("-wallet=<file>", _("Specify wallet file (within data directory)") + " " + strprintf(_("(default: %s)"), "wallet.dat"));
-    strUsage += HelpMessageOpt("-walletbroadcast", _("Make the wallet broadcast transactions") + " " + strprintf(_("(default: %u)"), DEFAULT_WALLETBROADCAST));
+    strUsage += HelpMessageOpt("-walletbroadcast", _("Make the wallet broadcast transactions") + " " + strprintf(_("(default: %u)"), DEFAULT_USE_HD_WALLET));
     strUsage += HelpMessageOpt("-walletnotify=<cmd>", _("Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)"));
     strUsage += HelpMessageOpt("-zapwallettxes=<mode>", _("Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup") +
         " " + _("(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)"));
@@ -1781,7 +1781,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                 }
             }
         }
-        pwalletMain->SetBroadcastTransactions(GetBoolArg("-walletbroadcast", DEFAULT_WALLETBROADCAST));
+        pwalletMain->SetBroadcastTransactions(GetBoolArg("-walletbroadcast", DEFAULT_USE_HD_WALLET));
     } // (!fDisableWallet)
 #else // ENABLE_WALLET
     LogPrintf("No wallet support compiled in!\n");
