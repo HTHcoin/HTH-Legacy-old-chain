@@ -54,7 +54,7 @@ install:
     - if [ -n "$DPKG_ADD_ARCH" ]; then sudo dpkg --add-architecture "$DPKG_ADD_ARCH" ; fi
     - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
     - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
-    - cd x16r_hash && python3 setup.py install && cd ..
+    - cd x16r_hash && python setup.py install && cd ..
 before_script:
     - unset CC; unset CXX
     - unset DISPLAY
