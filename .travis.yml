@@ -85,11 +85,9 @@ before_deploy:
     - if [[ "$PLATFORM" = *"osx"* ]]; then mkdir -p $OUTDIR/bin && cp HTH-Core.dmg $OUTDIR/bin/hthcoin-$PLATFORM-$TRAVIS_TAG.dmg; fi
 deploy:
     provider: releases
-    api_key:
-      secure: LlorZZRaFCo888opatoQIgZIhXDL905qVT/8T9V0cN285uYnoLp6rRdztOgZ/Bq71ii1wk67FzOeBNkKP05PfqMTB8wB96hwFOI4HkznqLbW8CnoQNR0T+sakwBlYACz2lw1QASSRrR6/AMWNlvDUdxfQkFg95eGAT8e/y34JAb8VHrMO3qdTJls+4kTxFtwiQxDVgJmm9V22+dz2Nd0CIdHkgurtPXeSoaDAuTvRbm9ZjCHDLWu+1t94bZ/2IQkx5No3jP8UcvDLlCMztsasU9ow9vgkShxM/UCb2S2gFCjfDjCV0rAm0pWpDhnVFvwKrXdV34E/nYZj3hHUTb7LwgYOl9PcMxrqqUZYpW1FU1LGaPoIOe7Nikjek/yg8XdXiPX4a1OzGDXrOBOzWwNdFKFdAuqbqSStIXZt5QBSVSILg8CRd3VWjDBtusmH+oz/lO/1HRW7tMw18UBMQlUIjThADUgoGBGYWvaMPWw3lyTzvbOyoj313WKpy/5WbArHZ/u2SGWdVTrgOktg+H8R91TNM/I4UYNr+shnHH2zIIJYaKHgzMCwuvwTcIerwS5dS+oBIFmJYkIfSqvWYAAxh2Si4qmgonq8o8yX1XIaGckeITgscehWNveIgWy7d7x876al1hj2s7ETi3RLn/SL/76Ix0dnYBmhbeR0u4zQQs=
     file_glob: true
     file: $OUTDIR/bin/hthcoin-$PLATFORM-$TRAVIS_TAG*
     skip_cleanup: true
     on:
       repo: hthcoin/hthcoin
-      tags: true 
+      tags: true
