@@ -1,7 +1,7 @@
-1.0.0 Release notes
+1.2.0 Release notes
 ====================
 
-HTH Core version 1.0.0 is now available from:
+HTH Core version 1.2.0 is now available from:
 
   https://github.com/HTHcoin/HTH/releases/
 
@@ -22,9 +22,9 @@ hthd/hth-qt (on Linux).
 the blockchain. To do so, start the client with --reindex.**
 
 
-1.0.0 changelog
+1.2.0 changelog
 ----------------
-- Initial release
+- Masternodes Enabled
 
 
 Credits

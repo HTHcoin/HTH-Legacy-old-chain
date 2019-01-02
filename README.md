@@ -9,7 +9,7 @@ https://hthcoin.world/
 What is HTH?
 ----------------
 
-HTH-Coin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
+HTH-Coin is a fully decentralized cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
 
 
 For more information see https://hthcoin.world/ or discord: https://discord.gg/xqGjacW.
@@ -59,4 +59,3 @@ Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
-
