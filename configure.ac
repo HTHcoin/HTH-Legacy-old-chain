@@ -60,7 +60,7 @@ case $host in
      lt_cv_deplibs_check_method="pass_all"
   ;;
 esac
-dnl Require C++14 compiler (no GNU extensions)
+dnl Require C++1y compiler (no GNU extensions)
 AX_CXX_COMPILE_STDCXX([14], [noext], [mandatory], [nodefault])
 dnl Check if -latomic is required for <std::atomic>
 CHECK_ATOMIC
