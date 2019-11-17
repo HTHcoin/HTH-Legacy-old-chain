@@ -14,7 +14,7 @@ HTH-Coin is a fully decentralized cryptocurrency built on the premise of providi
 
 For more information see http://hth.world/ or discord: https://discord.gg/xqGjacW.
 
-An immediately usable, binary version of the HTH Core software is available at https://github.com/HTHcoin/HTH/releases.
+An immediately usable, binary version of the HTH Core software is available at https://github.com/HTHcoin/HTH-Legacy/releases.
 
 
 License
