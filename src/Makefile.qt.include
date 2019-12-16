@@ -164,10 +164,7 @@ BITCOIN_QT_H = \
   qt/winshutdownmonitor.h
 
 RES_ICONS = \
-  qt/res/icons/discord.png \
-  qt/res/icons/mcm.png \
-  qt/res/icons/twitter.png \
-  qt/res/icons/web.png \
+  
   qt/res/icons/bitcoin.ico \
   qt/res/icons/bitcoin.png \
   qt/res/icons/drkblue/add.png \
