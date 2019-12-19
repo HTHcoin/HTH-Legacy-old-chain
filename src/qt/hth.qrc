@@ -1,6 +1,10 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/bitcoin.png</file>
+        <file alias="mcm">res/icons/mcm.png</file>
+        <file alias="twitter">res/icons/twitter.png</file>
+        <file alias="discord">res/icons/discord.png</file>
+        <file alias="web">res/icons/web.png</file>
     </qresource>
     <qresource prefix="/icons/drkblue">
         <file alias="address-book">res/icons/drkblue/address-book.png</file>
