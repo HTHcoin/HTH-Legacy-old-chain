@@ -221,7 +221,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #ifndef QT_NO_TOOLTIP
     mcm->setToolTip(QApplication::translate("OverviewPage", "Visit Exchanges.", nullptr));
 #endif // QT_NO_TOOLTIP
-    mcm->setText(QApplication::translate("OverviewPage", "<a href=\"https://hth.world/exchanges.html\"><img src=\":/icons/bitcoin\" width=\"21\" height=\"21\"></a>", nullptr));
+    mcm->setText(QApplication::translate("OverviewPage", "<a href=\"https://hth.world/exchanges.html\"><img src=\":/icons/mcm\" width=\"21\" height=\"21\"></a>", nullptr));
     QLabel* twitter = new QLabel();
     twitter->setObjectName(QStringLiteral("twitter"));
     twitter->setMinimumSize(QSize(21, 21));
