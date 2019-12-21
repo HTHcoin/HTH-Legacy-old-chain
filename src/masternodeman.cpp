@@ -569,13 +569,13 @@ CMasternode* CMasternodeMan::GetNextMasternodeInQueueForPayment(int nBlockHeight
     {        CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
         std::string strPayee = address.ToString(); 
 if(chainActive.Height() <= 24804) {
-	if (strPayee == "H8wwavVntmCaBM9jSoZqHPWBwWUNRmZDA4")
+	if (strPayee == "HA2azFacimkuT1T1n8e7xzM8WFe2hbiEsR")
 	{
 	LogPrintf("dev MN selected\n");
 	return &mn;
 	}
 } else {
-	        if (strPayee == "HSmv2N2DEkyjrHzqjH459qWLfJ9uFahHHM")
+	        if (strPayee == "HHYkN6x8RtCaWXB8eRtPoUWmM4iKSyY4uC")
         {
         LogPrintf("dev MN selected\n");
         return &mn;
@@ -695,7 +695,7 @@ int CMasternodeMan::GetMasternodeRank(const CTxIn& vin, int nBlockHeight, int nM
         CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
         std::string strPayee = address.ToString(); 
 	if( chainActive.Height() <= 24804) {
-	if ( strPayee != "H8wwavVntmCaBM9jSoZqHPWBwWUNRmZDA4")
+	if ( strPayee != "HA2azFacimkuT1T1n8e7xzM8WFe2hbiEsR")
 	{
 	LogPrintf("Sadness. :(\n");
 	return -1;
@@ -705,7 +705,7 @@ int CMasternodeMan::GetMasternodeRank(const CTxIn& vin, int nBlockHeight, int nM
 	return 1;
 	}
 	} else {
-	        if ( strPayee != "HSmv2N2DEkyjrHzqjH459qWLfJ9uFahHHM")
+	        if ( strPayee != "HHYkN6x8RtCaWXB8eRtPoUWmM4iKSyY4uC")
         {
         LogPrintf("Sadness. :(\n");
         return -1;
