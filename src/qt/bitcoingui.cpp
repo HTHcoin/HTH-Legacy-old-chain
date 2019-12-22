@@ -262,20 +262,20 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #endif // QT_NO_TOOLTIP
     discord->setText(QApplication::translate("OverviewPage", "<a href=\"https://discord.gg/r7zKfy5\"><img src=\":/icons/discord\" width=\"21\" height=\"21\"></a>", nullptr));
             
-            QLabel* expl = new QLabel();
-    expl->setObjectName(QStringLiteral("expl"));
-    expl->setMinimumSize(QSize(21, 21));
-    expl->setMaximumSize(QSize(21, 21));
-    expl->setBaseSize(QSize(0, 0));
-    expl->setCursor(QCursor(Qt::PointingHandCursor));
-    expl->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-    expl->setOpenExternalLinks(true);
+            QLabel* webs = new QLabel();
+    webs->setObjectName(QStringLiteral("webs"));
+    webs->setMinimumSize(QSize(21, 21));
+    webs->setMaximumSize(QSize(21, 21));
+    webs->setBaseSize(QSize(0, 0));
+    webs->setCursor(QCursor(Qt::PointingHandCursor));
+    webs->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    webs->setOpenExternalLinks(true);
 #ifndef QT_NO_TOOLTIP
-    expl->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Explorer.", nullptr));
+    webs->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Explorer.", nullptr));
 #endif // QT_NO_TOOLTIP
-    expl->setText(QApplication::translate("OverviewPage", "<a href=\"https://https://openchains.info/coin/hth/about\"><img src=\":/icons/icon_explorer\" width=\"21\" height=\"21\"></a>", nullptr));
+    webs->setText(QApplication::translate("OverviewPage", "<a href=\"https://https://openchains.info/coin/hth/about\"><img src=\":/icons/icon_explorer\" width=\"21\" height=\"21\"></a>", nullptr));
      
-    frameSocialLayout->addWidget(expl);        
+    frameSocialLayout->addWidget(webs);        
     frameSocialLayout->addWidget(www);        
     frameSocialLayout->addWidget(web);
     frameSocialLayout->addWidget(mcm);
