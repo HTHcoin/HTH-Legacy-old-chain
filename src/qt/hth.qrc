@@ -7,7 +7,7 @@
         <file alias="web">res/icons/web.png</file>
         <file alias="website">res/icons/website.png</file>
         <file alias="telegram">res/icons/icon_www.png</file>
-        <file alias="explorer">res/icons/icon_explorer.png</file>
+        <file alias="www">res/icons/icon_explorer.png</file>
         <file alias="reddit">res/icons/icon_reddit.png</file>
         <file alias="medium">res/icons/icon_medium.png</file>
     </qresource>
