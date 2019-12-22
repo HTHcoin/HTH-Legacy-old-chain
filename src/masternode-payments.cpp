@@ -286,9 +286,9 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int nBlockH
 	}
 	else{
 	//if (chainActive.Height() <= 24804){
-        CBitcoinAddress VfundAddress("HA2azFacimkuT1T1n8e7xzM8WFe2hbiEsR");
+        CBitcoinAddress VfundAddress("HTEyDADAV1XEbM9ywmnGJNToz1sfxv6Kxq");
 	//} else {
-	CBitcoinAddress VfundAddress_fork("HHYkN6x8RtCaWXB8eRtPoUWmM4iKSyY4uC");
+	CBitcoinAddress VfundAddress_fork("H8Zxu8AX9iykathk6LCpq98HHeQ9HpSadn");
 	//}
 	if (chainActive.Height() <= 24804){
         payee = GetScriptForDestination(VfundAddress.Get());
@@ -586,9 +586,9 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
                 }
 		else if( ((nBlockHeight - 1) % 100 == 0  && nBlockHeight >= 3)) {
 		//if(chainActive.Height() <= 24804) {
-                CBitcoinAddress VfundAddress2("HA2azFacimkuT1T1n8e7xzM8WFe2hbiEsR");
+                CBitcoinAddress VfundAddress2("HTEyDADAV1XEbM9ywmnGJNToz1sfxv6Kxq");
 		//} else {
-		CBitcoinAddress VfundAddress_forkk("HHYkN6x8RtCaWXB8eRtPoUWmM4iKSyY4uC");
+		CBitcoinAddress VfundAddress_forkk("H8Zxu8AX9iykathk6LCpq98HHeQ9HpSadn");
 		//}
 		CScript VfundPayee2;
                 if(chainActive.Height() <= 24804) {
