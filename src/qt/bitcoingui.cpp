@@ -207,9 +207,24 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     web->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
     web->setOpenExternalLinks(true);
 #ifndef QT_NO_TOOLTIP
-    web->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Worldwide.", nullptr));
+    web->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Worldwide NonProfit.", nullptr));
 #endif // QT_NO_TOOLTIP
     web->setText(QApplication::translate("OverviewPage", "<a href=\"https://helpthehomelessworldwide.org\"><img src=\":/icons/web\" width=\"21\" height=\"21\"></a>", nullptr));
+            
+            QLabel* www = new QLabel();
+    www->setObjectName(QStringLiteral("www"));
+    www->setMinimumSize(QSize(21, 21));
+    www->setMaximumSize(QSize(21, 21));
+    www->setBaseSize(QSize(0, 0));
+    www->setCursor(QCursor(Qt::PointingHandCursor));
+    www->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    www->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    www->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Coin.", nullptr));
+#endif // QT_NO_TOOLTIP
+    www->setText(QApplication::translate("OverviewPage", "<a href=\"https://hth.world\"><img src=\":/icons/www\" width=\"21\" height=\"21\"></a>", nullptr));
+            
+            
     QLabel* mcm = new QLabel();
     mcm->setObjectName(QStringLiteral("mcm"));
     mcm->setMinimumSize(QSize(21, 21));
@@ -246,6 +261,22 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     discord->setToolTip(QApplication::translate("OverviewPage", "Join the official HTH Discord community.", nullptr));
 #endif // QT_NO_TOOLTIP
     discord->setText(QApplication::translate("OverviewPage", "<a href=\"https://discord.gg/r7zKfy5\"><img src=\":/icons/discord\" width=\"21\" height=\"21\"></a>", nullptr));
+            
+            QLabel* webs = new QLabel();
+    webs->setObjectName(QStringLiteral("webs"));
+    webs->setMinimumSize(QSize(21, 21));
+    webs->setMaximumSize(QSize(21, 21));
+    webs->setBaseSize(QSize(0, 0));
+    webs->setCursor(QCursor(Qt::PointingHandCursor));
+    webs->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    webs->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    webs->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Explorer.", nullptr));
+#endif // QT_NO_TOOLTIP
+    webs->setText(QApplication::translate("OverviewPage", "<a href=\"https://https://openchains.info/coin/hth/about\"><img src=\":/icons/webs\" width=\"21\" height=\"21\"></a>", nullptr));
+     
+    frameSocialLayout->addWidget(webs);        
+    frameSocialLayout->addWidget(www);        
     frameSocialLayout->addWidget(web);
     frameSocialLayout->addWidget(mcm);
     frameSocialLayout->addWidget(twitter);
