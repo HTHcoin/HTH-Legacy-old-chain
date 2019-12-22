@@ -257,7 +257,7 @@
                   <cursorShape>PointingHandCursor</cursorShape>
                  </property>
                  <property name="text">
-                  <string>ESBC</string>
+                  <string>HTH</string>
                  </property>
                  <property name="flat">
                   <bool>true</bool>
