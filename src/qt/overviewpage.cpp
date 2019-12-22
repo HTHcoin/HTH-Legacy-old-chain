@@ -713,11 +713,11 @@ void OverviewPage::on_pushButton_Reddit_clicked() {
 void OverviewPage::on_pushButton_Medium_clicked() {
     QDesktopServices::openUrl(QUrl("https://github.com/HTHcoin/HTH/raw/master/Light_Paper.pdf", QUrl::TolerantMode));
 }
-
+/*
 void OverviewPage::on_pushButton_Facebook_clicked() {
     QDesktopServices::openUrl(QUrl("https://www.facebook.com/hthcoin", QUrl::TolerantMode));
 }
-
+*/
 void OverviewPage::on_pushButton_Explorer_clicked() {
     QDesktopServices::openUrl(QUrl("http://explorer.hth.world/", QUrl::TolerantMode));
 }
