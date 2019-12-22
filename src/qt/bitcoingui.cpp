@@ -211,7 +211,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #endif // QT_NO_TOOLTIP
     web->setText(QApplication::translate("OverviewPage", "<a href=\"https://helpthehomelessworldwide.org\"><img src=\":/icons/web\" width=\"21\" height=\"21\"></a>", nullptr));
             
-            QLabel* web = new QLabel();
+            QLabel* www = new QLabel();
     www->setObjectName(QStringLiteral("www"));
     www->setMinimumSize(QSize(21, 21));
     www->setMaximumSize(QSize(21, 21));
@@ -262,7 +262,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 #endif // QT_NO_TOOLTIP
     discord->setText(QApplication::translate("OverviewPage", "<a href=\"https://discord.gg/r7zKfy5\"><img src=\":/icons/discord\" width=\"21\" height=\"21\"></a>", nullptr));
             
-            QLabel* web = new QLabel();
+            QLabel* exp = new QLabel();
     exp->setObjectName(QStringLiteral("exp"));
     exp->setMinimumSize(QSize(21, 21));
     exp->setMaximumSize(QSize(21, 21));
