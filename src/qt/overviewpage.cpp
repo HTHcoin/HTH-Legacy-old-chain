@@ -136,9 +136,25 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
     currentWatchImmatureBalance(-1),
     txdelegate(new TxViewDelegate(platformStyle)),
     filter(0)
-{
+ {
+    
+nDisplayUnit = 0; // just make sure it's not unitialized
     ui->setupUi(this);
-    QString theme = GUIUtil::getThemeName();
+
+    ui->pushButton_Website->setIcon(QIcon(GUIUtil::getThemeImage(":/icons/website")));
+    ui->pushButton_Website->setStatusTip(tr("Go to HTH Worldwide NonProfit Website"));
+    ui->pushButton_Discord->setIcon(QIcon(GUIUtil::getThemeImage(":/icons/discord")));
+    ui->pushButton_Discord->setStatusTip(tr("Join HTH Discord"));
+    ui->pushButton_Telegram->setIcon(QIcon(GUIUtil::getThemeImage(":/icons/telegram")));
+    ui->pushButton_Telegram->setStatusTip(tr("Visit HTH Coin"));
+    ui->pushButton_Twitter->setIcon(QIcon(GUIUtil::getThemeImage(":/icons/twitter")));
+    ui->pushButton_Twitter->setStatusTip(tr("Visit HTH Twitter"));
+    ui->pushButton_Explorer->setIcon(QIcon(GUIUtil::getThemeImage(":/icons/explorer")));
+    ui->pushButton_Explorer->setStatusTip(tr("Go to HTH Explorer"));
+    ui->pushButton_Reddit->setIcon(QIcon(GUIUtil::getThemeImage(":/icons/reddit")));
+    ui->pushButton_Reddit->setStatusTip(tr("Read HTH reddit"));
+    ui->pushButton_Medium->setIcon(QIcon(GUIUtil::getThemeImage(":/icons/medium")));
+    ui->pushButton_Medium->setStatusTip(tr("Read HTH Light Paper"));
 
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
@@ -672,4 +688,36 @@ void OverviewPage::DisablePrivateSendCompletely() {
         ui->labelPrivateSendEnabled->setText("<span style='color:red;'>(" + tr("Disabled") + ")</span>");
     }
     fEnablePrivateSend = false;
+
+
+void OverviewPage::on_pushButton_Website_clicked() {
+    QDesktopServices::openUrl(QUrl("https://helpthehomelessworldwide.org/", QUrl::TolerantMode));
+}
+void OverviewPage::on_pushButton_Discord_clicked() {
+    QDesktopServices::openUrl(QUrl("https://discord.gg/r7zKfy5", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_pushButton_Telegram_clicked() {
+    QDesktopServices::openUrl(QUrl("https://hth.world/", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_pushButton_Twitter_clicked() {
+    QDesktopServices::openUrl(QUrl("https://www.twitter.com/hthcoin", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_pushButton_Reddit_clicked() {
+    QDesktopServices::openUrl(QUrl("https://www.reddit.com/user/HTHCoin", QUrl::TolerantMode));
+}
+
+
+void OverviewPage::on_pushButton_Medium_clicked() {
+    QDesktopServices::openUrl(QUrl("https://github.com/HTHcoin/HTH/raw/master/Light_Paper.pdf", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_pushButton_Facebook_clicked() {
+    QDesktopServices::openUrl(QUrl("https://www.facebook.com/hthcoin", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_pushButton_Explorer_clicked() {
+    QDesktopServices::openUrl(QUrl("http://explorer.hth.world/", QUrl::TolerantMode));
 }
