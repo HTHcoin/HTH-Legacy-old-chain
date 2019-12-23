@@ -166,20 +166,24 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("55ca58e05f1e4d9996744c024ba1291e6ce61df3afbada7af1c8d64d22512be5"));
        // vSeeds.push_back(CDNSSeedData("hthseed1", "seed.hthcoin.world"));
        // vSeeds.push_back(CDNSSeedData("hthseed1", "seed2.hthcoin.world"));
-	vSeeds.push_back(CDNSSeedData("seed.hthcoin.world", "seed2.hthcoin.world"));
-	vSeeds.push_back(CDNSSeedData("128.199.37.17", "108.61.188.253"));
-        vSeeds.push_back(CDNSSeedData("149.28.215.143", "151.236.57.21"));
-        vSeeds.push_back(CDNSSeedData("167.99.158.141", "173.176.247.102"));
-        vSeeds.push_back(CDNSSeedData("188.166.80.179", "193.124.184.212"));
-        vSeeds.push_back(CDNSSeedData("194.67.201.169", "198.211.113.118"));
-        vSeeds.push_back(CDNSSeedData("202.39.49.57", "207.148.92.79"));
-        vSeeds.push_back(CDNSSeedData("213.136.83.223", "45.32.216.76"));
-        vSeeds.push_back(CDNSSeedData("45.63.19.54", "45.76.254.107"));
-        vSeeds.push_back(CDNSSeedData("45.77.75.195", "5.188.104.245"));
-        vSeeds.push_back(CDNSSeedData("54.39.205.64", "64.140.150.153"));
-        vSeeds.push_back(CDNSSeedData("8.9.11.65", "80.211.84.246"));
-        vSeeds.push_back(CDNSSeedData("86.105.49.151", "89.40.125.209"));
-        vSeeds.push_back(CDNSSeedData("95.179.177.194", "95.79.35.133"));
+	vSeeds.push_back(CDNSSeedData("80.211.88.123:35888", "194.182.64.21:35888"));
+	vSeeds.push_back(CDNSSeedData("108.61.215.140:35888", "51.15.69.6:35888"));
+        vSeeds.push_back(CDNSSeedData("66.151.242.154:35888", "[2001:bc8:472c:7211::1]:35888"));
+	vSeeds.push_back(CDNSSeedData("95.216.228.253:35888", "95.179.146.245:35888"));
+	vSeeds.push_back(CDNSSeedData("213.136.83.223:35888", "5.188.187.130:35888"));
+        vSeeds.push_back(CDNSSeedData("192.227.136.155:35888", "95.217.85.169:35888"));
+	vSeeds.push_back(CDNSSeedData("155.138.225.20:35888", "194.67.214.246:35888"));
+	vSeeds.push_back(CDNSSeedData("194.182.64.21:35888", "212.14.213.219:35888"));
+        vSeeds.push_back(CDNSSeedData("51.75.163.159:35888", "178.124.172.48:35888"));
+	vSeeds.push_back(CDNSSeedData("45.32.233.188:35888", "89.22.110.234:35888"));
+	vSeeds.push_back(CDNSSeedData("207.180.241.199:35888", "54.39.146.48:35888"));
+        vSeeds.push_back(CDNSSeedData("89.103.119.168:35888", "164.68.124.102:35888"));
+	vSeeds.push_back(CDNSSeedData("94.177.236.204:35888", "45.77.66.199:35888"));
+	vSeeds.push_back(CDNSSeedData("144.217.81.24:35888", "73.157.231.125:35888"));
+        vSeeds.push_back(CDNSSeedData("63.35.22.153:35888", "51.77.193.143:35888"));
+	vSeeds.push_back(CDNSSeedData("116.203.226.187:35888", "54.39.146.238:35888"));
+	vSeeds.push_back(CDNSSeedData("192.99.244.189:35888", "80.211.82.77:35888"));
+        vSeeds.push_back(CDNSSeedData("81.2.254.227:35888", "8.9.31.196:35888"));
         // HTH addresses start with 'H'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
         // HTH script addresses start with '7'
