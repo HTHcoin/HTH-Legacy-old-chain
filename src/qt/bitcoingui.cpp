@@ -191,6 +191,97 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     // Create status bar
     statusBar();
 
+            // Social icons
+    QFrame* frameSocial = new QFrame();
+    frameSocial->setContentsMargins(0, 0, 0, 0);
+    frameSocial->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    QHBoxLayout* frameSocialLayout = new QHBoxLayout(frameSocial);
+    frameSocialLayout->setContentsMargins(16, 0, 16, 0);
+    frameSocialLayout->setSpacing(16);
+    QLabel* web = new QLabel();
+    web->setObjectName(QStringLiteral("web"));
+    web->setMinimumSize(QSize(21, 21));
+    web->setMaximumSize(QSize(21, 21));
+    web->setBaseSize(QSize(0, 0));
+    web->setCursor(QCursor(Qt::PointingHandCursor));
+    web->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    web->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    web->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Worldwide NonProfit.", nullptr));
+#endif // QT_NO_TOOLTIP
+    web->setText(QApplication::translate("OverviewPage", "<a href=\"https://helpthehomelessworldwide.org\"><img src=\":/icons/web\" width=\"21\" height=\"21\"></a>", nullptr));
+            
+            QLabel* www = new QLabel();
+    www->setObjectName(QStringLiteral("www"));
+    www->setMinimumSize(QSize(21, 21));
+    www->setMaximumSize(QSize(21, 21));
+    www->setBaseSize(QSize(0, 0));
+    www->setCursor(QCursor(Qt::PointingHandCursor));
+    www->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    www->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    www->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Coin.", nullptr));
+#endif // QT_NO_TOOLTIP
+    www->setText(QApplication::translate("OverviewPage", "<a href=\"https://hth.world\"><img src=\":/icons/www\" width=\"21\" height=\"21\"></a>", nullptr));
+            
+            
+    QLabel* mcm = new QLabel();
+    mcm->setObjectName(QStringLiteral("mcm"));
+    mcm->setMinimumSize(QSize(21, 21));
+    mcm->setMaximumSize(QSize(21, 21));
+    mcm->setBaseSize(QSize(0, 0));
+    mcm->setCursor(QCursor(Qt::PointingHandCursor));
+    mcm->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    mcm->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    mcm->setToolTip(QApplication::translate("OverviewPage", "Visit Exchanges.", nullptr));
+#endif // QT_NO_TOOLTIP
+    mcm->setText(QApplication::translate("OverviewPage", "<a href=\"https://hth.world/exchanges.html\"><img src=\":/icons/mcm\" width=\"21\" height=\"21\"></a>", nullptr));
+    QLabel* twitter = new QLabel();
+    twitter->setObjectName(QStringLiteral("twitter"));
+    twitter->setMinimumSize(QSize(21, 21));
+    twitter->setMaximumSize(QSize(21, 21));
+    twitter->setBaseSize(QSize(0, 0));
+    twitter->setCursor(QCursor(Qt::PointingHandCursor));
+    twitter->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    twitter->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    twitter->setToolTip(QApplication::translate("OverviewPage", "Follow HTH on Twitter.", nullptr));
+#endif // QT_NO_TOOLTIP
+    twitter->setText(QApplication::translate("OverviewPage", "<a href=\"https://twitter.com/HTHCoin\"><img src=\":/icons/twitter\" width=\"21\" height=\"21\"></a>", nullptr));
+    QLabel* discord = new QLabel();
+    discord->setObjectName(QStringLiteral("discord"));
+    discord->setMinimumSize(QSize(21, 21));
+    discord->setMaximumSize(QSize(21, 21));
+    discord->setBaseSize(QSize(0, 0));
+    discord->setCursor(QCursor(Qt::PointingHandCursor));
+    discord->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    discord->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    discord->setToolTip(QApplication::translate("OverviewPage", "Join the official HTH Discord community.", nullptr));
+#endif // QT_NO_TOOLTIP
+    discord->setText(QApplication::translate("OverviewPage", "<a href=\"https://discord.gg/r7zKfy5\"><img src=\":/icons/discord\" width=\"21\" height=\"21\"></a>", nullptr));
+            
+            QLabel* webs = new QLabel();
+    webs->setObjectName(QStringLiteral("webs"));
+    webs->setMinimumSize(QSize(21, 21));
+    webs->setMaximumSize(QSize(21, 21));
+    webs->setBaseSize(QSize(0, 0));
+    webs->setCursor(QCursor(Qt::PointingHandCursor));
+    webs->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    webs->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    webs->setToolTip(QApplication::translate("OverviewPage", "Visit HTH Explorer.", nullptr));
+#endif // QT_NO_TOOLTIP
+    webs->setText(QApplication::translate("OverviewPage", "<a href=\"https://openchains.info/coin/hth/about\"><img src=\":/icons/webs\" width=\"21\" height=\"21\"></a>", nullptr));
+     
+    frameSocialLayout->addWidget(webs);        
+    frameSocialLayout->addWidget(www);        
+    frameSocialLayout->addWidget(web);
+    frameSocialLayout->addWidget(mcm);
+    frameSocialLayout->addWidget(twitter);
+    frameSocialLayout->addWidget(discord);
+            
     // Disable size grip because it looks ugly and nobody needs it
     statusBar()->setSizeGripEnabled(false);
 
@@ -239,7 +330,8 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     {
         progressBar->setStyleSheet("QProgressBar { background-color: #F8F8F8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #00CCFF, stop: 1 #33CCFF); border-radius: 7px; margin: 0px; }");
     }
-
+            
+    statusBar()->addWidget(frameSocial);
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);

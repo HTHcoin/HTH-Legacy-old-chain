@@ -6,8 +6,9 @@ padding:0;
 }
 
 QStatusBar {
-background-color:#ffffff;
+background-color: transparent;
 }
+
 
 .QFrame {
 background-color:transparent;
@@ -1600,5 +1601,4 @@ background-color:#F8F6F6;
 QDialog#TransactionDescDialog QTextEdit { /* Contents of Receive Coin Dialog */
 border:1px solid #d7d7d7;
 }
-
 

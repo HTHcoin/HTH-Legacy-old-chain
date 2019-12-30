@@ -2,7 +2,7 @@
 HTH Core 1.2.0.0
 ===============================
 
-https://hthcoin.world/
+http://hth.world/
 
 ![](https://github.com/Altcoin-Cash/HTH/blob/master/src/qt/res/images/light/hth_logo_horizontal.png)
 
@@ -12,9 +12,9 @@ What is HTH?
 HTH-Coin is a fully decentralized cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
 
 
-For more information see https://hthcoin.world/ or discord: https://discord.gg/xqGjacW.
+For more information see http://hth.world/ or discord: https://discord.gg/xqGjacW.
 
-An immediately usable, binary version of the HTH Core software is available at https://github.com/HTHcoin/HTH/releases.
+An immediately usable, binary version of the HTH Core software is available at https://github.com/HTHcoin/HTH-Legacy/releases.
 
 
 License
